@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="windows-1252" ?>
 <pageTemplateDefs xmlns="http://xmlns.oracle.com/adf/faces/rich/pagetemplate">
+  <pagetemplate-jsp-ui-def>/Main_Pages/Modules/Management/Management_Sidebar.jsf</pagetemplate-jsp-ui-def>
   <pagetemplate-jsp-ui-def>/Main_Pages/Modules/Grants/Grants_Sidebar.jsf</pagetemplate-jsp-ui-def>
   <pagetemplate-jsp-ui-def>/Main_Pages/Modules/Marketing/Marketing_Sidebar.jsf</pagetemplate-jsp-ui-def>
   <pagetemplate-jsp-ui-def>/Main_Pages/Modules/Monitoring/Monitoring_Sidebar.jsf</pagetemplate-jsp-ui-def>

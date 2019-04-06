@@ -34,13 +34,15 @@
                             </af:gridRow>
                             <af:gridRow marginTop="5px" height="auto" id="gr41">
                                 <af:gridCell marginStart="5px" width="34%" id="gc91" halign="center" valign="middle">
-                                    <af:link id="l6" icon="#{resource['images:dash_management.png']}"/>
+                                    <af:link id="l6" icon="#{resource['images:dash_management.png']}"
+                                                destination="/faces/Main_Pages/Modules/Management/Main_Management.jsf"/>
                                 </af:gridCell>
                                 <af:gridCell marginStart="5px" width="46%" id="gc92">
                                     <af:panelGridLayout id="pgl13" inlineStyle="width:175px;">
                                         <af:gridRow marginTop="5px" height="auto" id="gr42">
                                             <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc93">
                                                 <af:link text="Management" id="l17"
+                                                destination="/faces/Main_Pages/Modules/Management/Main_Management.jsf"
                                                          inlineStyle="font-size:x-large; color: #008442;font-weight: bold;"/>
                                             </af:gridCell>
                                         </af:gridRow>

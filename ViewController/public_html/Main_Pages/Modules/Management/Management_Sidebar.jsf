@@ -1,0 +1,19 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<af:pageTemplateDef xmlns:af="http://xmlns.oracle.com/adf/faces/rich" var="attrs" definition="private"
+                    xmlns:afc="http://xmlns.oracle.com/adf/faces/rich/component">
+    <af:xmlContent>
+        <afc:component>
+            <afc:description/>
+            <afc:display-name>Management_Sidebar</afc:display-name>
+        </afc:component>
+    </af:xmlContent>
+    <af:panelAccordion discloseMany="false" id="pa2" inlineStyle="width:195px;">
+        <af:showDetailItem id="sdi1" text="Management">
+            <af:spacer width="190" height="10" id="s1"/>
+            <af:button text="User Roles" id="b1" inlineStyle="width:190px;"
+                       icon="#{resource['images:user_roles.png']}"
+                       actionListener="#{viewScope.ManagementSidebarBean.UserRoles_Click}"/>
+            <af:spacer width="190" height="10" id="s3"/>
+        </af:showDetailItem>
+    </af:panelAccordion>
+</af:pageTemplateDef>
