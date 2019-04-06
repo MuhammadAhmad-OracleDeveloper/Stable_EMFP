@@ -77,7 +77,8 @@
     ColumnType="CHAR"
     TableName="TBL_GRANT_APPROVAL_DETAIL"
     RetrievedOnUpdate="true"
-    RetrievedOnInsert="true">
+    RetrievedOnInsert="true"
+    DefaultValue="Y">
     <DesignTime>
       <Attr Name="_DisplaySize" Value="1"/>
     </DesignTime>
