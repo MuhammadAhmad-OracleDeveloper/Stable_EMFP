@@ -62,7 +62,8 @@
     ColumnType="CHAR"
     TableName="TBL_MON_PARAM"
     RetrievedOnUpdate="true"
-    RetrievedOnInsert="true">
+    RetrievedOnInsert="true"
+    DefaultValue="Y">
     <DesignTime>
       <Attr Name="_DisplaySize" Value="1"/>
     </DesignTime>

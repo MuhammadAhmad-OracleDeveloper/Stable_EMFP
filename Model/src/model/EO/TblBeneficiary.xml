@@ -57,7 +57,8 @@
     ColumnType="CHAR"
     TableName="TBL_BENEFICIARY"
     RetrievedOnUpdate="true"
-    RetrievedOnInsert="true">
+    RetrievedOnInsert="true"
+    DefaultValue="Y">
     <DesignTime>
       <Attr Name="_DisplaySize" Value="1"/>
     </DesignTime>

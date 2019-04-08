@@ -44,7 +44,8 @@
     ColumnType="CHAR"
     TableName="TBL_OUTPUT_IND"
     RetrievedOnUpdate="true"
-    RetrievedOnInsert="true">
+    RetrievedOnInsert="true"
+    DefaultValue="Y">
     <DesignTime>
       <Attr Name="_DisplaySize" Value="1"/>
     </DesignTime>

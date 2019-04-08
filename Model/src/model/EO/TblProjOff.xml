@@ -129,7 +129,8 @@
     ColumnType="CHAR"
     TableName="TBL_PROJ_OFF"
     RetrievedOnUpdate="true"
-    RetrievedOnInsert="true">
+    RetrievedOnInsert="true"
+    DefaultValue="Y">
     <DesignTime>
       <Attr Name="_DisplaySize" Value="1"/>
     </DesignTime>
