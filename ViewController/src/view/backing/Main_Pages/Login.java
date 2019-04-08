@@ -506,15 +506,15 @@ public class Login {
     
     
     // creating generic database connection
-    public static Connection getConnection() throws SQLException {
-        String username = "mfp";
-        String password = "mfp";
-        String thinConn = "jdbc:oracle:thin:@192.168.1.102:1521:orcl";
-        DriverManager.registerDriver(new OracleDriver());
-        Connection conn = DriverManager.getConnection(thinConn, username, password);
-        conn.setAutoCommit(false);
-        return conn;
-    }
+//    public static Connection getConnection() throws SQLException {
+//        String username = "emfp";
+//        String password = "emfp";
+//        String thinConn = "jdbc:oracle:thin:@192.168.1.102:1521:orcl";
+//        DriverManager.registerDriver(new OracleDriver());
+//        Connection conn = DriverManager.getConnection(thinConn, username, password);
+//        conn.setAutoCommit(false);
+//        return conn;
+//    }
     
     //user logging in
     public String login_action() {
@@ -561,17 +561,19 @@ public class Login {
 //                    //                return "good";
 //    
 //                    conn.close();
-//                    return "/faces/Dashboard.jsf?faces-redirect=true";
+//                    return "/faces/Main_Pages/Dashboard.jsf?faces-redirect=true";
 //                } else {
+//                    conn.close();
 //                    System.out.println("........wrong login credentials........");
-//    
+//                    return "/faces/Main_Pages/Login.jsf?faces-redirect=true";
+//                    
 //                }
-//                conn.close();
+//                
 //    
 //            } catch (SQLException e) {
 //                System.out.println(e);
 //            }
-    
+//    
 //            return role_master_id;
         return "/faces/Main_Pages/Dashboard.jsf?faces-redirect=true";
 //        return "good";
