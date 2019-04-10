@@ -4,11 +4,11 @@
   <parameters/>
   <executables>
     <variableIterator id="variables"/>
-    <iterator Binds="TblTrainingSchMasterView1" RangeSize="25" DataControl="AppModuleDataControl"
+    <iterator Binds="TblTrainingSchMasterView1" RangeSize="8" DataControl="AppModuleDataControl"
               id="TblTrainingSchMasterView1Iterator"/>
     <searchRegion Binds="TblTrainingSchMasterView1Iterator" Criteria=""
                   Customizer="oracle.jbo.uicli.binding.JUSearchBindingCustomizer" id="TblTrainingSchMasterView1Query"/>
-    <iterator Binds="TblTrainingSchDetailView4" RangeSize="25" DataControl="AppModuleDataControl"
+    <iterator Binds="TblTrainingSchDetailView4" RangeSize="8" DataControl="AppModuleDataControl"
               id="TblTrainingSchDetailView4Iterator"/>
     <searchRegion Binds="TblTrainingSchDetailView4Iterator" Criteria=""
                   Customizer="oracle.jbo.uicli.binding.JUSearchBindingCustomizer" id="TblTrainingSchDetailView4Query"/>

@@ -122,8 +122,9 @@
                                             </af:gridRow>
                                             <af:gridRow marginTop="5px" height="auto" id="gr4">
                                                 <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc5">
-                                                    <af:spacer width="277" height="15" id="s16"/>
-                                                     <h:panelGroup id="pg1">
+                                                    
+                                                     <af:panelGroupLayout id="pg1">
+                                                     <af:spacer width="277" height="15" id="s16"/>
                                                         <af:button actionListener="#{bindings.CreateInsert.execute}"
                                                                    text="Add"
                                                                    disabled="#{!bindings.CreateInsert.enabled}" id="b15"
@@ -147,7 +148,7 @@
                                                                    id="b10"
                                                                    icon="#{resource['images:save.png']}"
                                                                    inlineStyle="width:70px; text-align:center; vertical-align: middle;"/>
-                                                    </h:panelGroup>
+                                                    </af:panelGroupLayout>
                                                 </af:gridCell>
                                             </af:gridRow>
                                             <af:gridRow marginTop="5px" height="auto" id="gr5">
@@ -388,7 +389,7 @@
                                             <af:gridRow marginTop="5px" height="auto" id="gr7">
                                                 <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc8">
                                                     <af:spacer width="360" height="15" id="s13"/>
-                                                    <h:panelGroup id="pg2">
+                                                    <af:panelGroupLayout id="pg2">
                                                         <af:button actionListener="#{bindings.CreateInsert1.execute}"
                                                                    text="Add"
                                                                    disabled="#{!bindings.CreateInsert1.enabled}"
@@ -411,7 +412,7 @@
                                                                    disabled="#{!bindings.Commit.enabled}" id="b14"
                                                                    icon="#{resource['images:save.png']}"
                                                                    inlineStyle="width:70px; text-align:center; vertical-align: middle;"/>
-                                                    </h:panelGroup>
+                                                    </af:panelGroupLayout>
                                                    
                                                 </af:gridCell>
                                             </af:gridRow>

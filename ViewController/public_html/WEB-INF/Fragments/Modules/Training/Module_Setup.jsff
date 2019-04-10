@@ -221,7 +221,7 @@
                                             <af:gridRow marginTop="5px" height="auto" id="gr5">
                                                 <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc6">
                                                     <af:spacer width="220" height="20" id="s9"/>
-                                                    <h:panelGroup id="pg1">
+                                                    <af:panelGroupLayout id="pg1">
                                                         <af:button actionListener="#{bindings.CreateInsert.execute}"
                                                                    text="Add"
                                                                    disabled="#{!bindings.CreateInsert.enabled}" id="b9"
@@ -245,7 +245,7 @@
                                                                    text="Save"
                                                                    disabled="#{!bindings.Commit.enabled}" id="b8"
                                                                    icon="#{resource['images:save.png']}"/>
-                                                    </h:panelGroup>
+                                                    </af:panelGroupLayout>
                                                 </af:gridCell>
                                             </af:gridRow>
                                             <af:gridRow marginTop="5px" height="auto" marginBottom="5px" id="gr6">

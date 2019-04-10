@@ -155,7 +155,7 @@
                                             <af:gridRow marginTop="5px" height="auto" id="gr3">
                                                 <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc4">
                                                     <af:spacer width="200" height="20" id="s16"/>
-                                                    <h:panelGroup id="pg1">
+                                                    <af:panelGroupLayout id="pg1">
                                                      <af:button actionListener="#{bindings.First.execute}"
                                                                                        text="First"
                                                                                        disabled="#{!bindings.First.enabled}"
@@ -194,7 +194,7 @@
                                                         <af:spacer width="5" height="10" id="s12"/>
                                                         <af:button text="Save" id="b21"
                                                                    icon="#{resource['images:save.png']}"/>
-                                                    </h:panelGroup>
+                                                    </af:panelGroupLayout>
                                                     
                                                 </af:gridCell>
                                             </af:gridRow>
@@ -320,7 +320,7 @@
                                             <af:gridRow marginTop="5px" height="auto" marginBottom="5px" id="gr6">
                                                 <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc7">
                                                     <af:spacer width="100" height="20" id="s9"/>
-                                                    <h:panelGroup id="pg2">
+                                                    <af:panelGroupLayout id="pg2">
                                                          <af:button actionListener="#{bindings.CreateInsert.execute}"
                                                                text="Add"
                                                                icon="#{resource['images:add.png']}"
@@ -340,7 +340,7 @@
                                                         <af:button actionListener="#{bindings.Commit.execute}" text="Save"
                                                     icon="#{resource['images:save.png']}"
                                                                disabled="#{!bindings.Commit.enabled}" id="b16"/>
-                                                    </h:panelGroup>
+                                                    </af:panelGroupLayout>
                                                     
                                                 </af:gridCell>
                                             </af:gridRow>

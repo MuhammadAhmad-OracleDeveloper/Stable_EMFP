@@ -123,7 +123,7 @@
                                             <af:gridRow marginTop="5px" height="auto" id="gr5">
                                                 <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc6">
                                                     <af:spacer width="260" height="20" id="s9"/>
-                                                    <h:panelGroup id="pg1">
+                                                    <af:panelGroupLayout id="pg1">
                                                         <af:button actionListener="#{bindings.CreateInsert.execute}"
                                                                    text="Add"
                                                                    icon="#{resource['images:add.png']}"
@@ -149,7 +149,7 @@
                                                                   
                                                                    icon="#{resource['images:save.png']}"
                                                                    id="b12"/>
-                                                    </h:panelGroup>
+                                                    </af:panelGroupLayout>
                                                   
                                                 </af:gridCell>
                                             </af:gridRow>
