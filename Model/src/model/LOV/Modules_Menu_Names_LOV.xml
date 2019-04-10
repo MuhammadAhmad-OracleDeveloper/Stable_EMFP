@@ -4,7 +4,7 @@
 <ViewObject
   xmlns="http://xmlns.oracle.com/bc4j"
   Name="Modules_Menu_Names_LOV"
-  Version="12.1.3.10.8"
+  Version="12.2.1.11.57"
   InheritPersonalization="merge"
   SelectList="TblModuleMenu.AST, 
        TblModuleMenu.MODULE_MENU_ID, 
@@ -39,7 +39,6 @@
     AliasName="MODULE_MENU_ID"/>
   <ViewAttribute
     Name="ModuleMenuName"
-    IsUnique="true"
     IsNotNull="true"
     PrecisionRule="true"
     EntityAttrName="ModuleMenuName"

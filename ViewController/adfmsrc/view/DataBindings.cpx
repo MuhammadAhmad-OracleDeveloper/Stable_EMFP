@@ -45,6 +45,7 @@
 	<page path="/WEB-INF/Fragments/Modules/Training/Trainer.jsff" usageId="view_TrainerPageDef"/>
         <page path="/WEB-INF/Fragments/Modules/Training/Training_Sched.jsff" usageId="view_Training_SchedPageDef"/>
         <page path="/Main_Pages/Modules/Management/Main_Management.jsf" usageId="view_Main_ManagementPageDef"/>
+        <page path="/WEB-INF/Fragments/Modules/Management/User_Roles.jsff" usageId="view_User_RolesPageDef"/>
     </pageMap>
     <pageDefinitionUsages>
         <page id="view_Farmer_RegistrationPageDef"
@@ -80,6 +81,7 @@
 	<page id="view_TrainerPageDef" path="Fragments.Modules.Training.TrainerPageDef"/>
         <page id="view_Training_SchedPageDef" path="Fragments.Modules.Training.Training_SchedPageDef"/>
         <page id="view_Main_ManagementPageDef" path="Main_Pages.Modules.Management.Main_ManagementPageDef"/>
+        <page id="view_User_RolesPageDef" path="Fragments.Modules.Management.User_RolesPageDef"/>
     </pageDefinitionUsages>
     <dataControlUsages>
         <BC4JDataControl id="AppModuleDataControl" Package="model"
