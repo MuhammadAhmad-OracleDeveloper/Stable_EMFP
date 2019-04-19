@@ -12,7 +12,9 @@
                     <af:gridCell marginStart="5px" width="33%" marginEnd="5px" id="gc3"/>
                 </af:gridRow>-->
                 <af:gridRow marginTop="5px" height="auto" id="gr2">
-                    <af:gridCell marginStart="5px" width="34%" id="gc4"/>
+                    <af:gridCell marginStart="5px" width="34%" id="gc4">
+                    <af:button text="button 1" id="b1" action="#{backingBeanScope.backing_Main_Pages_Login.getArray}"/>
+                </af:gridCell>
                     <af:gridCell marginStart="5px" width="33%" id="gc5">
                         <af:image id="i1" inlineStyle="width:405px; height:139px;margin-top:-15%;"
                                   source="#{resource['images:mfp.png']}"/>

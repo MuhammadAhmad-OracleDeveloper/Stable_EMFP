@@ -1027,6 +1027,37 @@ public class Login {
 
      }
 
+
+    public String main() {
+        int[][] myNumbers = { {1, 2, 3, 4}, {5, 6, 7} };
+        for (int i = 0; i < myNumbers.length; ++i) {
+          for(int j = 0; j < myNumbers[i].length; ++j) {
+            System.out.println(myNumbers[i][j]);
+          }
+        }
+        return "good";
+      }
+    
+    public String getArray (){
+      int twoDim [][] = new int [2][3];
+      twoDim[0][0]=1;
+      twoDim[0][1]=2;
+      twoDim[0][2]=3;
+      twoDim[1][0]=4;
+      twoDim[1][1]=5;
+      twoDim[1][2]=6;
+      System.out.println(twoDim[0][0] + " " + twoDim[0][1] + " " + twoDim[0][2]);
+      System.out.println(twoDim[1][0] + " " + twoDim[1][1] + " " + twoDim[1][2]);
+       return "good";
+   }
+    
+    
+    
+    
+    
+    
+    
+    
     
     
 }
