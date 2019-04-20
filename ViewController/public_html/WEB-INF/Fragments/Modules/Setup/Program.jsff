@@ -22,8 +22,8 @@
                 </af:gridRow>
                 <af:gridRow marginTop="5px" height="auto" id="gr2">
                     <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc4">
-                        <af:panelTabbed position="above" id="pt2" inlineStyle="width:665px;">
-                            <af:showDetailItem id="tab1" text="Program Setup">
+                        <af:panelTabbed position="above" id="pt2" inlineStyle="width:627px;">
+                            <af:showDetailItem id="tab1" text="Program">
                                 <af:table value="#{bindings.TblProgView1.collectionModel}" var="row"
                                           rows="#{bindings.TblProgView1.rangeSize}"
                                           emptyText="#{bindings.TblProgView1.viewable ? 'No data to display.' : 'Access Denied.'}"
@@ -34,7 +34,7 @@
                                           filterModel="#{bindings.TblProgView1Query.queryDescriptor}"
                                           filterVisible="true"
                                           queryListener="#{bindings.TblProgView1Query.processQuery}" varStatus="vs"
-                                          id="t1" inlineStyle="height:242px;" partialTriggers=" ::b9 ::b16" width="644"
+                                          id="t1" inlineStyle="height:242px;" partialTriggers=" ::b9 ::b16" width="614"
                                           scrollPolicy="page" autoHeightRows="0">
                                     <af:column sortProperty="#{bindings.TblProgView1.hints.ProgId.name}"
                                                filterable="true" sortable="true" headerText="Program ID" align="center"
@@ -94,7 +94,7 @@
                 <af:gridRow marginTop="5px" height="auto" id="gr3">
                     <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc5">
                         <af:panelGroupLayout id="pg1">
-                            <af:spacer width="174" height="15" id="s17"/>
+                            <af:spacer width="190" height="15" id="s17"/>
                             <af:button actionListener="#{bindings.CreateInsert.execute}" text="Add"
                                        disabled="#{!bindings.CreateInsert.enabled}" id="b9"
                                        
@@ -123,7 +123,7 @@
                 <af:gridRow marginTop="5px" height="auto" marginBottom="5px" id="gr6">
                     <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc7">
                         <af:panelTabbed position="above" id="pt3" inlineStyle="width:1028px;">
-                            <af:showDetailItem id="tab2" text="Program Offices Setup">
+                            <af:showDetailItem id="tab2" text="Program Offices">
                                 <af:table value="#{bindings.TblProgOffView3.collectionModel}" var="row"
                                           rows="#{bindings.TblProgOffView3.rangeSize}"
                                           emptyText="#{bindings.TblProgOffView3.viewable ? 'No data to display.' : 'Access Denied.'}"
@@ -134,7 +134,7 @@
                                           filterModel="#{bindings.TblProgOffView3Query.queryDescriptor}"
                                           filterVisible="true"
                                           queryListener="#{bindings.TblProgOffView3Query.processQuery}" varStatus="vs"
-                                          id="t2" width="1012" inlineStyle="height:241px;"
+                                          id="t2" width="1010" inlineStyle="height:241px;"
                                           partialTriggers="::b12 ::b13 ::b14 ::b17" scrollPolicy="page"
                                           autoHeightRows="0">
                                     <af:column sortProperty="#{bindings.TblProgOffView3.hints.ProgOffId.name}"
@@ -156,7 +156,7 @@
                                     </af:column>
                                     <af:column sortProperty="#{bindings.TblProgOffView3.hints.Name.name}"
                                                filterable="true" sortable="true" headerText="Office" align="left"
-                                               id="c6" width="161">
+                                               id="c6" width="150">
                                         <f:facet name="filter">
                                             <af:inputText value="#{vs.filterCriteria.Name}" id="it15"
                                                           placeholder="Search Office"></af:inputText>
@@ -173,7 +173,7 @@
                                     </af:column>
                                     <af:column sortProperty="#{bindings.TblProgOffView3.hints.ContactPer.name}"
                                                filterable="true" sortable="true" headerText="Contact Person"
-                                               align="left" id="c7" width="120">
+                                               align="left" id="c7" width="100">
                                         <f:facet name="filter">
                                             <af:inputText value="#{vs.filterCriteria.ContactPer}" id="it16"
                                                           placeholder="Search Contact"></af:inputText>
@@ -189,8 +189,8 @@
                                         </af:inputText>
                                     </af:column>
                                     <af:column filterable="true" sortable="true"
-                                               headerText="#{bindings.TblProgOffView3.hints.Designation.label}"
-                                               id="c14">
+                                               headerText="Designation"
+                                               id="c14" width="100">
                                         <f:facet name="filter">
                                             <af:inputText value="#{vs.filterCriteria.Designation}" id="it24"
                                                           placeholder="Search Designation"></af:inputText>
@@ -207,7 +207,7 @@
                                     </af:column>
                                     <af:column sortProperty="#{bindings.TblProgOffView3.hints.Address.name}"
                                                filterable="true" sortable="true" headerText="Address" align="left"
-                                               id="c8" width="210">
+                                               id="c8" width="200">
                                         <f:facet name="filter">
                                             <af:inputText value="#{vs.filterCriteria.Address}" id="it17"
                                                           placeholder="Search Address"></af:inputText>
@@ -293,7 +293,7 @@
                                         </af:selectOneChoice>
                                     </af:column>
                                     <af:column sortProperty="#{bindings.TblProgOffView3.hints.Ast.name}"
-                                               filterable="true" sortable="true" headerText="Active" id="c13" width="47"
+                                               filterable="true" sortable="true" headerText="Active" id="c13" width="50"
                                                align="left">
                                         <f:facet name="filter">
                                             <af:inputText value="#{vs.filterCriteria.Ast}" id="it22"

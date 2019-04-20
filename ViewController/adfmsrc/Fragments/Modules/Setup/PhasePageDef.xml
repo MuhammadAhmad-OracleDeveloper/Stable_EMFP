@@ -78,5 +78,6 @@
             Action="createInsertRow"/>
     <action IterBinding="TblPhasePlanView3Iterator" id="Execute1" RequiresUpdateModel="true" Action="iteratorExecute"/>
     <action IterBinding="TblPhasePlanView3Iterator" id="Delete1" RequiresUpdateModel="false" Action="removeCurrentRow"/>
+    <action id="Rollback" RequiresUpdateModel="false" Action="rollbackTransaction" DataControl="AppModuleDataControl"/>
   </bindings>
 </pageDefinition>

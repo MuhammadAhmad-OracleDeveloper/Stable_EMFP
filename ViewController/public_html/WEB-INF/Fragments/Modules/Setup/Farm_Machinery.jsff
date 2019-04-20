@@ -6,6 +6,24 @@
                                                    inlineStyle="height:1511px; width:1050px;">
                                     <af:showDetailItem id="pane2" text="Farm Machinery &amp; Implements">
                                         <af:panelGridLayout id="pgl2">
+                                        <af:gridRow marginTop="5px" height="auto" id="gr4">
+                                               <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc6"
+                                                            halign="end" valign="middle">
+                       <af:button actionListener="#{bindings.Rollback.execute}" text="Cancel"
+                                  disabled="#{!bindings.Rollback.enabled}" immediate="true" id="b1"
+                                  icon="#{resource['images:cancel.png']}" iconPosition="top">
+                           <af:resetActionListener/>
+                       </af:button>
+                       <af:spacer width="10" height="10" id="s9"/>
+                                                       <af:button actionListener="#{bindings.Commit.execute}"
+                                                                  text="Save All" disabled="#{!bindings.Commit.enabled}"
+                                                                  id="b10"
+
+                                                                  icon="#{resource['images:save.png']}"
+                                                                  iconPosition="top"/>
+                       <af:spacer width="10" height="10" id="s1"/>
+                   </af:gridCell>
+                                           </af:gridRow>
                                             <af:gridRow marginTop="5px" height="auto" id="gr2">
                                                 <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc2">
                                                     <af:panelTabbed position="above" id="pt2"
@@ -16,7 +34,7 @@
                                                                     <af:gridCell marginStart="5px" width="100%"
                                                                                  marginEnd="5px" id="gc8">
                                                                         <af:panelTabbed position="above" id="pt3"
-                                                                                        inlineStyle="width:997px;">
+                                                                                        inlineStyle="width:446px;">
                                                                             <af:showDetailItem id="tab2" text="Level 1">
                                                                                 <af:table value="#{bindings.TblItemL1View1.collectionModel}"
                                                                                           var="row"
@@ -33,7 +51,7 @@
                                                                                           varStatus="vs" id="t2"
                                                                                           partialTriggers="::b9 ::b10 ::b11 ::b25"
                                                                                           scrollPolicy="page" autoHeightRows="0"
-                                                                                          width="460">
+                                                                                          width="435">
                                                                                     <af:column sortProperty="#{bindings.TblItemL1View1.hints.ItemL1Id.name}"
                                                                                                filterable="true"
                                                                                                sortable="true"
@@ -105,12 +123,12 @@
                                                                                            id="b25"
                                                                                            icon="#{resource['images:refresh.png']}"/>
                                                                                 <af:spacer width="10" height="10"
-                                                                                           id="s9"/>
+                                                                                           id="s2"/>
                                                     <af:panelGroupLayout id="pgl1" layout="horizontal">
                                                         
                                                     
                                                     
-                                                                                    <af:spacer width="83" height="10"
+                                                                                    <af:spacer width="100" height="10"
                                                                                                id="s10"/>
                                                                                     <af:button actionListener="#{bindings.CreateInsert.execute}"
                                                                                                text="Add"
@@ -122,7 +140,7 @@
                                                                                     <af:button actionListener="#{bindings.Execute1.execute}"
                                                                                                text="Edit"
                                                                                                disabled="#{!bindings.Execute1.enabled}"
-                                                                                               id="b10"
+                                                                                               id="b2"
                                                                                                icon="#{resource['images:edit.png']}"/>
                                                                                     <af:spacer width="5" height="10"
                                                                                                id="s29"/>
@@ -132,14 +150,7 @@
                                                                                                id="b11"
                                                                                                icon="#{resource['images:delete.png']}"
                                                                                                immediate="true" action="Machinery_Setup.jsf"/>
-                                                                                    <af:spacer width="5" height="10"
-                                                                                               id="s19"/>
-                                                                                    <af:button actionListener="#{bindings.Commit.execute}"
-                                                                                               text="Save"
-                                                                                               disabled="#{!bindings.Commit.enabled}"
-                                                                                               id="b12"
-                                                                                               icon="#{resource['images:save.png']}"/>
-                                                                               </af:panelGroupLayout>
+                                                    </af:panelGroupLayout>
                                                                             </af:showDetailItem>
                                                                         </af:panelTabbed>
                                                                     </af:gridCell>
@@ -152,7 +163,7 @@
                                                                     <af:gridCell marginStart="5px" width="100%"
                                                                                  marginEnd="5px" id="gc10">
                                                                         <af:panelTabbed position="above" id="pt4"
-                                                                                        inlineStyle="width:996px;">
+                                                                                        inlineStyle="width:445px;">
                                                                             <af:showDetailItem id="tab3" text="Level 2">
                                                                                 <af:table value="#{bindings.TblItemL2View3.collectionModel}"
                                                                                           var="row"
@@ -169,7 +180,7 @@
                                                                                           varStatus="vs" id="t3"
                                                                                           partialTriggers="::b14 ::b15 ::b16 ::b17 ::b18 ::b19 ::b26"
                                                                                           scrollPolicy="page" autoHeightRows="0"
-                                                                                          width="457">
+                                                                                          width="435">
                                                                                     <af:column sortProperty="#{bindings.TblItemL2View3.hints.ItemL2Id.name}"
                                                                                                filterable="true"
                                                                                                sortable="true"
@@ -244,7 +255,7 @@
                                                                                            id="s11"/>
                                                                                 <af:panelGroupLayout id="pg2"
                                                                                                      layout="horizontal">
-                                                                                    <af:spacer width="83" height="10"
+                                                                                    <af:spacer width="100" height="10"
                                                                                                id="s12"/>
                                                                                     <af:button actionListener="#{bindings.CreateInsert1.execute}"
                                                                                                text="Add"
@@ -266,13 +277,6 @@
                                                                                                id="b16"
                                                                                                icon="#{resource['images:delete.png']}"
                                                                                                immediate="true" action="Machinery_Setup.jsf"/>
-                                                                                    <af:spacer width="5" height="10"
-                                                                                               id="s22"/>
-                                                                                    <af:button actionListener="#{bindings.Commit.execute}"
-                                                                                               text="Save"
-                                                                                               disabled="#{!bindings.Commit.enabled}"
-                                                                                               id="b13"
-                                                                                               icon="#{resource['images:save.png']}"/>
                                                                                 </af:panelGroupLayout>
                                                                             </af:showDetailItem>
                                                                         </af:panelTabbed>
@@ -286,7 +290,7 @@
                                                                     <af:gridCell marginStart="5px" width="100%"
                                                                                  marginEnd="5px" id="gc12">
                                                                         <af:panelTabbed position="above" id="pt5"
-                                                                                        inlineStyle="width:993px;">
+                                                                                        inlineStyle="width:443px;">
                                                                             <af:showDetailItem id="tab4" text="Level 3">
                                                                                 <af:table value="#{bindings.TblItemL3View4.collectionModel}"
                                                                                           var="row"
@@ -303,7 +307,7 @@
                                                                                           varStatus="vs" id="t4"
                                                                                           partialTriggers="::b17 ::b18 ::b19 ::b27"
                                                                                           scrollPolicy="page" autoHeightRows="0"
-                                                                                          width="459">
+                                                                                          width="434">
                                                                                     <af:column sortProperty="#{bindings.TblItemL3View4.hints.ItemL3Id.name}"
                                                                                                filterable="true"
                                                                                                sortable="true"
@@ -378,7 +382,7 @@
                                                                                            id="s13"/>
                                                                                 <af:panelGroupLayout id="pg3"
                                                                                                      layout="horizontal">
-                                                                                    <af:spacer width="83" height="10"
+                                                                                    <af:spacer width="100" height="10"
                                                                                                id="s14"/>
                                                                                     <af:button actionListener="#{bindings.CreateInsert2.execute}"
                                                                                                text="Add"
@@ -400,13 +404,6 @@
                                                                                                id="b19"
                                                                                                icon="#{resource['images:delete.png']}"
                                                                                                immediate="true" action="Machinery_Setup.jsf"/>
-                                                                                    <af:spacer width="10" height="10"
-                                                                                               id="s25"/>
-                                                                                    <af:button actionListener="#{bindings.Commit.execute}"
-                                                                                               text="Save"
-                                                                                               disabled="#{!bindings.Commit.enabled}"
-                                                                                               id="b20"
-                                                                                               icon="#{resource['images:save.png']}"/>
                                                                                 </af:panelGroupLayout>
                                                                             </af:showDetailItem>
                                                                         </af:panelTabbed>
@@ -420,7 +417,7 @@
                                                                     <af:gridCell marginStart="5px" width="100%"
                                                                                  marginEnd="5px" id="gc14">
                                                                         <af:panelTabbed position="above" id="pt6"
-                                                                                        inlineStyle="width:994px;">
+                                                                                        inlineStyle="width:445px;">
                                                                             <af:showDetailItem id="tab5" text="Level 4">
                                                                                 <af:table value="#{bindings.TblItemL4View5.collectionModel}"
                                                                                           var="row"
@@ -437,7 +434,7 @@
                                                                                           varStatus="vs" id="t5"
                                                                                           partialTriggers="::b21 ::b22 ::b23 ::b29"
                                                                                           scrollPolicy="page" autoHeightRows="0"
-                                                                                          width="460">
+                                                                                          width="435">
                                                                                     <af:column sortProperty="#{bindings.TblItemL4View5.hints.ItemL4Id.name}"
                                                                                                filterable="true"
                                                                                                sortable="true"
@@ -512,7 +509,7 @@
                                                                                            id="s15"/>
                                                                                 <af:panelGroupLayout id="pg4"
                                                                                                      layout="horizontal">
-                                                                                    <af:spacer width="83" height="10"
+                                                                                    <af:spacer width="100" height="10"
                                                                                                id="s16"/>
                                                                                     <af:button actionListener="#{bindings.CreateInsert3.execute}"
                                                                                                text="Add"
@@ -534,13 +531,6 @@
                                                                                                id="b23"
                                                                                                icon="#{resource['images:delete.png']}"
                                                                                                immediate="true" action="Machinery_Setup.jsf"/>
-                                                                                    <af:spacer width="10" height="10"
-                                                                                               id="s28"/>
-                                                                                    <af:button actionListener="#{bindings.Commit.execute}"
-                                                                                               text="Save"
-                                                                                               disabled="#{!bindings.Commit.enabled}"
-                                                                                               id="b24"
-                                                                                               icon="#{resource['images:save.png']}"/>
                                                                                 </af:panelGroupLayout>
                                                                             </af:showDetailItem>
                                                                         </af:panelTabbed>
@@ -568,8 +558,16 @@
                                                                       queryListener="#{bindings.TblItemL4View1Query.processQuery}"
                                                                       varStatus="vs" id="t1"
                                                                       partialTriggers=" ::b28"
-                                                                      scrollPolicy="page" autoHeightRows="0">
-                                    <af:column headerText="#{bindings.TblItemL4View1.hints.ItemL1Id.label}" id="c3">
+                                                                      scrollPolicy="page" autoHeightRows="0"
+                                                                      width="1005">
+                                    <af:column sortProperty="#{bindings.TblItemL4View1.hints.ItemL1Id.name}"
+                                               filterable="true" 
+                                                headerText="Level-1 ID" id="c3" width="50" align="center">
+                                     <f:facet name="filter">
+                                                                        <af:inputText value="#{vs.filterCriteria.ItemL1Id}"
+                                                                                      id="it24" placeholder="Search Level-1">
+                                                                                      </af:inputText>
+                                                                    </f:facet>
                                         <af:outputText value="#{row.ItemL1Id}"
                                                        shortDesc="#{bindings.TblItemL4View1.hints.ItemL1Id.tooltip}"
                                                        id="ot3">
@@ -577,12 +575,26 @@
                                                               pattern="#{bindings.TblItemL4View1.hints.ItemL1Id.format}"/>
                                         </af:outputText>
                                     </af:column>
-                                    <af:column headerText="#{bindings.TblItemL4View1.hints.L1_Name.label}" id="c4">
+                                    <af:column sortProperty="#{bindings.TblItemL4View1.hints.L1_Name.name}"
+                                               filterable="true" 
+                                                headerText="Level-1" id="c4" width="150" >
+                                     <f:facet name="filter">
+                                                                        <af:inputText value="#{vs.filterCriteria.L1_Name}"
+                                                                                      id="it23" placeholder="Search Level-1">
+                                                                                      </af:inputText>
+                                                                    </f:facet>
                                         <af:outputText value="#{row.L1_Name}"
                                                        shortDesc="#{bindings.TblItemL4View1.hints.L1_Name.tooltip}"
                                                        id="ot4"/>
                                     </af:column>
-                                    <af:column headerText="#{bindings.TblItemL4View1.hints.ItemL2Id.label}" id="c11">
+                                    <af:column sortProperty="#{bindings.TblItemL4View1.hints.ItemL2Id.name}"
+                                               filterable="true"
+                                                headerText="Level-2 ID" id="c11" width="50" align="center">
+                                     <f:facet name="filter">
+                                                                        <af:inputText value="#{vs.filterCriteria.ItemL2Id}"
+                                                                                      id="it22" placeholder="Search ID">
+                                                                                      </af:inputText>
+                                                                    </f:facet>
                                         <af:outputText value="#{row.ItemL2Id}"
                                                        shortDesc="#{bindings.TblItemL4View1.hints.ItemL2Id.tooltip}"
                                                        id="ot8">
@@ -590,17 +602,24 @@
                                                               pattern="#{bindings.TblItemL4View1.hints.ItemL2Id.format}"/>
                                         </af:outputText>
                                     </af:column>
-                                    <af:column headerText="#{bindings.TblItemL4View1.hints.L2_Name.label}" id="c14">
+                                    <af:column sortProperty="#{bindings.TblItemL4View1.hints.L2_Name.name}"
+                                               filterable="true"
+                                               headerText="Level-2" id="c14" width="150" >
+                                     <f:facet name="filter">
+                                                                        <af:inputText value="#{vs.filterCriteria.L2_Name}"
+                                                                                      id="it21" placeholder="Search Level-2">
+                                                                                      </af:inputText>
+                                                                    </f:facet>
                                         <af:outputText value="#{row.L2_Name}"
                                                        shortDesc="#{bindings.TblItemL4View1.hints.L2_Name.tooltip}"
                                                        id="ot9"/>
                                     </af:column>
                                     <af:column sortProperty="#{bindings.TblItemL4View1.hints.ItemL3Id.name}"
                                                                            filterable="true" headerText="Level-3 ID"
-                                                                           id="c2" width="47" align="center">
+                                                                           id="c2" width="50" align="center">
                                                                     <f:facet name="filter">
                                                                         <af:inputText value="#{vs.filterCriteria.ItemL3Id}"
-                                                                                      id="it24" placeholder="Search ID"></af:inputText>
+                                                                                      id="it7" placeholder="Search ID"></af:inputText>
                                                                     </f:facet>
                                                                     <af:outputText value="#{row.ItemL3Id}"
                                                                                    shortDesc="#{bindings.TblItemL4View1.hints.ItemL3Id.tooltip}"
@@ -609,7 +628,7 @@
                                    
                                     <af:column sortProperty="#{bindings.TblItemL4View1.hints.L3_Name.name}"
                                                                            filterable="true" headerText="Level-3"
-                                                                           id="c31" width="151">
+                                                                           id="c31" width="150">
                                                                     <f:facet name="filter">
                                                                         <af:inputText value="#{vs.filterCriteria.L3_Name}"
                                                                                       id="it25"
@@ -621,7 +640,7 @@
                                                                 </af:column>
                                                                 <af:column sortProperty="#{bindings.TblItemL4View1.hints.ItemL4Id.name}"
                                                                            filterable="true" align="center"
-                                                                           headerText="FMI ID" id="c1" width="65">
+                                                                           headerText="FMI ID" id="c1" width="50">
                                                                     <f:facet name="filter">
                                                                         <af:inputText value="#{vs.filterCriteria.ItemL4Id}"
                                                                                       id="it26" placeholder="Search ID"></af:inputText>
@@ -645,7 +664,7 @@
                                                                 </af:column>
                                                                 <af:column sortProperty="#{bindings.TblItemL4View1.hints.Ast.name}"
                                                                            filterable="true" align="left"
-                                                                           headerText="Active" id="c6" width="62">
+                                                                           headerText="Active" id="c6" width="60">
                                                                     <f:facet name="filter">
                                                                         <af:inputText value="#{vs.filterCriteria.Ast}"
                                                                                       id="it29"

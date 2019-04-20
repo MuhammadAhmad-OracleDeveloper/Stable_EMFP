@@ -3,8 +3,26 @@
                 xmlns:f="http://java.sun.com/jsf/core">
     <af:panelAccordion discloseMany="false" id="pa3" inlineStyle="height:811px; width:1030px;">
         <af:showDetailItem id="pane2" text="Phase">
-            <af:panelGridLayout id="pgl2">
-                <af:gridRow marginTop="5px" height="auto" id="gr2">
+        <af:panelGridLayout id="pgl2">
+        <af:gridRow marginTop="5px" height="auto" id="gr4">
+                                               <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc6"
+                                                            halign="end" valign="middle">
+                       <af:button actionListener="#{bindings.Rollback.execute}" text="Cancel"
+                                  disabled="#{!bindings.Rollback.enabled}" immediate="true" id="b1"
+                                  icon="#{resource['images:cancel.png']}" iconPosition="top">
+                           <af:resetActionListener/>
+                       </af:button>
+                       <af:spacer width="10" height="10" id="s9"/>
+                                                       <af:button actionListener="#{bindings.Commit.execute}"
+                                                                  text="Save All" disabled="#{!bindings.Commit.enabled}"
+                                                                  id="b10"
+
+                                                                  icon="#{resource['images:save.png']}"
+                                                                  iconPosition="top"/>
+                       <af:spacer width="10" height="10" id="s1"/>
+                   </af:gridCell>
+                                           </af:gridRow>
+             <af:gridRow marginTop="5px" height="auto" id="gr2">
                     <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc2">
                         <af:panelTabbed position="above" id="pt2" inlineStyle="width:701px;">
                             <af:showDetailItem id="tab1" text="Phase">
@@ -19,7 +37,7 @@
                                           filterVisible="true"
                                           queryListener="#{bindings.TblPhaseView1Query.processQuery}" varStatus="vs"
                                           id="t1" partialTriggers="::b10 ::b11 ::b12 ::b14 ::b1 ::b2 ::b3 ::b4"
-                                          width="690" scrollPolicy="page" autoHeightRows="0">
+                                          width="685" scrollPolicy="page" autoHeightRows="0">
                                     <af:column sortProperty="#{bindings.TblPhaseView1.hints.PhaseId.name}"
                                                filterable="true" sortable="true" headerText="Phase ID" id="c1"
                                                align="center" width="80">
@@ -116,7 +134,7 @@
                 <af:gridRow marginTop="5px" height="auto" id="gr3">
                     <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc4"></af:gridCell>
                 </af:gridRow>
-                <af:gridRow marginTop="5px" height="auto" marginBottom="5px" id="gr4">
+                <af:gridRow marginTop="5px" height="auto" marginBottom="5px" id="gr6">
                     <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc5"/>
                 </af:gridRow>
                 <af:gridRow marginTop="5px" height="auto" marginBottom="5px" id="gr1">
@@ -150,7 +168,7 @@
                                     </af:inputText>
                                     <af:outputLabel value="Domestic Marketing" id="ol2"
                                                     inlineStyle="color:Black; font-size:large;"/>
-                                    <af:spacer width="10" height="10" id="s9"/>
+                                    <af:spacer width="10" height="10" id="s15"/>
                                     <af:inputText value="#{bindings.DomExpo.inputValue}" label="Domestic Expo"
                                                   required="#{bindings.DomExpo.hints.mandatory}"
                                                   columns="#{bindings.DomExpo.hints.displayWidth}"
@@ -192,13 +210,13 @@
                                                           pattern="#{bindings.IntlPromCamp.format}"/>
                                     </af:inputText>
                                     <f:facet name="footer">
-                                        <af:spacer width="10" height="30" id="s1"/>
+                                        <af:spacer width="10" height="30" id="s16"/>
                                         <af:panelGroupLayout layout="vertical" id="pgl1">
                                             <af:panelGroupLayout layout="horizontal" id="pgl3">
                                                 <af:spacer width="100" height="10" id="s7"/>
                                                 <af:button actionListener="#{bindings.First.execute}" text="First"
                                                            disabled="#{!bindings.First.enabled}" partialSubmit="true"
-                                                           id="b1" icon="#{resource['images:first.png']}"/>
+                                                           id="b15" icon="#{resource['images:first.png']}"/>
                                                 <af:button actionListener="#{bindings.Previous.execute}" text="Previous"
                                                            disabled="#{!bindings.Previous.enabled}" partialSubmit="true"
                                                            id="b2" icon="#{resource['images:backward.png']}"/>
@@ -208,11 +226,11 @@
                                                 <af:button actionListener="#{bindings.Last.execute}" text="Last"
                                                            disabled="#{!bindings.Last.enabled}" partialSubmit="true"
                                                            id="b4" icon="#{resource['images:forward.png']}"/>
-                                            <af:spacer width="100" height="20" id="s12"/>
+                                            <af:spacer width="250" height="20" id="s12"/>
                                        
                                             <af:button actionListener="#{bindings.CreateInsert.execute}" text="Add"
                                                        icon="#{resource['images:add.png']}"
-                                                       disabled="#{!bindings.CreateInsert.enabled}" id="b10"/>
+                                                       disabled="#{!bindings.CreateInsert.enabled}" id="b16"/>
                                             <af:spacer width="5" height="10" id="s13"/>
                                             <af:button actionListener="#{bindings.Execute.execute}" text="Edit"
                                                        icon="#{resource['images:edit.png']}"
@@ -222,11 +240,6 @@
                                                        icon="#{resource['images:delete.png']}"
                                                        disabled="#{!bindings.Delete.enabled}" id="b12" immediate="true"
                                                        action="Phase.jsf"/>
-                                            <af:spacer width="5" height="10" id="s11"/>
-                                            <af:button actionListener="#{bindings.Commit.execute}"
-                                                       icon="#{resource['images:save.png']}" text="Save"
-                                                       disabled="#{!bindings.Commit.enabled}" id="b13"/>
-                                        
                                             </af:panelGroupLayout>
                                         </af:panelGroupLayout>
                                     </f:facet>
@@ -243,7 +256,7 @@
                                           filterModel="#{bindings.TblPhasePlanView3Query.queryDescriptor}"
                                           queryListener="#{bindings.TblPhasePlanView3Query.processQuery}"
                                           filterVisible="true" varStatus="vs" id="t2"
-                                          partialTriggers="::b6 ::b7 ::b8 ::b5" width="963" scrollPolicy="page"
+                                          partialTriggers="::b6 ::b7 ::b8 ::b5" width="956" scrollPolicy="page"
                                           autoHeightRows="0">
                                     <af:column sortProperty="#{bindings.TblPhasePlanView3.hints.PhasePlanId.name}"
                                                filterable="true" sortable="true" headerText="Phase Plan ID" id="c6"
@@ -334,7 +347,7 @@
                                            disabled="#{!bindings.Execute1.enabled}" id="b5"/>
                                 <af:spacer width="10" height="50" id="s5"/>
                                 <af:panelGroupLayout id="pgl5" layout="horizontal">
-                                    <af:spacer width="150" height="10" id="s6"/>
+                                    <af:spacer width="350" height="10" id="s6"/>
                                     <af:panelGroupLayout id="pgl4">
                                         <af:button actionListener="#{bindings.CreateInsert1.execute}" text="Add"
                                                    disabled="#{!bindings.CreateInsert1.enabled}" id="b6"
@@ -348,10 +361,6 @@
                                                    disabled="#{!bindings.Delete1.enabled}" id="b8"
                                                    icon="#{resource['images:delete.png']}" immediate="true"
                                                    action="Phase.jsf"/>
-                                        <af:spacer width="5" height="10" id="s4"/>
-                                        <af:button actionListener="#{bindings.Commit.execute}" text="Save"
-                                                   disabled="#{!bindings.Commit.enabled}" id="b9"
-                                                   icon="#{resource['images:save.png']}"/>
                                         
                                     </af:panelGroupLayout>
                                 </af:panelGroupLayout>
