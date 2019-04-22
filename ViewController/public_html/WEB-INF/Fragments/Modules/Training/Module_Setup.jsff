@@ -5,10 +5,28 @@
                                                    inlineStyle="height:811px; width:1030px;">
                                     <af:showDetailItem id="pane2" text="Module Setup">
                                         <af:panelGridLayout id="pgl2">
+                                        <af:gridRow marginTop="5px" height="auto" id="gr4">
+                                               <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc6"
+                                                            halign="end" valign="middle">
+                       <af:button actionListener="#{bindings.Rollback.execute}" text="Cancel"
+                                  disabled="#{!bindings.Rollback.enabled}" immediate="true" id="b1"
+                                  icon="#{resource['images:cancel.png']}" iconPosition="top">
+                           <af:resetActionListener/>
+                       </af:button>
+                       <af:spacer width="10" height="10" id="s9"/>
+                                                       <af:button actionListener="#{bindings.Commit.execute}"
+                                                                  text="Save All" disabled="#{!bindings.Commit.enabled}"
+                                                                  id="b10"
+
+                                                                  icon="#{resource['images:save.png']}"
+                                                                  iconPosition="top"/>
+                       <af:spacer width="10" height="10" id="s1"/>
+                   </af:gridCell>
+                                           </af:gridRow>
                                             <af:gridRow marginTop="5px" height="auto" id="gr2">
                                                 <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc2">
                                                     <af:panelTabbed position="above" id="pt2"
-                                                                    inlineStyle="width:735px;">
+                                                                    inlineStyle="width:646px;">
                                                         <af:showDetailItem id="tab1" text="Training Setup">
                                                             <af:table value="#{bindings.TblCourseView1.collectionModel}"
                                                                       var="row"
@@ -22,36 +40,17 @@
                                                                       filterModel="#{bindings.TblCourseView1Query.queryDescriptor}"
                                                                       filterVisible="true"
                                                                       queryListener="#{bindings.TblCourseView1Query.processQuery}"
-                                                                      varStatus="vs" id="t1" width="730"
+                                                                      varStatus="vs" id="t1" width="634"
                                                                       partialTriggers="::b13"
                                                                       scrollPolicy="page" autoHeightRows="0">
-                                                                <af:column sortProperty="#{bindings.TblCourseView1.hints.CourseId.name}"
-                                                                           filterable="true"
-                                                                           headerText="Training ID"
-                                                                           id="c1">
-                                                                            <f:facet name="filter">
-                                                                       <af:inputText value="#{vs.filterCriteria.CourseId}"
-                                                                                     id="it4" placeholder="Search ID">
-                                                                       </af:inputText>
-                                                                            </f:facet>
-                                                                    <af:outputText value="#{row.CourseId}"
-                                                                                   shortDesc="#{bindings.TblCourseView1.hints.CourseId.tooltip}"
-                                                                                   id="ot1"/>
-                                                                </af:column>
-                                                                <af:column sortProperty="#{bindings.TblCourseView1.hints.PhaseId.name}"
-                                                                           filterable="true"
-                                                                            headerText="Phase"
-                                                                           id="c2">
-                                                                            <f:facet name="filter">
+                                                  <af:column sortProperty="#{bindings.TblCourseView1.hints.PhaseId.name}"
+                                                             filterable="true" 
+                                                             headerText="Phase" id="c9" width="150">
+                                                             <f:facet name="filter">
                                                                        <af:inputText value="#{vs.filterCriteria.PhaseId}"
-                                                                                     id="it5" placeholder="Search Phase">
+                                                                                     id="it4" placeholder="Search Phase">
                                                                        </af:inputText>
                                                                             </f:facet>
-                                                                    <af:outputText value="#{row.PhaseId}"
-                                                                                   shortDesc="#{bindings.TblCourseView1.hints.PhaseId.tooltip}"
-                                                                                   id="ot2"/>
-                                                                </af:column>
-                                    <af:column headerText="#{bindings.TblCourseView1.hints.PhaseId.label}" id="c9">
                                         <af:selectOneChoice value="#{row.bindings.PhaseId.inputValue}"
                                                             label="#{row.bindings.PhaseId.label}"
                                                             required="#{bindings.TblCourseView1.hints.PhaseId.mandatory}"
@@ -61,8 +60,23 @@
                                             <f:validator binding="#{row.bindings.PhaseId.validator}"/>
                                         </af:selectOneChoice>
                                     </af:column>
+                                                                <af:column sortProperty="#{bindings.TblCourseView1.hints.CourseId.name}"
+                                                                           filterable="true" 
+                                                                           headerText="Training ID"
+                                                                           id="c1" width="80">
+                                                                            <f:facet name="filter">
+                                                                       <af:inputText value="#{vs.filterCriteria.CourseId}"
+                                                                                     id="it5" placeholder="Search ID">
+                                                                       </af:inputText>
+                                                                            </f:facet>
+                                                                    <af:outputText value="#{row.CourseId}"
+                                                                                   shortDesc="#{bindings.TblCourseView1.hints.CourseId.tooltip}"
+                                                                                   id="ot1"/>
+                                                                </af:column>
+                                    
                                     <af:column sortProperty="#{bindings.TblCourseView1.hints.Name.name}"
-                                                                           filterable="true" headerText="Training"
+                                                                           filterable="true" 
+                                                                           headerText="Training"
                                                                            id="c3" width="300">
                                                                            
                                                                              <f:facet name="filter">
@@ -76,8 +90,9 @@
                                                                                    id="ot3"/>
                                                                 </af:column>
                                                                 <af:column sortProperty="#{bindings.TblCourseView1.hints.Ast.name}"
-                                                                           filterable="true" headerText="Active" id="c4"
-                                                                           width="79">
+                                                                           filterable="true" 
+                                                                           headerText="Active" id="c4"
+                                                                           width="80">
                                                                            
                                                                                 <f:facet name="filter">
                                                                        <af:inputText value="#{vs.filterCriteria.Ast}"
@@ -102,10 +117,10 @@
                                             <af:gridRow marginTop="5px" height="auto" id="gr3">
                                                 <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc4"/>
                                             </af:gridRow>
-                                            <af:gridRow marginTop="5px" height="auto" id="gr4">
+                                            <af:gridRow marginTop="5px" height="auto" id="gr1">
                                                 <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc5">
                                                     <af:panelTabbed position="above" id="pt3"
-                                                                    inlineStyle="width:735px;">
+                                                                    inlineStyle="width:569px;">
                                                         <af:showDetailItem id="tab2" text="Module Setup">
                                                             <af:table value="#{bindings.TblModuleView3.collectionModel}"
                                                                       var="row"
@@ -120,31 +135,8 @@
                                                                       filterVisible="true"
                                                                       queryListener="#{bindings.TblModuleView3Query.processQuery}"
                                                                       varStatus="vs" id="t2"
-                                                                      partialTriggers="::b4 ::b6 ::b7 ::b14" width="718"
+                                                                      partialTriggers="::b7 ::b14" width="557"
                                                                       scrollPolicy="page" autoHeightRows="0">
-                                                                <af:column sortProperty="#{bindings.TblModuleView3.hints.CourseId.name}"
-                                                                           filterable="true" sortable="true"
-                                                                           headerText="Training ID" align="center"
-                                                                           id="c6" width="80">
-                                                                           
-                                                                            <f:facet name="filter">
-                                                                       <af:inputText value="#{vs.filterCriteria.CourseId}"
-                                                                                     id="it8" placeholder="Search ID">
-                                                                       </af:inputText>
-                                                                            </f:facet>
-                                                                           
-                                                                    <af:inputText value="#{row.bindings.CourseId.inputValue}"
-                                                                                  label="#{bindings.TblModuleView3.hints.CourseId.label}"
-                                                                                  required="#{bindings.TblModuleView3.hints.CourseId.mandatory}"
-                                                                                  columns="#{bindings.TblModuleView3.hints.CourseId.displayWidth}"
-                                                                                  maximumLength="#{bindings.TblModuleView3.hints.CourseId.precision}"
-                                                                                  shortDesc="#{bindings.TblModuleView3.hints.CourseId.tooltip}"
-                                                                                  id="it2"
-                                                                                  inlineStyle="text-align:center; vertical-align: middle;"
-                                                                                  contentStyle="text-align:center">
-                                                                        <f:validator binding="#{row.bindings.CourseId.validator}"/>
-                                                                    </af:inputText>
-                                                                </af:column>
                                                                 <af:column sortProperty="#{bindings.TblModuleView3.hints.ModuleId.name}"
                                                                            filterable="true" sortable="true"
                                                                            headerText="Module ID" align="center" id="c5"
@@ -170,7 +162,7 @@
                                                                 </af:column>
                                                                 <af:column sortProperty="#{bindings.TblModuleView3.hints.Name.name}"
                                                                            filterable="true" sortable="true"
-                                                                           headerText="Module" id="c7" width="445">
+                                                                           headerText="Module" id="c7" width="400">
                                                                            
                                                                                 <f:facet name="filter">
                                                                        <af:inputText value="#{vs.filterCriteria.Name}"
@@ -219,10 +211,11 @@
                                                 </af:gridCell>
                                             </af:gridRow>
                                             <af:gridRow marginTop="5px" height="auto" id="gr5">
-                                                <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc6">
-                                                    <af:spacer width="220" height="20" id="s9"/>
+                                                <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc1">
+                                                   
                                                     <af:panelGroupLayout id="pg1">
-                                                        <af:button actionListener="#{bindings.CreateInsert.execute}"
+                            <af:spacer width="165" height="20" id="s2"/>
+                            <af:button actionListener="#{bindings.CreateInsert.execute}"
                                                                    text="Add"
                                                                    disabled="#{!bindings.CreateInsert.enabled}" id="b9"
                                                                    icon="#{resource['images:add.png']}"
@@ -240,18 +233,11 @@
                                                                    icon="#{resource['images:delete.png']}"
                                                                    inlineStyle="width:70px; text-align:center; vertical-align: middle;"
                                                                    immediate="true" action="Module_Setup.jsf"/>
-                                                        <af:spacer width="5" height="10" id="s12"/>
-                                                        <af:button actionListener="#{bindings.Commit.execute}"
-                                                                   text="Save"
-                                                                   disabled="#{!bindings.Commit.enabled}" id="b8"
-                                                                   icon="#{resource['images:save.png']}"/>
-                                                    </af:panelGroupLayout>
+                        </af:panelGroupLayout>
                                                 </af:gridCell>
                                             </af:gridRow>
                                             <af:gridRow marginTop="5px" height="auto" marginBottom="5px" id="gr6">
-                                                <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc7">
-                                                    <af:spacer width="10" height="10" id="s13"/>
-                                                </af:gridCell>
+                                                <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc7"/>
                                             </af:gridRow>
                                         </af:panelGridLayout>
                                     </af:showDetailItem>

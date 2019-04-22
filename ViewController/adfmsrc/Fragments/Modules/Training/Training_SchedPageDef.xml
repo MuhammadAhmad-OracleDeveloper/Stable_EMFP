@@ -108,6 +108,7 @@
     <action IterBinding="TblTrainingSchMasterView1Iterator" id="Previous" RequiresUpdateModel="true" Action="previous"/>
     <action IterBinding="TblTrainingSchMasterView1Iterator" id="Next" RequiresUpdateModel="true" Action="next"/>
     <action IterBinding="TblTrainingSchMasterView1Iterator" id="Last" RequiresUpdateModel="true" Action="last"/>
+    <action id="Rollback" RequiresUpdateModel="false" Action="rollbackTransaction" DataControl="AppModuleDataControl"/>
   </bindings>
 </pageDefinition>
 

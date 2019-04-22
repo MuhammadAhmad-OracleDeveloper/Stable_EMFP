@@ -1,28 +1,34 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <ui:composition xmlns:ui="http://java.sun.com/jsf/facelets" xmlns:h="http://java.sun.com/jsf/html"
                 xmlns:af="http://xmlns.oracle.com/adf/faces/rich" xmlns:f="http://java.sun.com/jsf/core">
-  <af:panelAccordion discloseMany="false" id="pa3" inlineStyle="height:811px; width:1030px;">
+  <af:panelAccordion discloseMany="false" id="pa3" inlineStyle="height:850px; width:1030px;">
                                     <af:showDetailItem id="pane2" text="Training Schedule">
                                         <af:panelGridLayout id="pgl2">
+                                        <af:gridRow marginTop="5px" height="auto" id="gr4">
+                                               <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc6"
+                                                            halign="end" valign="middle">
+                       <af:button actionListener="#{bindings.Rollback.execute}" text="Cancel"
+                                  disabled="#{!bindings.Rollback.enabled}" immediate="true" id="b1"
+                                  icon="#{resource['images:cancel.png']}" iconPosition="top">
+                           <af:resetActionListener/>
+                       </af:button>
+                       <af:spacer width="10" height="10" id="s9"/>
+                                                       <af:button actionListener="#{bindings.Commit.execute}"
+                                                                  text="Save All" disabled="#{!bindings.Commit.enabled}"
+                                                                  id="b10"
+
+                                                                  icon="#{resource['images:save.png']}"
+                                                                  iconPosition="top"/>
+                       <af:spacer width="10" height="10" id="s1"/>
+                    </af:gridCell>
+                                           </af:gridRow>
                                             <af:gridRow marginTop="5px" height="auto" id="gr2">
                                                 <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc2">
                                                     <af:panelTabbed position="above" id="pt2"
                                                                     inlineStyle="width:1013px;height:365px">
                                                         <af:showDetailItem id="tab1" text="Training Schedule Master"
                                                                            inflexibleHeight="100">
-                                                                           
-                                                                           
-                                                                           
-                                                                           
-                                                   
-                                
-                                
-                                
-                                
-                                
-                                
-                                
-                                <af:panelFormLayout id="pfl1" maxColumns="3" rows="5">
+                                        <af:panelFormLayout id="pfl1" maxColumns="3" rows="5">
                                                                 <af:inputText value="#{bindings.TrainingSchMasterId.inputValue}"
                                                                               label="#{bindings.TrainingSchMasterId.hints.label}"
                                                                               required="#{bindings.TrainingSchMasterId.hints.mandatory}"
@@ -154,8 +160,9 @@
                                             </af:gridRow>
                                             <af:gridRow marginTop="5px" height="auto" id="gr3">
                                                 <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc4">
-                                                    <af:spacer width="200" height="20" id="s16"/>
+                                                    
                                                     <af:panelGroupLayout id="pg1">
+                                                    <af:spacer width="230" height="20" id="s16"/>
                                                      <af:button actionListener="#{bindings.First.execute}"
                                                                                        text="First"
                                                                                        disabled="#{!bindings.First.enabled}"
@@ -191,22 +198,19 @@
                                                     icon="#{resource['images:delete.png']}"
                                                                disabled="#{!bindings.Delete.enabled}" id="b9"
                                                                immediate="true" action="Training_Sched.jsf" />
-                                                        <af:spacer width="5" height="10" id="s12"/>
-                                                        <af:button text="Save" id="b21"
-                                                                   icon="#{resource['images:save.png']}"/>
                                                     </af:panelGroupLayout>
                                                     
                                                 </af:gridCell>
                                             </af:gridRow>
-                                            <af:gridRow marginTop="5px" height="auto" marginBottom="5px" id="gr4">
+                                            <af:gridRow marginTop="5px" height="auto" marginBottom="5px" id="gr7">
                                                 <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc5">
                                                     
                                                 </af:gridCell>
                                             </af:gridRow>
                                             <af:gridRow marginTop="5px" height="auto" marginBottom="5px" id="gr5">
-                                                <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc6">
+                                                <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc1">
                                                     <af:panelTabbed position="above" id="pt3"
-                                                                    inlineStyle="width:465px;">
+                                                                    inlineStyle="width:439px;">
                                                         <af:showDetailItem id="tab2" text="Training Schedule Detail">
                                                             <af:table value="#{bindings.TblTrainingSchDetailView4.collectionModel}"
                                                                       var="row"
@@ -221,7 +225,8 @@
                                                                       filterVisible="true"
                                                                       queryListener="#{bindings.TblTrainingSchDetailView4Query.processQuery}"
                                                                       varStatus="vs" id="t2"
-                                                                      partialTriggers="::b13 ::b14 ::b15 ::b22" width="447"
+                                                                      partialTriggers="::b13 ::b14 ::b15 ::b22"
+                                                                      width="426"
                                                                       scrollPolicy="page" autoHeightRows="0" >
                                                                 <af:column sortProperty="#{bindings.TblTrainingSchDetailView4.hints.ClusterId.name}"
                                                                            filterable="true" sortable="true"
@@ -319,8 +324,9 @@
                                             </af:gridRow>
                                             <af:gridRow marginTop="5px" height="auto" marginBottom="5px" id="gr6">
                                                 <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc7">
-                                                    <af:spacer width="100" height="20" id="s9"/>
+                                                    
                                                     <af:panelGroupLayout id="pg2">
+                                                    <af:spacer width="120" height="20" id="s2"/>
                                                          <af:button actionListener="#{bindings.CreateInsert.execute}"
                                                                text="Add"
                                                                icon="#{resource['images:add.png']}"
@@ -336,10 +342,6 @@
                                                                text="Delete" disabled="#{!bindings.Delete1.enabled}"
                                                                id="b15"
                                                                immediate="true" action="Training_Sched.jsf" />
-                                                        <af:spacer width="5" height="10" id="s15"/>
-                                                        <af:button actionListener="#{bindings.Commit.execute}" text="Save"
-                                                    icon="#{resource['images:save.png']}"
-                                                               disabled="#{!bindings.Commit.enabled}" id="b16"/>
                                                     </af:panelGroupLayout>
                                                     
                                                 </af:gridCell>
