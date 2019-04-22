@@ -34,7 +34,7 @@
                                                                     <af:gridCell marginStart="5px" width="100%"
                                                                                  marginEnd="5px" id="gc8">
                                                                         <af:panelTabbed position="above" id="pt3"
-                                                                                        inlineStyle="width:446px;">
+                                                                                        inlineStyle="width:454px;">
                                                                             <af:showDetailItem id="tab2" text="Level 1">
                                                                                 <af:table value="#{bindings.TblItemL1View1.collectionModel}"
                                                                                           var="row"
@@ -51,7 +51,7 @@
                                                                                           varStatus="vs" id="t2"
                                                                                           partialTriggers="::b9 ::b10 ::b11 ::b25"
                                                                                           scrollPolicy="page" autoHeightRows="0"
-                                                                                          width="435">
+                                                                                          width="436">
                                                                                     <af:column sortProperty="#{bindings.TblItemL1View1.hints.ItemL1Id.name}"
                                                                                                filterable="true"
                                                                                                sortable="true"
@@ -99,7 +99,7 @@
                                                                                                filterable="true"
                                                                                                sortable="true"
                                                                                                headerText="Active"
-                                                                                               id="c9"  width="60">
+                                                                                               id="c9"  width="59">
                                                                                                 <f:facet name="filter">
                                                                        <af:inputText 
                                                                        value="#{vs.filterCriteria.Ast}"
@@ -163,7 +163,7 @@
                                                                     <af:gridCell marginStart="5px" width="100%"
                                                                                  marginEnd="5px" id="gc10">
                                                                         <af:panelTabbed position="above" id="pt4"
-                                                                                        inlineStyle="width:445px;">
+                                                                                        inlineStyle="width:453px;">
                                                                             <af:showDetailItem id="tab3" text="Level 2">
                                                                                 <af:table value="#{bindings.TblItemL2View3.collectionModel}"
                                                                                           var="row"
@@ -180,7 +180,7 @@
                                                                                           varStatus="vs" id="t3"
                                                                                           partialTriggers="::b14 ::b15 ::b16 ::b17 ::b18 ::b19 ::b26"
                                                                                           scrollPolicy="page" autoHeightRows="0"
-                                                                                          width="435">
+                                                                                          width="438">
                                                                                     <af:column sortProperty="#{bindings.TblItemL2View3.hints.ItemL2Id.name}"
                                                                                                filterable="true"
                                                                                                sortable="true"
@@ -290,7 +290,7 @@
                                                                     <af:gridCell marginStart="5px" width="100%"
                                                                                  marginEnd="5px" id="gc12">
                                                                         <af:panelTabbed position="above" id="pt5"
-                                                                                        inlineStyle="width:443px;">
+                                                                                        inlineStyle="width:451px;">
                                                                             <af:showDetailItem id="tab4" text="Level 3">
                                                                                 <af:table value="#{bindings.TblItemL3View4.collectionModel}"
                                                                                           var="row"
@@ -307,7 +307,7 @@
                                                                                           varStatus="vs" id="t4"
                                                                                           partialTriggers="::b17 ::b18 ::b19 ::b27"
                                                                                           scrollPolicy="page" autoHeightRows="0"
-                                                                                          width="434">
+                                                                                          width="438">
                                                                                     <af:column sortProperty="#{bindings.TblItemL3View4.hints.ItemL3Id.name}"
                                                                                                filterable="true"
                                                                                                sortable="true"
@@ -417,7 +417,7 @@
                                                                     <af:gridCell marginStart="5px" width="100%"
                                                                                  marginEnd="5px" id="gc14">
                                                                         <af:panelTabbed position="above" id="pt6"
-                                                                                        inlineStyle="width:445px;">
+                                                                                        inlineStyle="width:448px;">
                                                                             <af:showDetailItem id="tab5" text="Level 4">
                                                                                 <af:table value="#{bindings.TblItemL4View5.collectionModel}"
                                                                                           var="row"
@@ -434,7 +434,7 @@
                                                                                           varStatus="vs" id="t5"
                                                                                           partialTriggers="::b21 ::b22 ::b23 ::b29"
                                                                                           scrollPolicy="page" autoHeightRows="0"
-                                                                                          width="435">
+                                                                                          width="437">
                                                                                     <af:column sortProperty="#{bindings.TblItemL4View5.hints.ItemL4Id.name}"
                                                                                                filterable="true"
                                                                                                sortable="true"
@@ -559,7 +559,7 @@
                                                                       varStatus="vs" id="t1"
                                                                       partialTriggers=" ::b28"
                                                                       scrollPolicy="page" autoHeightRows="0"
-                                                                      width="1005">
+                                                                      width="1008">
                                     <af:column sortProperty="#{bindings.TblItemL4View1.hints.ItemL1Id.name}"
                                                filterable="true" 
                                                 headerText="Level-1 ID" id="c3" width="50" align="center">

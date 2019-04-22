@@ -36,7 +36,8 @@
                                           filterModel="#{bindings.TblProjOffView1Query.queryDescriptor}"
                                           filterVisible="true"
                                           queryListener="#{bindings.TblProjOffView1Query.processQuery}" varStatus="vs"
-                                          id="t1" partialTriggers="::b9 ::b2" scrollPolicy="page" autoHeightRows="0">
+                                          id="t1" partialTriggers="::b9 ::b2" scrollPolicy="page" autoHeightRows="0"
+                                          width="999">
                                     <af:column sortProperty="#{bindings.TblProjOffView1.hints.Project_Name.name}"
                                                filterable="true" headerText="Project" id="c16" width="150">
                                         <f:facet name="filter">
@@ -58,7 +59,7 @@
                                                        id="ot3"/>
                                     </af:column>
                                     <af:column sortProperty="#{bindings.TblProjOffView1.hints.ContactPer.name}"
-                                               filterable="true" headerText="Contact Person" id="c4" width="100">
+                                               filterable="true" headerText="Contact Person" id="c4" width="80">
                                         <f:facet name="filter">
                                             <af:inputText value="#{vs.filterCriteria.ContactPer}" id="it6"
                                                           placeholder="Search Contact Person"></af:inputText>
@@ -152,7 +153,7 @@
                 </af:gridRow>
                 <af:gridRow marginTop="5px" height="auto" id="gr1">
                     <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc5">
-                        <af:panelTabbed position="above" id="pt3" inlineStyle="width:691px;">
+                        <af:panelTabbed position="above" id="pt3" inlineStyle="width:697px;">
                             <af:showDetailItem id="tab2" text="Target Crops">
                                 <af:table value="#{bindings.TblTargetCropsView4.collectionModel}" var="row"
                                           rows="#{bindings.TblTargetCropsView4.rangeSize}"
@@ -165,7 +166,7 @@
                                           filterVisible="true"
                                           queryListener="#{bindings.TblTargetCropsView4Query.processQuery}"
                                           varStatus="vs" id="t2" partialTriggers="::b10"
-                                          scrollPolicy="page" autoHeightRows="0" width="680">
+                                          scrollPolicy="page" autoHeightRows="0" width="683">
                                     <af:column sortProperty="#{bindings.TblTargetCropsView4.hints.CropId.name}"
                                                filterable="true" sortable="true" headerText="Crop" id="c19" width="200">
                                         <f:facet name="filter">

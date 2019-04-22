@@ -26,7 +26,7 @@
                                             <af:gridRow marginTop="5px" height="auto" id="gr2">
                                                 <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc4">
                                                     <af:panelTabbed position="above" id="pt2"
-                                                                    inlineStyle="width:712px;">
+                                                                    inlineStyle="width:716px;">
                                                         <af:showDetailItem id="tab1" text="Project Crops">
                                                             <af:table value="#{bindings.TblCropView1.collectionModel}"
                                                                       var="row"
@@ -41,7 +41,7 @@
                                                                       filterVisible="true"
                                                                       queryListener="#{bindings.TblCropView1Query.processQuery}"
                                                                       varStatus="vs" id="t1"
-                                                                      partialTriggers="::b12 ::b19 ::b2" width="700"
+                                                                      partialTriggers="::b12 ::b19 ::b2" width="702"
                                                                       scrollPolicy="page" autoHeightRows="0">
                                                                 <af:column sortProperty="#{bindings.TblCropView1.hints.CropId.name}"
                                                                            filterable="true" sortable="true"
@@ -218,7 +218,7 @@
                                                                       varStatus="vs" id="t2"
                                                                       partialTriggers="::b13 ::b14 ::b15 ::b17"
                                                                       scrollPolicy="page" autoHeightRows="0"
-                                                                      width="410">
+                                                                      width="414">
                                                                 <af:column sortProperty="#{bindings.TblCropTypeView3.hints.CropTypeId.name}"
                                                                            filterable="true" sortable="true"
                                                                            headerText="Crop type ID"

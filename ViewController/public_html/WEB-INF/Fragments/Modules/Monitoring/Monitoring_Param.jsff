@@ -27,7 +27,7 @@
                                             <af:gridRow marginTop="5px" height="auto" id="gr1">
                                                 <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc5">
                                                     <af:panelTabbed position="above" id="pt3"
-                                                                    inlineStyle="width:946px;">
+                                                                    inlineStyle="width:950px;">
                                                         <af:showDetailItem id="tab2" text="Monitoring Parameters">
                                                             <af:table value="#{bindings.TblMonParamView1.collectionModel}"
                                                                       var="row"
@@ -42,7 +42,7 @@
                                                                       filterVisible="true"
                                                                       queryListener="#{bindings.TblMonParamView1Query.processQuery}"
                                                                       varStatus="vs" id="t2"
-                                                                      partialTriggers="::b4 ::b6 ::b7 ::b2" width="935"
+                                                                      partialTriggers="::b4 ::b6 ::b7 ::b2" width="938"
                                                                       scrollPolicy="page" autoHeightRows="0">
                                                                 <af:column sortProperty="#{bindings.TblMonParamView1.hints.OutputIndId.name}"
                                                                            filterable="true" sortable="true"

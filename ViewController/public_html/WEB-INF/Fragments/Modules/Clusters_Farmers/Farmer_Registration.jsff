@@ -42,7 +42,7 @@
                                                       queryListener="#{bindings.TblFarmerRegView1Query.processQuery}"
                                                       varStatus="vs" id="t1"
                                                       partialTriggers="::b4 ::b6 ::b7 ::b8 ::b11 ::b12 ::b13 ::b33"
-                                                      width="764" scrollPolicy="page" autoHeightRows="0">
+                                                      width="765" scrollPolicy="page" autoHeightRows="0">
                                                 <af:column sortProperty="#{bindings.TblFarmerRegView1.hints.ClusterId.name}"
                                                            filterable="true" sortable="true" headerText="Cluster"
                                                            id="c20" width="150">
@@ -1005,7 +1005,7 @@
                                           filterModel="#{bindings.TblFarmerRegOwnershipView3Query.queryDescriptor}"
                                           filterVisible="true"
                                           queryListener="#{bindings.TblFarmerRegOwnershipView3Query.processQuery}"
-                                          varStatus="vs" id="t6" partialTriggers="::b10 ::b30 ::b31 ::b38" width="875"
+                                          varStatus="vs" id="t6" partialTriggers="::b10 ::b30 ::b31 ::b38" width="877"
                                           scrollPolicy="page" autoHeightRows="0">
                                     <af:column sortProperty="#{bindings.TblFarmerRegOwnershipView3.hints.FarmerRegOwnershipId.name}"
                                                filterable="true" sortable="true" headerText="Farmer Owner ID" id="c38"

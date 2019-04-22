@@ -24,7 +24,7 @@
                                            </af:gridRow>
                 <af:gridRow marginTop="5px" height="auto" id="gr2">
                     <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc2">
-                        <af:panelTabbed position="above" id="pt2" inlineStyle="width:652px;">
+                        <af:panelTabbed position="above" id="pt2" inlineStyle="width:659px;">
                             <af:showDetailItem id="tab1" text="Supplier Setup">
                                 <af:table value="#{bindings.TblSupplierView1.collectionModel}" var="row"
                                           rows="#{bindings.TblSupplierView1.rangeSize}"
@@ -37,7 +37,7 @@
                                           filterVisible="true"
                                           queryListener="#{bindings.TblSupplierView1Query.processQuery}" varStatus="vs"
                                           id="t1" partialTriggers="::b9 ::b10 ::b13 ::b14 ::b16 ::b1"
-                                          scrollPolicy="page" autoHeightRows="0" width="639">
+                                          scrollPolicy="page" autoHeightRows="0" width="643">
                                     <af:column sortProperty="#{bindings.TblSupplierView1.hints.SupplierId.name}"
                                                filterable="true" sortable="true" align="center" headerText="Supplier ID"
                                                id="c1" width="60">

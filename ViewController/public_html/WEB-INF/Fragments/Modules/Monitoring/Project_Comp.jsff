@@ -28,7 +28,7 @@
                                             <af:gridRow marginTop="5px" height="auto" id="gr2">
                                                 <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc2">
                                                     <af:panelTabbed position="above" id="pt2"
-                                                                    inlineStyle="width:947px;">
+                                                                    inlineStyle="width:953px;">
                                                         <af:showDetailItem id="tab1" text="Project Components">
                                                             <af:table value="#{bindings.TblProjCompView1.collectionModel}"
                                                                       var="row"
@@ -44,7 +44,7 @@
                                                                       queryListener="#{bindings.TblProjCompView1Query.processQuery}"
                                                                       varStatus="vs" id="t1"
                                                                       partialTriggers="::b13 ::b14 ::b15 ::b2"
-                                                                      width="936"
+                                                                      width="940"
                                                                       scrollPolicy="page" autoHeightRows="0" >
                                                                 <af:column sortProperty="#{bindings.TblProjCompView1.hints.ProjId.name}"
                                                                            filterable="true" sortable="true"
