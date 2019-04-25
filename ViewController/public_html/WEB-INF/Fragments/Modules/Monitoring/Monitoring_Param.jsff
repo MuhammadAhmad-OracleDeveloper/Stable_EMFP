@@ -6,11 +6,28 @@
                                                    inlineStyle="height:811px; width:1030px;">
                                     <af:showDetailItem id="pane2" text="Monitoring Parameters">
                                         <af:panelGridLayout id="pgl2">
-                                          
-                                            <af:gridRow marginTop="5px" height="auto" id="gr4">
+                                          <af:gridRow marginTop="5px" height="auto" id="gr4">
+                                               <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc6"
+                                                            halign="end" valign="middle">
+                       <af:button actionListener="#{bindings.Rollback.execute}" text="Cancel"
+                                  disabled="#{!bindings.Rollback.enabled}" immediate="true" id="b1"
+                                  icon="#{resource['images:cancel.png']}" iconPosition="top">
+                           <af:resetActionListener/>
+                       </af:button>
+                       <af:spacer width="10" height="10" id="s9"/>
+                                                       <af:button actionListener="#{bindings.Commit.execute}"
+                                                                  text="Save All" disabled="#{!bindings.Commit.enabled}"
+                                                                  id="b10"
+
+                                                                  icon="#{resource['images:save.png']}"
+                                                                  iconPosition="top"/>
+                       <af:spacer width="10" height="10" id="s1"/>
+                   </af:gridCell>
+                                           </af:gridRow>
+                                            <af:gridRow marginTop="5px" height="auto" id="gr1">
                                                 <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc5">
                                                     <af:panelTabbed position="above" id="pt3"
-                                                                    inlineStyle="width:1001px;">
+                                                                    inlineStyle="width:950px;">
                                                         <af:showDetailItem id="tab2" text="Monitoring Parameters">
                                                             <af:table value="#{bindings.TblMonParamView1.collectionModel}"
                                                                       var="row"
@@ -25,7 +42,7 @@
                                                                       filterVisible="true"
                                                                       queryListener="#{bindings.TblMonParamView1Query.processQuery}"
                                                                       varStatus="vs" id="t2"
-                                                                      partialTriggers="::b4 ::b6 ::b7 ::b2" width="979"
+                                                                      partialTriggers="::b4 ::b6 ::b7 ::b2" width="938"
                                                                       scrollPolicy="page" autoHeightRows="0">
                                                                 <af:column sortProperty="#{bindings.TblMonParamView1.hints.OutputIndId.name}"
                                                                            filterable="true" sortable="true"
@@ -133,9 +150,10 @@
                                                 </af:gridCell>
                                             </af:gridRow>
                                             <af:gridRow marginTop="5px" height="auto" id="gr5">
-                                                <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc6">
-                                                    <af:spacer width="343" height="20" id="s2"/>
+                                                <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc2">
+                                                    
                                                     <af:panelGroupLayout id="pg1" layout="horizontal">
+                                                    <af:spacer width="343" height="20" id="s2"/>
                                                         <af:button actionListener="#{bindings.CreateInsert.execute}"
                                                                    text="Add"
                                                                   
@@ -156,14 +174,7 @@
                                                                    icon="#{resource['images:delete.png']}" id="b7"
                                                                    inlineStyle="width:70px; text-align:center; vertical-align: middle;"
                                                                    immediate="true" action="Monitoring_Parameters.jsf"/>
-                                                        <af:spacer width="5" height="10" id="s7"/>
-                                                        <af:button actionListener="#{bindings.Commit.execute}"
-                                                                   icon="#{resource['images:save.png']}" text="Save"
-                                                                   disabled="#{!bindings.Commit.enabled}"
-                                                                  
-                                                                   id="b8"
-                                                                   inlineStyle="width:70px; text-align:center; vertical-align: middle;"/>
-                                                    </af:panelGroupLayout>
+                        </af:panelGroupLayout>
                                                 </af:gridCell>
                                             </af:gridRow>
                                             <af:gridRow marginTop="5px" height="auto" marginBottom="5px" id="gr6">

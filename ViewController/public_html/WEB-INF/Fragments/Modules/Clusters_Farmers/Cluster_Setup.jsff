@@ -5,10 +5,28 @@
                                                    inlineStyle="height:811px; width:1030px;">
                                     <af:showDetailItem id="pane2" text="Cluster Setup">
                                         <af:panelGridLayout id="pgl2">
-                                            <af:gridRow marginTop="5px" height="auto" id="gr4">
+                                        <af:gridRow marginTop="5px" height="auto" id="gr4">
+                                               <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc6"
+                                                            halign="end" valign="middle">
+                       <af:button actionListener="#{bindings.Rollback.execute}" text="Cancel"
+                                  disabled="#{!bindings.Rollback.enabled}" immediate="true" id="b1"
+                                  icon="#{resource['images:cancel.png']}" iconPosition="top">
+                           <af:resetActionListener/>
+                       </af:button>
+                       <af:spacer width="10" height="10" id="s9"/>
+                                                       <af:button actionListener="#{bindings.Commit.execute}"
+                                                                  text="Save All" disabled="#{!bindings.Commit.enabled}"
+                                                                  id="b10"
+
+                                                                  icon="#{resource['images:save.png']}"
+                                                                  iconPosition="top"/>
+                       <af:spacer width="10" height="10" id="s1"/>
+                   </af:gridCell>
+                                           </af:gridRow>
+                                            <af:gridRow marginTop="5px" height="auto" id="gr1">
                                                 <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc5">
                                                     <af:panelTabbed position="above" id="pt3"
-                                                                    inlineStyle="width:1015px;">
+                                                                    inlineStyle="width:1005px;">
                                                         <af:showDetailItem id="tab2" text="Clusters Setup">
                                                             <af:table value="#{bindings.TblClusterView1.collectionModel}"
                                                                       var="row"
@@ -25,11 +43,11 @@
                                                                       varStatus="vs" id="t2"
                                                                       partialTriggers="::b6 ::b7 ::b8 ::b9"
                                                                       scrollPolicy="page" autoHeightRows="0"
-                                                                      width="993">
+                                                                      width="995">
                                                                 <af:column sortProperty="#{bindings.TblClusterView1.hints.ClusterId.name}"
                                                                            filterable="true" sortable="true"
                                                                            headerText="Cluster ID"
-                                                                           id="c8" align="center" width="60">
+                                                                           id="c8" align="center" width="50">
                                                                             <f:facet name="filter">
                                                                        <af:inputText 
                                                                        value="#{vs.filterCriteria.ClusterId}"
@@ -62,7 +80,7 @@
                                     <af:column sortProperty="#{bindings.TblClusterView1.hints.PhaseId.name}"
                                                                            filterable="true" sortable="true"
                                                                            headerText="Phase"
-                                                                           id="c1" width="100">
+                                                                           id="c1" width="130">
                                                                             <f:facet name="filter">
                                                                        <af:inputText 
                                                                        value="#{vs.filterCriteria.PhaseId}"
@@ -82,7 +100,7 @@
                                                                 <af:column sortProperty="#{bindings.TblClusterView1.hints.Name.name}"
                                                                            filterable="true" sortable="true"
                                                                            headerText="Cluster"
-                                                                           id="c9" width="100">
+                                                                           id="c9" width="130">
                                                                             <f:facet name="filter">
                                                                        <af:inputText 
                                                                        value="#{vs.filterCriteria.Name}"
@@ -103,7 +121,7 @@
                                                                 <af:column sortProperty="#{bindings.TblClusterView1.hints.CropId.name}"
                                                                            filterable="true" sortable="true"
                                                                            headerText="Crop"
-                                                                           id="c11" width="100">
+                                                                           id="c11" width="130">
                                                                             <f:facet name="filter">
                                                                        <af:inputText 
                                                                        value="#{vs.filterCriteria.CropId}"
@@ -223,7 +241,7 @@
                                                                 <af:column sortProperty="#{bindings.TblClusterView1.hints.Ast.name}"
                                                                            filterable="true" sortable="true"
                                                                            headerText="Active"
-                                                                           id="c10" width="60">
+                                                                           id="c10" width="50">
                                                                             <f:facet name="filter">
                                                                        <af:inputText 
                                                                        value="#{vs.filterCriteria.Ast}"
@@ -251,7 +269,7 @@
                                                 </af:gridCell>
                                             </af:gridRow>
                                             <af:gridRow marginTop="5px" height="auto" marginBottom="5px" id="gr5">
-                                                <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc6">
+                                                <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc1">
                                                    
                                                     <af:panelGroupLayout id="pg1" layout="horizontal">
                                                      <af:spacer width="350" height="10" id="s7"/>
@@ -272,13 +290,7 @@
                                                                    disabled="#{!bindings.Delete.enabled}"
                                                                    id="b9"
                                                                    immediate="true" action="Clusters_Setup.jsf"/>
-                                                                     <af:spacer width="5" height="10" id="s8"/>
-                                                        <af:button actionListener="#{bindings.Commit.execute}"
-                                                                    text="Save"
-                                                                   icon="#{resource['images:save.png']}"
-                                                                    disabled="#{!bindings.Commit.enabled}"
-                                                                   id="b10"/>
-                                                    </af:panelGroupLayout>
+                        </af:panelGroupLayout>
                                                    
                                                 </af:gridCell>
                                             </af:gridRow>

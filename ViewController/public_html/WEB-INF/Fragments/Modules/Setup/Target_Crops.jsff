@@ -1,9 +1,27 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <ui:composition xmlns:ui="http://java.sun.com/jsf/facelets" xmlns:af="http://xmlns.oracle.com/adf/faces/rich"
                 xmlns:f="http://java.sun.com/jsf/core">
-    <af:panelAccordion discloseMany="false" id="pa3" inlineStyle="height:811px; width:1030px;">
+    <af:panelAccordion discloseMany="false" id="pa3" inlineStyle="height:780px; width:1030px;">
         <af:showDetailItem id="pane2" text="Target Crops">
             <af:panelGridLayout id="pgl2">
+            <af:gridRow marginTop="5px" height="auto" id="gr4">
+                                               <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc6"
+                                                            halign="end" valign="middle">
+                       <af:button actionListener="#{bindings.Rollback.execute}" text="Cancel"
+                                  disabled="#{!bindings.Rollback.enabled}" immediate="true" id="b1"
+                                  icon="#{resource['images:cancel.png']}" iconPosition="top">
+                           <af:resetActionListener/>
+                       </af:button>
+                       <af:spacer width="10" height="10" id="s9"/>
+                                                       <af:button actionListener="#{bindings.Commit.execute}"
+                                                                  text="Save All" disabled="#{!bindings.Commit.enabled}"
+                                                                  id="b10"
+
+                                                                  icon="#{resource['images:save.png']}"
+                                                                  iconPosition="top"/>
+                       <af:spacer width="10" height="10" id="s1"/>
+                   </af:gridCell>
+                                           </af:gridRow>
                 <af:gridRow marginTop="5px" height="auto" id="gr2">
                     <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc2">
                         <af:panelTabbed position="above" id="pt2" inlineStyle="width:1014px;">
@@ -18,7 +36,8 @@
                                           filterModel="#{bindings.TblProjOffView1Query.queryDescriptor}"
                                           filterVisible="true"
                                           queryListener="#{bindings.TblProjOffView1Query.processQuery}" varStatus="vs"
-                                          id="t1" partialTriggers="::b9" scrollPolicy="page" autoHeightRows="0">
+                                          id="t1" partialTriggers="::b9 ::b2" scrollPolicy="page" autoHeightRows="0"
+                                          width="999">
                                     <af:column sortProperty="#{bindings.TblProjOffView1.hints.Project_Name.name}"
                                                filterable="true" headerText="Project" id="c16" width="150">
                                         <f:facet name="filter">
@@ -40,7 +59,7 @@
                                                        id="ot3"/>
                                     </af:column>
                                     <af:column sortProperty="#{bindings.TblProjOffView1.hints.ContactPer.name}"
-                                               filterable="true" headerText="Contact Person" id="c4" width="99">
+                                               filterable="true" headerText="Contact Person" id="c4" width="80">
                                         <f:facet name="filter">
                                             <af:inputText value="#{vs.filterCriteria.ContactPer}" id="it6"
                                                           placeholder="Search Contact Person"></af:inputText>
@@ -63,7 +82,7 @@
                                     </af:column>
                                     <af:column sortProperty="#{bindings.TblProjOffView1.hints.Tel.name}"
                                                filterable="true" align="center" headerText="Telephone" id="c6"
-                                               width="60">
+                                               width="80">
                                         <f:facet name="filter">
                                             <af:inputText value="#{vs.filterCriteria.Tel}" id="it8"
                                                           placeholder="Search Telephone"></af:inputText>
@@ -75,7 +94,7 @@
                                     <af:column sortProperty="#{bindings.TblProjOffView1.hints.Fax.name}"
                                                filterable="true" align="center"
                                                headerText="#{bindings.TblProjOffView1.hints.Fax.label}" id="c7"
-                                               width="60">
+                                               width="80">
                                         <f:facet name="filter">
                                             <af:inputText value="#{vs.filterCriteria.Fax}" id="it9"
                                                           placeholder="Search Fax"></af:inputText>
@@ -97,7 +116,7 @@
                                     <af:column sortProperty="#{bindings.TblProjOffView1.hints.Category.name}"
                                                filterable="true" align="left"
                                                headerText="#{bindings.TblProjOffView1.hints.Category.label}" id="c1"
-                                               width="90">
+                                               width="100">
                                         <f:facet name="filter">
                                             <af:inputText value="#{vs.filterCriteria.Category}" id="it11"
                                                           placeholder="Search Category"></af:inputText>
@@ -132,9 +151,9 @@
                 <af:gridRow marginTop="5px" height="auto" id="gr3">
                     <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc4"/>
                 </af:gridRow>
-                <af:gridRow marginTop="5px" height="auto" id="gr4">
+                <af:gridRow marginTop="5px" height="auto" id="gr1">
                     <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc5">
-                        <af:panelTabbed position="above" id="pt3" inlineStyle="width:706px;">
+                        <af:panelTabbed position="above" id="pt3" inlineStyle="width:697px;">
                             <af:showDetailItem id="tab2" text="Target Crops">
                                 <af:table value="#{bindings.TblTargetCropsView4.collectionModel}" var="row"
                                           rows="#{bindings.TblTargetCropsView4.rangeSize}"
@@ -147,7 +166,7 @@
                                           filterVisible="true"
                                           queryListener="#{bindings.TblTargetCropsView4Query.processQuery}"
                                           varStatus="vs" id="t2" partialTriggers="::b10"
-                                          scrollPolicy="page" autoHeightRows="0" width="687">
+                                          scrollPolicy="page" autoHeightRows="0" width="683">
                                     <af:column sortProperty="#{bindings.TblTargetCropsView4.hints.CropId.name}"
                                                filterable="true" sortable="true" headerText="Crop" id="c19" width="200">
                                         <f:facet name="filter">
@@ -165,7 +184,7 @@
                                     </af:column>
                                     <af:column sortProperty="#{bindings.TblTargetCropsView4.hints.TargetCropsId.name}"
                                                filterable="true" sortable="true" align="center" headerText="Target ID"
-                                               id="c11" width="75">
+                                               id="c11" width="80">
                                         <f:facet name="filter">
                                             <af:inputText value="#{vs.filterCriteria.TargetCropsId}" id="it16"
                                                           placeholder="Search ID"></af:inputText>
@@ -199,7 +218,7 @@
                                     </af:column>
                                     <af:column sortProperty="#{bindings.TblTargetCropsView4.hints.Ast.name}"
                                                filterable="true" sortable="true" headerText="Active" id="c15"
-                                               width="60">
+                                               width="80">
                                         <f:facet name="filter">
                                             <af:inputText value="#{vs.filterCriteria.Ast}" id="it18"
                                                           placeholder="Search Status"></af:inputText>
@@ -215,16 +234,17 @@
                                     </af:column>
                                 </af:table>
                                 <af:button actionListener="#{bindings.Execute.execute}" text="Refresh"
-                                           disabled="#{!bindings.Execute.enabled}" id="b10"
+                                           disabled="#{!bindings.Execute.enabled}" id="b2"
                                            icon="#{resource['images:refresh.png']}"/>
                             </af:showDetailItem>
                         </af:panelTabbed>
                     </af:gridCell>
                 </af:gridRow>
                 <af:gridRow marginTop="5px" height="auto" id="gr5">
-                    <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc6">
-                        <af:spacer width="200" height="20" id="s9"/>
+                    <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc1">
+                        
                         <af:panelGroupLayout id="pg1">
+                        <af:spacer width="220" height="10" id="s2"/>
                             <af:button actionListener="#{bindings.CreateInsert.execute}" text="Add"
                                        icon="#{resource['images:add.png']}" disabled="#{!bindings.CreateInsert.enabled}"
                                        id="b12" inlineStyle="width:70px; text-align:center; vertical-align: middle;"/>
@@ -239,10 +259,6 @@
                                        disabled="#{!bindings.Delete.enabled}" id="b14"
                                        inlineStyle="width:70px; text-align:center; vertical-align: middle;"
                                        immediate="true" action="Target_Crops.jsf"/>
-                            <af:spacer width="5" height="20" id="s12"/>
-                            <af:button actionListener="#{bindings.Commit.execute}" text="Save"
-                                       icon="#{resource['images:save.png']}" disabled="#{!bindings.Commit.enabled}"
-                                       id="b15" inlineStyle="width:70px; text-align:center; vertical-align: middle;"/>
                         </af:panelGroupLayout>
                     </af:gridCell>
                 </af:gridRow>

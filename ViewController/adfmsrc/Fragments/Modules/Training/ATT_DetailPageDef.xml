@@ -53,5 +53,6 @@
     <action IterBinding="TblClusterAttDetailView3Iterator" id="Execute1" RequiresUpdateModel="true"
             Action="iteratorExecute"/>
     <action id="Commit" RequiresUpdateModel="true" Action="commitTransaction" DataControl="AppModuleDataControl"/>
+    <action id="Rollback" RequiresUpdateModel="false" Action="rollbackTransaction" DataControl="AppModuleDataControl"/>
   </bindings>
 </pageDefinition>

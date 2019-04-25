@@ -118,5 +118,6 @@
             Action="iteratorExecute"/>
     <action IterBinding="TblSupplierPartView3Iterator" id="Delete1" RequiresUpdateModel="false"
             Action="removeCurrentRow"/>
+    <action id="Rollback" RequiresUpdateModel="false" Action="rollbackTransaction" DataControl="AppModuleDataControl"/>
   </bindings>
 </pageDefinition>
