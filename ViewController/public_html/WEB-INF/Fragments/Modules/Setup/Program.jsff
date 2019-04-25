@@ -2,6 +2,7 @@
 <ui:composition xmlns:ui="http://java.sun.com/jsf/facelets" xmlns:af="http://xmlns.oracle.com/adf/faces/rich"
                 xmlns:f="http://java.sun.com/jsf/core">
     <af:panelAccordion discloseMany="false" id="pa3" inlineStyle="height:811px; width:1050px;" 
+    
     >
         <af:showDetailItem id="pane2" text="Program">
             <af:panelGridLayout id="pgl2">

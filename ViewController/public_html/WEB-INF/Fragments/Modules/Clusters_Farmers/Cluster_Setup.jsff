@@ -48,7 +48,18 @@
                                                                         <f:validator binding="#{row.bindings.ClusterId.validator}"/>
                                                                     </af:inputText>
                                                                 </af:column>
-                                                                <af:column sortProperty="#{bindings.TblClusterView1.hints.PhaseId.name}"
+                                    <af:column headerText="Cluster No." id="c2">
+                                        <af:inputText value="#{row.bindings.ClusterNo.inputValue}"
+                                                      label="#{bindings.TblClusterView1.hints.ClusterNo.label}"
+                                                      required="#{bindings.TblClusterView1.hints.ClusterNo.mandatory}"
+                                                      columns="#{bindings.TblClusterView1.hints.ClusterNo.displayWidth}"
+                                                      maximumLength="#{bindings.TblClusterView1.hints.ClusterNo.precision}"
+                                                      shortDesc="#{bindings.TblClusterView1.hints.ClusterNo.tooltip}"
+                                                      id="it13">
+                                            <f:validator binding="#{row.bindings.ClusterNo.validator}"/>
+                                        </af:inputText>
+                                    </af:column>
+                                    <af:column sortProperty="#{bindings.TblClusterView1.hints.PhaseId.name}"
                                                                            filterable="true" sortable="true"
                                                                            headerText="Phase"
                                                                            id="c1" width="100">

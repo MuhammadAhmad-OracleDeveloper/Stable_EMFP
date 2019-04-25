@@ -14,7 +14,6 @@
                 <af:spacer width="190" height="10" id="s1"/>
                 <af:button text="Program" id="b1" inlineStyle="width:190px;" icon="#{resource['images:program.png']}"
                         partialSubmit="true"
-                        rendered="#{backingBeanScope.backing_Main_Pages_Login.get_page_view_rights('Program') == 'Y'}"
                         actionListener="#{viewScope.SetupSidebarBean.Program_Click}"/>
             </af:panelGroupLayout>
             <af:panelGroupLayout id="pt_pgl2" layout="vertical"
