@@ -118,7 +118,6 @@
   </Attribute>
   <Attribute
     Name="KhatooniNo"
-    IsNotNull="true"
     ColumnName="KHATOONI_NO"
     SQLType="NUMERIC"
     Type="java.math.BigDecimal"
@@ -126,7 +125,6 @@
     TableName="TBL_FARMER_REG_LAND"/>
   <Attribute
     Name="KhauuetNo"
-    IsNotNull="true"
     ColumnName="KHAUUET_NO"
     SQLType="NUMERIC"
     Type="java.math.BigDecimal"
@@ -134,7 +132,6 @@
     TableName="TBL_FARMER_REG_LAND"/>
   <Attribute
     Name="QittaNo"
-    IsNotNull="true"
     ColumnName="QITTA_NO"
     SQLType="NUMERIC"
     Type="java.math.BigDecimal"
@@ -143,7 +140,6 @@
   <Attribute
     Name="KhasraNo"
     IsUnique="true"
-    IsNotNull="true"
     ColumnName="KHASRA_NO"
     SQLType="NUMERIC"
     Type="java.math.BigDecimal"

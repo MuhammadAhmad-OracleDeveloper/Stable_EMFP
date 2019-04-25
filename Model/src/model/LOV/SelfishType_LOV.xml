@@ -4,7 +4,7 @@
 <ViewObject
   xmlns="http://xmlns.oracle.com/bc4j"
   Name="SelfishType_LOV"
-  Version="12.1.3.10.8"
+  Version="12.2.1.11.57"
   InheritPersonalization="merge"
   BindingStyle="OracleName"
   CustomQuery="true"
@@ -25,19 +25,21 @@
     IsPersistent="false"
     PrecisionRule="true"
     Type="java.lang.String"
-    ColumnType="$none$"/>
+    ColumnType="$none$"
+    SQLType="VARCHAR"/>
   <ViewAttribute
     Name="SelfishDB"
     IsUpdateable="false"
     IsPersistent="false"
     PrecisionRule="true"
     Type="java.lang.String"
-    ColumnType="$none$"/>
+    ColumnType="$none$"
+    SQLType="VARCHAR"/>
   <AttrArray Name="KeyAttributes">
     <Item Value="SelfishDB"/>
   </AttrArray>
   <StaticList
-    Rows="2"
+    Rows="3"
     Columns="2"/>
   <ResourceBundle>
     <PropertiesBundle

@@ -93,7 +93,6 @@
     TableName="TBL_FARMER_REG"/>
   <Attribute
     Name="MarStatus"
-    IsNotNull="true"
     Precision="1"
     ColumnName="MAR_STATUS"
     SQLType="CHAR"
@@ -108,7 +107,6 @@
   </Attribute>
   <Attribute
     Name="Dob"
-    IsNotNull="true"
     ColumnName="DOB"
     SQLType="DATE"
     Type="java.sql.Timestamp"
