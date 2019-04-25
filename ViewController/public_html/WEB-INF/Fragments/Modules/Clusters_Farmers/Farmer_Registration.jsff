@@ -77,6 +77,18 @@
                                                         <f:validator binding="#{row.bindings.FarmerRegId.validator}"/>
                                                     </af:inputText>
                                                 </af:column>
+                                                <af:column headerText="Farmer No."
+                                                           id="c37">
+                                                    <af:inputText value="#{row.bindings.FarmerNo.inputValue}"
+                                                                  label="#{bindings.TblFarmerRegView1.hints.FarmerNo.label}"
+                                                                  required="#{bindings.TblFarmerRegView1.hints.FarmerNo.mandatory}"
+                                                                  columns="#{bindings.TblFarmerRegView1.hints.FarmerNo.displayWidth}"
+                                                                  maximumLength="#{bindings.TblFarmerRegView1.hints.FarmerNo.precision}"
+                                                                  shortDesc="#{bindings.TblFarmerRegView1.hints.FarmerNo.tooltip}"
+                                                                  id="it83">
+                                                        <f:validator binding="#{row.bindings.FarmerNo.validator}"/>
+                                                    </af:inputText>
+                                                </af:column>
                                                 <af:column sortProperty="#{bindings.TblFarmerRegView1.hints.Name.name}"
                                                            filterable="true" sortable="true" headerText="Farmer" id="c2"
                                                            width="226">

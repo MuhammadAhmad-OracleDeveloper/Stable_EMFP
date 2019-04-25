@@ -38,6 +38,7 @@
           <Item Value="FatherName"/>
           <Item Value="Ast"/>
           <Item Value="ClusterId"/>
+          <Item Value="FarmerNo"/>
         </AttrNames>
       </nodeDefinition>
     </tree>
