@@ -33,7 +33,7 @@
   <managed-bean id="__8">
     <managed-bean-name>backing_Main_Pages_Login</managed-bean-name>
     <managed-bean-class>view.backing.Main_Pages.Login</managed-bean-class>
-    <managed-bean-scope>backingBean</managed-bean-scope>
+    <managed-bean-scope>session</managed-bean-scope>
     <!--oracle-jdev-comment:managed-bean-jsp-link:1Main_Pages/Login.jsf-->
   </managed-bean>
   <managed-bean id="__4">

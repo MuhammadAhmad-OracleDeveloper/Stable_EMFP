@@ -4,7 +4,7 @@
 <AppModule
   xmlns="http://xmlns.oracle.com/bc4j"
   Name="AppModule"
-  Version="12.1.3.10.8"
+  Version="12.2.1.11.57"
   InheritPersonalization="merge"
   ClearCacheOnRollback="true">
   <ViewUsage
@@ -901,6 +901,9 @@
   <ViewUsage
     Name="TblPhasePlanView4"
     ViewObjectName="model.queryBasedVO.TblPhasePlanView"/>
+  <ViewUsage
+    Name="USERS_MODULE1"
+    ViewObjectName="model.VO.USERS_MODULE"/>
   <ViewLinkUsage
     Name="FkTblClusterAttDetailFkLink1"
     ViewLinkObjectName="model.VO.FkTblClusterAttDetailFkLink"
