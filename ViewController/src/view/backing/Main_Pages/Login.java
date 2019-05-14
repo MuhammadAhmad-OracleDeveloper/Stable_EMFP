@@ -33,6 +33,7 @@ public class Login {
 
     // generating static variables to use in different scopes
     private static String role_master_id;
+    private static String user_master_id;
     private static String role_detail_pages_id;
     private static String role_detail_modules_id;
     private static String role_master_name;
@@ -137,17 +138,20 @@ public class Login {
                 //                conn.close();
                 //getting data against column from table
                 role_master_id = (rset.getString("role_master_id")).toString();
-
+                user_master_id = (rset.getString("user_master_id")).toString();
                 //Storing value in session username from input text field and role_master_id from DB
 
                 System.out.println(".........User Name stored in session is :..." + username + "...");
                 System.out.println(".........User Password stored in session is :..." + password + "...");
                 System.out.println(".........User Role stored in session is :..." + role_master_id + "...");
+                System.out.println(".........User Master ID stored in session is :..." + user_master_id + "...");
 
                 //Redirecting to home page after successfull authentication
                 //System.out.println("....... here we go /// you are redirecting now to DASHBOARD ......");
                 //                return "good";
 //                get_module_view_rights();
+                
+                storeOnSession("sessUID", role_master_id);
                 
                 conn.close();
                 return "/faces/Main_Pages/Dashboard.jsf?faces-redirect=true";
@@ -172,7 +176,9 @@ public class Login {
     public String logout_action() {
         System.out.println("logout called");
         sessUName = "";
+        role_master_id = "";
         storeOnSession("sessUName", "");
+        storeOnSession("sessUID", "");
         //        return "good";
         return "/faces/Main_Pages/Login.jsf?faces-redirect=true";
     }

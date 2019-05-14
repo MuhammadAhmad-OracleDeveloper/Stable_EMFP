@@ -149,7 +149,7 @@
                                 <af:gridCell marginStart="5px" width="auto" marginEnd="5px" id="gc3">
                                     <af:panelGroupLayout id="pgl5" layout="vertical" inlineStyle="margin-top: 20%; margin-left: 5%;">
                                         <af:image id="i1"
-                                                  shortDesc="Upload image or refresh application to render properly"
+                                                  shortDesc="Upload image or refresh page to render properly"
                                                   inlineStyle="height:100px;"
                                                   source="/imageservlet?imageNameParam=#{bindings.Image.inputValue}"
                                                   partialTriggers="it66"/>
