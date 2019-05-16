@@ -47,6 +47,7 @@
         <page path="/Main_Pages/Modules/Management/Main_Management.jsf" usageId="view_Main_ManagementPageDef"/>
         <page path="/WEB-INF/Fragments/Modules/Management/User_Roles.jsff" usageId="view_User_RolesPageDef"/>
         <page path="/WEB-INF/Fragments/Dashboard.jsff" usageId="view_DashboardPageDef1"/>
+        <page path="/Main_Pages/Modules/Setup/Setup_Sidebar.jsf" usageId="view_Setup_SidebarPageDef"/>
     </pageMap>
     <pageDefinitionUsages>
         <page id="view_Farmer_RegistrationPageDef"
@@ -84,6 +85,7 @@
         <page id="view_Main_ManagementPageDef" path="Main_Pages.Modules.Management.Main_ManagementPageDef"/>
         <page id="view_User_RolesPageDef" path="Fragments.Modules.Management.User_RolesPageDef"/>
         <page id="view_DashboardPageDef1" path="Fragments.DashboardPageDef"/>
+        <page id="view_Setup_SidebarPageDef" path="Main_Pages.Modules.Setup.Setup_SidebarPageDef"/>
     </pageDefinitionUsages>
     <dataControlUsages>
         <BC4JDataControl id="AppModuleDataControl" Package="model"

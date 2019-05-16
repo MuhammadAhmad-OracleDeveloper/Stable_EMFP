@@ -4,7 +4,7 @@
 <ViewObject
   xmlns="http://xmlns.oracle.com/bc4j"
   Name="TblPagesView"
-  Version="12.1.3.10.8"
+  Version="12.2.1.11.57"
   InheritPersonalization="merge"
   SelectListFlags="1"
   FromListFlags="1"
@@ -45,6 +45,18 @@
     EntityAttrName="Ast"
     EntityUsage="TblPages"
     AliasName="AST"/>
+  <ViewAttribute
+    Name="PageIcon"
+    PrecisionRule="true"
+    EntityAttrName="PageIcon"
+    EntityUsage="TblPages"
+    AliasName="PAGE_ICON"/>
+  <ViewAttribute
+    Name="PageLink"
+    PrecisionRule="true"
+    EntityAttrName="PageLink"
+    EntityUsage="TblPages"
+    AliasName="PAGE_LINK"/>
   <ViewLinkAccessor
     Name="TblRoleDetailPagesView"
     ViewLink="model.VO.Fk2TblRoleDetailPagesFkLink"
