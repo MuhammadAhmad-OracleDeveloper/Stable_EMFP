@@ -6,6 +6,7 @@
   Name="AppModule"
   Version="12.2.1.11.57"
   InheritPersonalization="merge"
+  RequeryOnCommit="true"
   ClearCacheOnRollback="true">
   <ViewUsage
     Name="TblBeneficiaryView1"
@@ -904,6 +905,12 @@
   <ViewUsage
     Name="USERS_MODULE1"
     ViewObjectName="model.VO.USERS_MODULE"/>
+  <ViewUsage
+    Name="USERS_PAGES1"
+    ViewObjectName="model.VO.USERS_PAGES"/>
+  <ViewUsage
+    Name="SETUP_PAGES1"
+    ViewObjectName="model.VO.USERS_ROLES.SETUP_PAGES"/>
   <ViewLinkUsage
     Name="FkTblClusterAttDetailFkLink1"
     ViewLinkObjectName="model.VO.FkTblClusterAttDetailFkLink"

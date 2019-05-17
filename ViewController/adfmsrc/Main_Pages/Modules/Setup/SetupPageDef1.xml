@@ -8,6 +8,26 @@
               activation="deferred" xmlns="http://xmlns.oracle.com/adf/controller/binding"/>
     <taskFlow id="dynamicRegion1" taskFlowId="${viewScope.SetupSidebarBean.dynamicTaskFlowId}" activation="deferred"
               xmlns="http://xmlns.oracle.com/adf/controller/binding"/>
+    <iterator Binds="SETUP_PAGES1" RangeSize="25" DataControl="AppModuleDataControl" id="SETUP_PAGES1Iterator"/>
   </executables>
-  <bindings/>
+  <bindings>
+    <tree IterBinding="SETUP_PAGES1Iterator" id="SETUP_PAGES1">
+      <nodeDefinition DefName="model.VO.USERS_ROLES.SETUP_PAGES" Name="SETUP_PAGES10">
+        <AttrNames>
+          <Item Value="PagesName"/>
+          <Item Value="Ast"/>
+          <Item Value="PageIcon"/>
+          <Item Value="PageLink"/>
+          <Item Value="RoleMasterId"/>
+          <Item Value="PagesId"/>
+          <Item Value="RoleMasterId1"/>
+          <Item Value="RView"/>
+          <Item Value="RAdd"/>
+          <Item Value="REdit"/>
+          <Item Value="RDelete"/>
+          <Item Value="RPrint"/>
+        </AttrNames>
+      </nodeDefinition>
+    </tree>
+  </bindings>
 </pageDefinition>

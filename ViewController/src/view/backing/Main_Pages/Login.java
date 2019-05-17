@@ -33,6 +33,7 @@ public class Login {
 
     // generating static variables to use in different scopes
     private static String role_master_id;
+    private static String user_master_id;
     private static String role_detail_pages_id;
     private static String role_detail_modules_id;
     private static String role_master_name;
@@ -137,17 +138,20 @@ public class Login {
                 //                conn.close();
                 //getting data against column from table
                 role_master_id = (rset.getString("role_master_id")).toString();
-
+                user_master_id = (rset.getString("user_master_id")).toString();
                 //Storing value in session username from input text field and role_master_id from DB
 
                 System.out.println(".........User Name stored in session is :..." + username + "...");
                 System.out.println(".........User Password stored in session is :..." + password + "...");
                 System.out.println(".........User Role stored in session is :..." + role_master_id + "...");
+                System.out.println(".........User Master ID stored in session is :..." + user_master_id + "...");
 
                 //Redirecting to home page after successfull authentication
                 //System.out.println("....... here we go /// you are redirecting now to DASHBOARD ......");
                 //                return "good";
 //                get_module_view_rights();
+                
+                storeOnSession("sessUID", role_master_id);
                 
                 conn.close();
                 return "/faces/Main_Pages/Dashboard.jsf?faces-redirect=true";
@@ -172,7 +176,9 @@ public class Login {
     public String logout_action() {
         System.out.println("logout called");
         sessUName = "";
+        role_master_id = "";
         storeOnSession("sessUName", "");
+        storeOnSession("sessUID", "");
         //        return "good";
         return "/faces/Main_Pages/Login.jsf?faces-redirect=true";
     }
@@ -643,66 +649,34 @@ public class Login {
     }
 
 
-    public String main() {
-        int[][] myNumbers = { { 1, 2, 3, 4 }, { 5, 6, 7 } };
-        for (int i = 0; i < myNumbers.length; ++i) {
-            for (int j = 0; j < myNumbers[i].length; ++j) {
-                System.out.println(myNumbers[i][j]);
-            }
-        }
-        return "good";
-    }
+//    public String main() {
+//        int[][] myNumbers = { { 1, 2, 3, 4 }, { 5, 6, 7 } };
+//        for (int i = 0; i < myNumbers.length; ++i) {
+//            for (int j = 0; j < myNumbers[i].length; ++j) {
+//                System.out.println(myNumbers[i][j]);
+//            }
+//        }
+//        return "good";
+//    }
+//
+//    public String getArray() {
+//        int twoDim[][] = new int[2][3];
+//        twoDim[0][0] = 1;
+//        twoDim[0][1] = 2;
+//        twoDim[0][2] = 3;
+//        twoDim[1][0] = 4;
+//        twoDim[1][1] = 5;
+//        twoDim[1][2] = 6;
+//        System.out.println(twoDim[0][0] + " " + twoDim[0][1] + " " + twoDim[0][2]);
+//        System.out.println(twoDim[1][0] + " " + twoDim[1][1] + " " + twoDim[1][2]);
+//        return "good";
+//    }
 
-    public String getArray() {
-        int twoDim[][] = new int[2][3];
-        twoDim[0][0] = 1;
-        twoDim[0][1] = 2;
-        twoDim[0][2] = 3;
-        twoDim[1][0] = 4;
-        twoDim[1][1] = 5;
-        twoDim[1][2] = 6;
-        System.out.println(twoDim[0][0] + " " + twoDim[0][1] + " " + twoDim[0][2]);
-        System.out.println(twoDim[1][0] + " " + twoDim[1][1] + " " + twoDim[1][2]);
-        return "good";
-    }
-
-
-//////////////////////////////////////////////////////////
-    ///////////////////////////////////////////////////////
-    /////////////////////////////////////////////////////////
-
-    public void setPanel_form_layout(RichPanelFormLayout panel_form_layout) {
-        this.panel_form_layout = panel_form_layout;
-    }
-
-    public RichPanelFormLayout getPanel_form_layout() {
-        return panel_form_layout;
-    }
-    
-    public void addComponent(UIComponent parentUIComponent, UIComponent childUIComponent) {
-            parentUIComponent.getChildren().add(childUIComponent);
-            AdfFacesContext.getCurrentInstance().addPartialTarget(parentUIComponent);
-        }
-    
-    public void createComptext(ActionEvent actionEvent) {
-        RichInputText ui = new RichInputText();
-        ui.setId("rit1");
-        ui.setLabel("Input text");
-        ui.setValue("Hello ADF");
-        ui.setContentStyle("font-weight:bold;color:red");
-        addComponent(getPanel_form_layout(), ui);
+    public String sess_module_id(String getModID) {
+        // Add event code here...
+        System.out.println("store module id now man" + getModID);
+        storeOnSession("sessModuleID", getModID);
         
-//        ActionEvent actionEvent;
-//        RichOutputText uci = new RichOutputText();
-//        ui.setId("rot1");
-//        ui.setValue("I am output text");
-//        ui.setInlineStyle("font-weight:bold;color:green");
-//        addComponent(getPanel_form_layout(), uci);
-        System.out.println("On load DashBoard Design Called");
+        return null;
     }
-    
-    public void afterPhase(PagePhaseEvent pagePhaseEvent) {
-        System.out.println("New.....");
-    }
-
 }

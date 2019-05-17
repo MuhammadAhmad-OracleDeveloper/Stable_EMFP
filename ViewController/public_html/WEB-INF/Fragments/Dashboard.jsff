@@ -1,33 +1,19 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <ui:composition xmlns:ui="http://java.sun.com/jsf/facelets" xmlns:af="http://xmlns.oracle.com/adf/faces/rich"
                 xmlns:h="http://java.sun.com/jsf/html" xmlns:f="http://java.sun.com/jsf/core">
-    
-    
     <af:panelFormLayout id="pfl3" maxColumns="3" rows="1" fieldWidth="500px;" inlineStyle=" padding-left: 2%;">
-     
-     
-     <af:iterator id="i2" value="#{bindings.USERS_MODULE1.collectionModel}" var="item" varStatus="status">
-            
-            
-                <af:panelGroupLayout id="pgl1" layout="horizontal">
-                <af:link id="l6" icon="#{resource['images:dash_management.png']}"/>
+        <af:iterator id="i2" value="#{bindings.USERS_MODULE1.collectionModel}" var="item" varStatus="status">
+            <af:panelGroupLayout id="pgl1" layout="horizontal" inlineStyle="padding: 4%;">
+                <af:link id="l6" destination="/faces/Main_Pages/Modules/#{item.bindings.ModuleMenuLink.inputValue}"
+                         icon="/ViewController/faces/javax.faces.resource/#{item.bindings.ModuleMenuIcon.inputValue}?ln=images"/>
+                <af:spacer width="10" height="10" id="s1"/>
                 <af:panelGroupLayout id="pgl2" layout="vertical">
-                    <af:outputText value="#{item.bindings.ModuleMenuName.inputValue}" id="ot33"
-                               inlineStyle="padding: 10px;"/>
-                                <af:outputText value="#{item.bindings.ModuleMenuDesc.inputValue}" id="ot3"
-                               inlineStyle="padding: 10px;"/>
-                 <af:outputText value="#{item.bindings.Ast.inputValue}" id="ot34"
-                               inlineStyle="padding: 10px;"/>
+                    <af:link text="#{item.bindings.ModuleMenuName.inputValue}" id="l17"
+                             destination="/faces/Main_Pages/Modules/#{item.bindings.ModuleMenuLink.inputValue}"
+                             inlineStyle="font-size:x-large; color: #008442;font-weight: bold;"/>
+                    <af:outputLabel value="#{item.bindings.ModuleMenuDesc.inputValue}" id="ol12"/>
                 </af:panelGroupLayout>
-                
-                               
-                </af:panelGroupLayout>
-                
-           
+            </af:panelGroupLayout>
         </af:iterator>
-     </af:panelFormLayout>
-     
-     
-     
-     
+    </af:panelFormLayout>
 </ui:composition>

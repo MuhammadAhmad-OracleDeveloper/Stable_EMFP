@@ -50,6 +50,14 @@
     </DesignTime>
   </Containee>
   <Containee
+    Name="USERS_ROLES"
+    PackageName="model.VO.USERS_ROLES"
+    ObjectType="JboPackage">
+    <DesignTime>
+      <Attr Name="_VO" Value="true"/>
+    </DesignTime>
+  </Containee>
+  <Containee
     Name="VO"
     PackageName="model.VO"
     ObjectType="JboPackage">

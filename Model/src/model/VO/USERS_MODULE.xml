@@ -19,25 +19,28 @@
     </SchemaBasedProperties>
   </Properties>
   <Variable
-    Name="ROLEMASTERID"
+    Name="GETROLEMASTERID"
     Kind="where"
-    Type="java.math.BigDecimal"
-    DefaultValue="2"/>
-  <SQLQuery><![CDATA[SELECT           
-MM.MODULE_MENU_ID, MM.MODULE_MENU_NAME, MM.MODULE_MENU_LINK, MM.MODULE_MENU_DESC, MM.MODULE_MENU_ICON, MM.AST        
-FROM           
-TBL_ROLE_DETAIL_MODULES RDM , TBL_MODULE_MENU MM         
-Where           
-MM.MODULE_MENU_ID = RDM.MODULE_MENU_ID          
-AND          
-RDM.R_VIEW = 'Y'          
-AND         
-MM.AST = 'Y'          
-AND          
-RDM.ROLE_MASTER_ID = :ROLEMASTERID]]></SQLQuery>
+    Type="java.math.BigDecimal">
+    <TransientExpression
+      Name="VariableScript"
+      CodeSourceName="USERS_MODULE"/>
+  </Variable>
+  <SQLQuery><![CDATA[SELECT             
+MM.MODULE_MENU_ID, MM.MODULE_MENU_NAME, MM.MODULE_MENU_LINK, MM.MODULE_MENU_DESC, MM.MODULE_MENU_ICON, MM.AST, 
+RDM.ROLE_MASTER_ID 
+FROM             
+TBL_ROLE_DETAIL_MODULES RDM , TBL_MODULE_MENU MM           
+Where             
+MM.MODULE_MENU_ID = RDM.MODULE_MENU_ID            
+AND            
+RDM.R_VIEW = 'Y'            
+AND           
+MM.AST = 'Y'            
+AND            
+RDM.ROLE_MASTER_ID = :GETROLEMASTERID]]></SQLQuery>
   <ViewAttribute
     Name="ModuleMenuId"
-    IsUpdateable="false"
     IsPersistent="false"
     PrecisionRule="true"
     Type="java.math.BigDecimal"
@@ -47,7 +50,6 @@ RDM.ROLE_MASTER_ID = :ROLEMASTERID]]></SQLQuery>
     SQLType="NUMERIC"/>
   <ViewAttribute
     Name="ModuleMenuName"
-    IsUpdateable="false"
     IsPersistent="false"
     PrecisionRule="true"
     Precision="150"
@@ -62,7 +64,6 @@ RDM.ROLE_MASTER_ID = :ROLEMASTERID]]></SQLQuery>
   </ViewAttribute>
   <ViewAttribute
     Name="ModuleMenuLink"
-    IsUpdateable="false"
     IsPersistent="false"
     PrecisionRule="true"
     Precision="200"
@@ -77,7 +78,6 @@ RDM.ROLE_MASTER_ID = :ROLEMASTERID]]></SQLQuery>
   </ViewAttribute>
   <ViewAttribute
     Name="ModuleMenuDesc"
-    IsUpdateable="false"
     IsPersistent="false"
     PrecisionRule="true"
     Precision="200"
@@ -92,7 +92,6 @@ RDM.ROLE_MASTER_ID = :ROLEMASTERID]]></SQLQuery>
   </ViewAttribute>
   <ViewAttribute
     Name="ModuleMenuIcon"
-    IsUpdateable="false"
     IsPersistent="false"
     PrecisionRule="true"
     Precision="200"
@@ -107,7 +106,6 @@ RDM.ROLE_MASTER_ID = :ROLEMASTERID]]></SQLQuery>
   </ViewAttribute>
   <ViewAttribute
     Name="Ast"
-    IsUpdateable="false"
     IsPersistent="false"
     PrecisionRule="true"
     Precision="1"
@@ -120,6 +118,15 @@ RDM.ROLE_MASTER_ID = :ROLEMASTERID]]></SQLQuery>
       <Attr Name="_DisplaySize" Value="1"/>
     </DesignTime>
   </ViewAttribute>
+  <ViewAttribute
+    Name="RoleMasterId"
+    IsPersistent="false"
+    PrecisionRule="true"
+    Type="java.math.BigDecimal"
+    ColumnType="NUMBER"
+    AliasName="ROLE_MASTER_ID"
+    Expression="ROLE_MASTER_ID"
+    SQLType="NUMERIC"/>
   <AttrArray Name="KeyAttributes">
     <Item Value="ModuleMenuId"/>
   </AttrArray>
