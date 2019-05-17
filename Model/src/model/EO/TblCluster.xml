@@ -44,7 +44,6 @@
   </Attribute>
   <Attribute
     Name="CityLibrDetail"
-    IsNotNull="true"
     ColumnName="CITY_LIBR_DETAIL"
     SQLType="NUMERIC"
     Type="java.math.BigDecimal"
@@ -52,7 +51,6 @@
     TableName="TBL_CLUSTER"/>
   <Attribute
     Name="DistrictLibrDetail"
-    IsNotNull="true"
     ColumnName="DISTRICT_LIBR_DETAIL"
     SQLType="NUMERIC"
     Type="java.math.BigDecimal"
@@ -60,7 +58,6 @@
     TableName="TBL_CLUSTER"/>
   <Attribute
     Name="TehsilLibrDetail"
-    IsNotNull="true"
     ColumnName="TEHSIL_LIBR_DETAIL"
     SQLType="NUMERIC"
     Type="java.math.BigDecimal"
@@ -68,7 +65,6 @@
     TableName="TBL_CLUSTER"/>
   <Attribute
     Name="MauzaLibrDetail"
-    IsNotNull="true"
     ColumnName="MAUZA_LIBR_DETAIL"
     SQLType="NUMERIC"
     Type="java.math.BigDecimal"
@@ -76,7 +72,6 @@
     TableName="TBL_CLUSTER"/>
   <Attribute
     Name="VillageLibrDetail"
-    IsNotNull="true"
     ColumnName="VILLAGE_LIBR_DETAIL"
     SQLType="NUMERIC"
     Type="java.math.BigDecimal"
@@ -119,6 +114,13 @@
       <Attr Name="_DisplaySize" Value="20"/>
     </DesignTime>
   </Attribute>
+  <Attribute
+    Name="UcNumber"
+    ColumnName="UC_NUMBER"
+    SQLType="NUMERIC"
+    Type="java.math.BigDecimal"
+    ColumnType="NUMBER"
+    TableName="TBL_CLUSTER"/>
   <AccessorAttribute
     Name="TblClusterAttMaster"
     Association="model.EO.Fk2TblClusterAttMasterFkAssoc"

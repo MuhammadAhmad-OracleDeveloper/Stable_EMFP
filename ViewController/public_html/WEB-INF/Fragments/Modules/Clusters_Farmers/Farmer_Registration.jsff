@@ -62,7 +62,7 @@
                                                 </af:column>
                                                 <af:column sortProperty="#{bindings.TblFarmerRegView1.hints.FarmerRegId.name}"
                                                            filterable="true" sortable="true" headerText="Farmer Reg ID"
-                                                           align="center" id="c1" width="85">
+                                                           align="center" id="c1" width="60">
                                                     <f:facet name="filter">
                                                         <af:inputText value="#{vs.filterCriteria.FarmerRegId}" id="it56"
                                                                       placeholder="Search ID"></af:inputText>
@@ -73,12 +73,20 @@
                                                                   columns="#{bindings.TblFarmerRegView1.hints.FarmerRegId.displayWidth}"
                                                                   maximumLength="#{bindings.TblFarmerRegView1.hints.FarmerRegId.precision}"
                                                                   shortDesc="#{bindings.TblFarmerRegView1.hints.FarmerRegId.tooltip}"
-                                                                  id="it1" readOnly="true">
+                                                                  id="it1" readOnly="true"
+                                                                  contentStyle='text-align:center'>
                                                         <f:validator binding="#{row.bindings.FarmerRegId.validator}"/>
                                                     </af:inputText>
                                                 </af:column>
-                                                <af:column headerText="Farmer No."
-                                                           id="c37">
+                                                <af:column sortProperty="#{bindings.TblFarmerRegView1.hints.FarmerNo.name}"
+                                                           filterable="true" sortable="true"
+                                                
+                                                           headerText="Farmer No."
+                                                           id="c37" width="120">
+                                                           <f:facet name="filter">
+                                                        <af:inputText value="#{vs.filterCriteria.FarmerNo}" id="it84"
+                                                                      placeholder="Search Farmer No."></af:inputText>
+                                                    </f:facet>
                                                     <af:inputText value="#{row.bindings.FarmerNo.inputValue}"
                                                                   label="#{bindings.TblFarmerRegView1.hints.FarmerNo.label}"
                                                                   required="#{bindings.TblFarmerRegView1.hints.FarmerNo.mandatory}"
@@ -89,9 +97,29 @@
                                                         <f:validator binding="#{row.bindings.FarmerNo.validator}"/>
                                                     </af:inputText>
                                                 </af:column>
+                                                <af:column sortProperty="#{bindings.TblFarmerRegView1.hints.Cnic.name}"
+                                                           filterable="true" sortable="true"
+                                                
+                                                           headerText="CNIC"
+                                                           id="c39" width="120" align="center">
+                                                           <f:facet name="filter">
+                                                        <af:inputText value="#{vs.filterCriteria.Cnic}" id="it85"
+                                                                      placeholder="Search CNIC"></af:inputText>
+                                                    </f:facet>
+                                                    <af:inputText value="#{row.bindings.Cnic.inputValue}"
+                                                                  label="#{bindings.TblFarmerRegView1.hints.Cnic.label}"
+                                                                  required="#{bindings.TblFarmerRegView1.hints.Cnic.mandatory}"
+                                                                  columns="#{bindings.TblFarmerRegView1.hints.Cnic.displayWidth}"
+                                                                  maximumLength="#{bindings.TblFarmerRegView1.hints.Cnic.precision}"
+                                                                  shortDesc="#{bindings.TblFarmerRegView1.hints.Cnic.tooltip}"
+                                                                  id="it8" contentStyle='text-align:center'>
+                                                        <f:validateRegex pattern="(^[0-9]{5}-[0-9]{7}-[0-9]$)"/>
+                                                        <f:validator binding="#{row.bindings.Cnic.validator}"/>
+                                                    </af:inputText>
+                                                </af:column>
                                                 <af:column sortProperty="#{bindings.TblFarmerRegView1.hints.Name.name}"
                                                            filterable="true" sortable="true" headerText="Farmer" id="c2"
-                                                           width="226">
+                                                           width="200">
                                                     <f:facet name="filter">
                                                         <af:inputText value="#{vs.filterCriteria.Name}" id="it4"
                                                                       placeholder="Search Farmer"></af:inputText>
@@ -108,7 +136,7 @@
                                                 </af:column>
                                                 <af:column sortProperty="#{bindings.TblFarmerRegView1.hints.FatherName.name}"
                                                            filterable="true" sortable="true" headerText="Father" id="c3"
-                                                           width="177">
+                                                           width="200">
                                                     <f:facet name="filter">
                                                         <af:inputText value="#{vs.filterCriteria.FatherName}" id="it5"
                                                                       placeholder="Search Father"></af:inputText>
@@ -125,7 +153,7 @@
                                                 </af:column>
                                                 <af:column sortProperty="#{bindings.TblFarmerRegView1.hints.Ast.name}"
                                                            filterable="true" sortable="true" headerText="Active" id="c4"
-                                                           width="-105">
+                                                           width="50">
                                                     <f:facet name="filter">
                                                         <af:inputText value="#{vs.filterCriteria.Ast}" id="it22"
                                                                       placeholder="Search Status"></af:inputText>
@@ -188,7 +216,8 @@
                                     <af:inputDate value="#{bindings.Dob.inputValue}" label="DOB"
                                                   required="#{bindings.Dob.hints.mandatory}"
                                                   columns="#{bindings.Dob.hints.displayWidth}"
-                                                  shortDesc="#{bindings.Dob.hints.tooltip}" id="id5">
+                                                  shortDesc="#{bindings.Dob.hints.tooltip}" id="id5"
+                                                  contentStyle="width:200px">
                                         <f:validator binding="#{bindings.Dob.validator}"/>
                                         <af:convertDateTime pattern="#{bindings.Dob.format}"/>
                                     </af:inputDate>
@@ -207,15 +236,6 @@
                                                   shortDesc="#{bindings.PassNo.hints.tooltip}" id="it7"
                                                   contentStyle="width:200px">
                                         <f:validator binding="#{bindings.PassNo.validator}"/>
-                                    </af:inputText>
-                                    <af:inputText value="#{bindings.Cnic.inputValue}" label="CNIC"
-                                                  required="#{bindings.Cnic.hints.mandatory}"
-                                                  columns="#{bindings.Cnic.hints.displayWidth}"
-                                                  maximumLength="#{bindings.Cnic.hints.precision}"
-                                                  shortDesc="#{bindings.Cnic.hints.tooltip}" id="it8"
-                                                  contentStyle="width:200px">
-                                        <f:validateRegex pattern="(^[0-9]{5}-[0-9]{7}-[0-9]$)"/>
-                                        <f:validator binding="#{bindings.Cnic.validator}"/>
                                     </af:inputText>
                                     <af:inputText value="#{bindings.DrLicNo.inputValue}" label="Driving License"
                                                   required="#{bindings.DrLicNo.hints.mandatory}"
@@ -256,7 +276,7 @@
                                                   columns="#{bindings.Url.hints.displayWidth}"
                                                   maximumLength="#{bindings.Url.hints.precision}"
                                                   shortDesc="#{bindings.Url.hints.tooltip}" id="it13"
-                                                  contentStyle="width:250px">
+                                                  contentStyle="width:200px">
                                         <f:validator binding="#{bindings.Url.validator}"/>
                                     </af:inputText>
                                     <af:inputText value="#{bindings.PreAddress.inputValue}" label="Present Address"
