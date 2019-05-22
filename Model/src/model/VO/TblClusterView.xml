@@ -334,6 +334,12 @@
     EntityAttrName="ClusterNo"
     EntityUsage="TblCluster"
     AliasName="CLUSTER_NO"/>
+  <ViewAttribute
+    Name="UcNumber"
+    PrecisionRule="true"
+    EntityAttrName="UcNumber"
+    EntityUsage="TblCluster"
+    AliasName="UC_NUMBER"/>
   <ViewLinkAccessor
     Name="TblClusterAttMasterView"
     ViewLink="model.VO.Fk2TblClusterAttMasterFkLink"

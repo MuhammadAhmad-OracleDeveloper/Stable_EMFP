@@ -39,6 +39,7 @@
           <Item Value="Ast"/>
           <Item Value="ClusterId"/>
           <Item Value="FarmerNo"/>
+          <Item Value="Cnic"/>
         </AttrNames>
       </nodeDefinition>
     </tree>
