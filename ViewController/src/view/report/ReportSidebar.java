@@ -24,7 +24,7 @@ public class ReportSidebar implements Serializable {
         // Add event code here...
         setDynamicTaskFlowId("/WEB-INF/Task_Flows/Reports/Cluster_Detail_Report_TaskFlow.xml#Cluster_Detail_Report_TaskFlow");
     }
-
+    
     public void FarmerReport_OnClick(ActionEvent actionEvent) {
         // Add event code here...
         setDynamicTaskFlowId("/WEB-INF/Task_Flows/Reports/Farmer_TaskFlow.xml#Farmer_TaskFlow");
@@ -38,4 +38,5 @@ public class ReportSidebar implements Serializable {
     public void setDynamicTaskFlowId1(String taskFlowId) {
         this.taskFlowId = taskFlowId;
     }
+
 }

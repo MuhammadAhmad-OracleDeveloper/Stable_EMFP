@@ -50,6 +50,7 @@
         <page path="/Main_Pages/Modules/Setup/Setup_Sidebar.jsf" usageId="view_Setup_SidebarPageDef"/>
         <page path="/Reports/Reports.jsf" usageId="view_ReportsPageDef"/>
         <page path="/WEB-INF/Fragments/Reports/Cluster_Detail_Report.jsff" usageId="view_Cluster_Detail_ReportPageDef"/>
+        <page path="/WEB-INF/Fragments/Reports/Farmer_Report.jsff" usageId="view_Farmer_ReportPageDef"/>
     </pageMap>
     <pageDefinitionUsages>
         <page id="view_Farmer_RegistrationPageDef"
@@ -90,6 +91,7 @@
         <page id="view_Setup_SidebarPageDef" path="Main_Pages.Modules.Setup.Setup_SidebarPageDef"/>
         <page id="view_ReportsPageDef" path="Reports.ReportsPageDef"/>
         <page id="view_Cluster_Detail_ReportPageDef" path="Fragments.Reports.Cluster_Detail_ReportPageDef"/>
+        <page id="view_Farmer_ReportPageDef" path="Fragments.Reports.Farmer_ReportPageDef"/>
     </pageDefinitionUsages>
     <dataControlUsages>
         <BC4JDataControl id="AppModuleDataControl" Package="model"
