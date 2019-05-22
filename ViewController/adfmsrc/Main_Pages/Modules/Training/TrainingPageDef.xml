@@ -6,6 +6,21 @@
     <variableIterator id="variables"/>
     <taskFlow id="dynamicRegion1" taskFlowId="${viewScope.TrainingSidebarBean.dynamicTaskFlowId}" activation="deferred"
               xmlns="http://xmlns.oracle.com/adf/controller/binding"/>
+    <iterator Binds="TRAINING_PAGES1" RangeSize="25" DataControl="AppModuleDataControl" id="TRAINING_PAGES1Iterator"
+              CacheResults="false"/>
   </executables>
-  <bindings/>
+  <bindings>
+    <tree IterBinding="TRAINING_PAGES1Iterator" id="TRAINING_PAGES1">
+      <nodeDefinition DefName="model.VO.USERS_ROLES.TRAINING_PAGES" Name="TRAINING_PAGES10">
+        <AttrNames>
+          <Item Value="PagesName"/>
+          <Item Value="PageIcon"/>
+          <Item Value="PageLink"/>
+          <Item Value="RoleMasterId"/>
+          <Item Value="PagesId"/>
+          <Item Value="RoleMasterId1"/>
+        </AttrNames>
+      </nodeDefinition>
+    </tree>
+  </bindings>
 </pageDefinition>

@@ -911,6 +911,36 @@
   <ViewUsage
     Name="SETUP_PAGES1"
     ViewObjectName="model.VO.USERS_ROLES.SETUP_PAGES"/>
+  <ViewUsage
+    Name="TRAINING_PAGES1"
+    ViewObjectName="model.VO.USERS_ROLES.TRAINING_PAGES"/>
+  <ViewUsage
+    Name="MONITORING_PAGES1"
+    ViewObjectName="model.VO.USERS_ROLES.MONITORING_PAGES"/>
+  <ViewUsage
+    Name="CLUSTER_PAGES1"
+    ViewObjectName="model.VO.USERS_ROLES.CLUSTER_PAGES"/>
+  <ViewUsage
+    Name="MANAGEMENT_PAGES1"
+    ViewObjectName="model.VO.USERS_ROLES.MANAGEMENT_PAGES"/>
+  <ViewUsage
+    Name="INFRASTRUCTURE_PAGES1"
+    ViewObjectName="model.VO.USERS_ROLES.INFRASTRUCTURE_PAGES"/>
+  <ViewUsage
+    Name="GRANTS_PAGES1"
+    ViewObjectName="model.VO.USERS_ROLES.GRANTS_PAGES"/>
+  <ViewUsage
+    Name="CERTIFICATION_PAGES1"
+    ViewObjectName="model.VO.USERS_ROLES.CERTIFICATION_PAGES"/>
+  <ViewUsage
+    Name="FINANCIAL_PAGES1"
+    ViewObjectName="model.VO.USERS_ROLES.FINANCIAL_PAGES"/>
+  <ViewUsage
+    Name="REPORTS_PAGES1"
+    ViewObjectName="model.VO.USERS_ROLES.REPORTS_PAGES"/>
+  <ViewUsage
+    Name="MARKETING_PAGES1"
+    ViewObjectName="model.VO.USERS_ROLES.MARKETING_PAGES"/>
   <ViewLinkUsage
     Name="FkTblClusterAttDetailFkLink1"
     ViewLinkObjectName="model.VO.FkTblClusterAttDetailFkLink"

@@ -30,4 +30,15 @@ public class ClusterFarmerSidebar implements Serializable {
         // Add event code here...
         setDynamicTaskFlowId("/WEB-INF/Task_Flows/Modules/Clusters_Farmers/Farmer_Registration_TaskFlow.xml#Farmer_Registration_TaskFlow");
     }
+    
+    public void fragmentCall(ActionEvent actionEvent) {
+        // Add event code here...
+        String action = (String)actionEvent.getComponent().getAttributes().get("link");
+        StringBuilder link = new StringBuilder();
+        link.append("/WEB-INF/Task_Flows/Modules/Clusters_Farmers/");
+        link.append(action);
+        link.append(".xml#");
+        link.append(action);
+        setDynamicTaskFlowId(link.toString());
+    }
 }

@@ -24,4 +24,15 @@ public class ManagementSidebar implements Serializable {
         // Add event code here...
         setDynamicTaskFlowId("/WEB-INF/Task_Flows/Modules/Management/UserRoles_TaskFlow.xml#UserRoles_TaskFlow");
     }
+    
+    public void fragmentCall(ActionEvent actionEvent) {
+        // Add event code here...
+        String action = (String)actionEvent.getComponent().getAttributes().get("link");
+        StringBuilder link = new StringBuilder();
+        link.append("/WEB-INF/Task_Flows/Modules/Management/");
+        link.append(action);
+        link.append(".xml#");
+        link.append(action);
+        setDynamicTaskFlowId(link.toString());
+    }
 }
