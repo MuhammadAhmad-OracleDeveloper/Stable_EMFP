@@ -41,4 +41,14 @@
     <managed-bean-class>view.ManagementSidebar</managed-bean-class>
     <managed-bean-scope>view</managed-bean-scope>
   </managed-bean>
+  <managed-bean id="__9">
+    <managed-bean-name>cluster_detail_report_Backbean</managed-bean-name>
+    <managed-bean-class>view.report.cluster_detail_report</managed-bean-class>
+    <managed-bean-scope>backingBean</managed-bean-scope>
+  </managed-bean>
+  <managed-bean id="__10">
+    <managed-bean-name>ReportSidebarBean</managed-bean-name>
+    <managed-bean-class>view.report.ReportSidebar</managed-bean-class>
+    <managed-bean-scope>view</managed-bean-scope>
+  </managed-bean>
 </adfc-config>

@@ -113,6 +113,11 @@
                   <url path="."/>
                </list>
             </hash>
+            <hash>
+               <list n="url-path">
+                  <url path="Reports/"/>
+               </list>
+            </hash>
          </list>
          <list n="url-path"/>
       </hash>

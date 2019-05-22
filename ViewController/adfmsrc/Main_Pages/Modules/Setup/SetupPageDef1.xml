@@ -8,7 +8,8 @@
               activation="deferred" xmlns="http://xmlns.oracle.com/adf/controller/binding"/>
     <taskFlow id="dynamicRegion1" taskFlowId="${viewScope.SetupSidebarBean.dynamicTaskFlowId}" activation="deferred"
               xmlns="http://xmlns.oracle.com/adf/controller/binding"/>
-    <iterator Binds="SETUP_PAGES1" RangeSize="25" DataControl="AppModuleDataControl" id="SETUP_PAGES1Iterator"/>
+    <iterator Binds="SETUP_PAGES1" RangeSize="25" DataControl="AppModuleDataControl" id="SETUP_PAGES1Iterator"
+              Refresh="always" CacheResults="false"/>
   </executables>
   <bindings>
     <tree IterBinding="SETUP_PAGES1Iterator" id="SETUP_PAGES1">

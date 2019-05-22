@@ -1,6 +1,7 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <af:pageTemplateDef xmlns:af="http://xmlns.oracle.com/adf/faces/rich" var="attrs" definition="private"
-                    xmlns:afc="http://xmlns.oracle.com/adf/faces/rich/component">
+                    xmlns:afc="http://xmlns.oracle.com/adf/faces/rich/component" xmlns:f="http://java.sun.com/jsf/core"
+                    xmlns:ui="http://java.sun.com/jsf/facelets">
     <af:xmlContent>
         <afc:component>
             <afc:description/>
@@ -11,7 +12,9 @@
         <af:showDetailItem id="sdi1" text="Setups">
             <af:spacer width="190" height="10" id="s1"/>
             <af:button text="Program" id="b1" inlineStyle="width:190px;" icon="#{resource['images:program.png']}"
-                       actionListener="#{viewScope.SetupSidebarBean.Program_Click}"/>
+                       actionListener="#{viewScope.SetupSidebarBean.Program_Click}">
+                <ui:param name="asd" value="Program"/>
+            </af:button>
             <af:spacer width="190" height="10" id="s3"/>
             <af:button text="Project" id="b3" inlineStyle="width:190px;" icon="#{resource['images:projects.png']}"
                        actionListener="#{viewScope.SetupSidebarBean.Project_Click}"/>

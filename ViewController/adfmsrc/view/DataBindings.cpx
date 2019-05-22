@@ -48,6 +48,8 @@
         <page path="/WEB-INF/Fragments/Modules/Management/User_Roles.jsff" usageId="view_User_RolesPageDef"/>
         <page path="/WEB-INF/Fragments/Dashboard.jsff" usageId="view_DashboardPageDef1"/>
         <page path="/Main_Pages/Modules/Setup/Setup_Sidebar.jsf" usageId="view_Setup_SidebarPageDef"/>
+        <page path="/Reports/Reports.jsf" usageId="view_ReportsPageDef"/>
+        <page path="/WEB-INF/Fragments/Reports/Cluster_Detail_Report.jsff" usageId="view_Cluster_Detail_ReportPageDef"/>
     </pageMap>
     <pageDefinitionUsages>
         <page id="view_Farmer_RegistrationPageDef"
@@ -86,9 +88,16 @@
         <page id="view_User_RolesPageDef" path="Fragments.Modules.Management.User_RolesPageDef"/>
         <page id="view_DashboardPageDef1" path="Fragments.DashboardPageDef"/>
         <page id="view_Setup_SidebarPageDef" path="Main_Pages.Modules.Setup.Setup_SidebarPageDef"/>
+        <page id="view_ReportsPageDef" path="Reports.ReportsPageDef"/>
+        <page id="view_Cluster_Detail_ReportPageDef" path="Fragments.Reports.Cluster_Detail_ReportPageDef"/>
     </pageDefinitionUsages>
     <dataControlUsages>
         <BC4JDataControl id="AppModuleDataControl" Package="model"
+                         FactoryClass="oracle.adf.model.bc4j.DataControlFactoryImpl" SupportsTransactions="true"
+                         SupportsFindMode="true" SupportsRangesize="true" SupportsResetState="true"
+                         SupportsSortCollection="true" Configuration="AppModuleLocal" syncMode="Immediate"
+                         xmlns="http://xmlns.oracle.com/adfm/datacontrol"/>
+        <BC4JDataControl id="AppModuleDataControl1" Package="model.LOV"
                          FactoryClass="oracle.adf.model.bc4j.DataControlFactoryImpl" SupportsTransactions="true"
                          SupportsFindMode="true" SupportsRangesize="true" SupportsResetState="true"
                          SupportsSortCollection="true" Configuration="AppModuleLocal" syncMode="Immediate"
