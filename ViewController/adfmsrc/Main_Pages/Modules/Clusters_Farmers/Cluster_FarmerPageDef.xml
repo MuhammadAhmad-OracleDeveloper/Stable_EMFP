@@ -6,6 +6,18 @@
     <variableIterator id="variables"/>
     <taskFlow id="dynamicRegion1" taskFlowId="${viewScope.ClusterFarmerSidebarBean.dynamicTaskFlowId}"
               activation="deferred" xmlns="http://xmlns.oracle.com/adf/controller/binding"/>
+    <iterator Binds="CLUSTER_PAGES1" RangeSize="25" DataControl="AppModuleDataControl" id="CLUSTER_PAGES1Iterator"
+              CacheResults="false" Refresh="always"/>
   </executables>
-  <bindings/>
+  <bindings>
+    <tree IterBinding="CLUSTER_PAGES1Iterator" id="CLUSTER_PAGES1">
+      <nodeDefinition DefName="model.VO.USERS_ROLES.CLUSTER_PAGES" Name="CLUSTER_PAGES10">
+        <AttrNames>
+          <Item Value="PagesName"/>
+          <Item Value="PageIcon"/>
+          <Item Value="PageLink"/>
+        </AttrNames>
+      </nodeDefinition>
+    </tree>
+  </bindings>
 </pageDefinition>
