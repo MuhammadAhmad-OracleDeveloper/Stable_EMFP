@@ -18,21 +18,30 @@
         ResId="model.VO.USERS_ROLES.MANAGEMENT_PAGES_LABEL"/>
     </SchemaBasedProperties>
   </Properties>
-  <SQLQuery><![CDATA[SELECT           
-TP.PAGES_NAME, TP.AST, TP.PAGE_ICON, TP.PAGE_LINK,    
-RDP.ROLE_MASTER_ID, RDP.PAGES_ID, RDP.ROLE_MASTER_ID, RDP.R_VIEW, RDP.R_ADD, RDP.R_EDIT, RDP.R_DELETE, RDP.R_PRINT          
-FROM           
-TBL_PAGES TP, TBL_ROLE_DETAIL_PAGES RDP         
-Where           
-TP.PAGES_ID = RDP.PAGES_ID          
-AND          
-RDP.R_VIEW = 'Y'          
-AND          
-TP.AST = 'Y'          
-AND          
-TP.MODULE_MENU_ID = 1      
-AND          
-RDP.ROLE_MASTER_ID = 1]]></SQLQuery>
+  <Variable
+    Name="MGROLEMASTERID"
+    Kind="where"
+    Type="java.math.BigDecimal">
+    <TransientExpression
+      Name="VariableScript"
+      trustMode="trusted"
+      CodeSourceName="MANAGEMENT_PAGES"/>
+  </Variable>
+  <SQLQuery><![CDATA[SELECT            
+TP.PAGES_NAME, TP.AST, TP.PAGE_ICON, TP.PAGE_LINK,     
+RDP.ROLE_MASTER_ID, RDP.PAGES_ID, RDP.ROLE_MASTER_ID, RDP.R_VIEW, RDP.R_ADD, RDP.R_EDIT, RDP.R_DELETE, RDP.R_PRINT           
+FROM            
+TBL_PAGES TP, TBL_ROLE_DETAIL_PAGES RDP          
+Where            
+TP.PAGES_ID = RDP.PAGES_ID           
+AND           
+RDP.R_VIEW = 'Y'           
+AND           
+TP.AST = 'Y'           
+AND           
+TP.MODULE_MENU_ID = 1       
+AND           
+RDP.ROLE_MASTER_ID = :MGROLEMASTERID]]></SQLQuery>
   <ViewAttribute
     Name="PagesName"
     IsUpdateable="false"
@@ -58,7 +67,7 @@ RDP.ROLE_MASTER_ID = 1]]></SQLQuery>
     ColumnType="CHAR"
     AliasName="AST"
     Expression="AST"
-    SQLType="CHAR">
+    SQLType="VARCHAR">
     <DesignTime>
       <Attr Name="_DisplaySize" Value="1"/>
     </DesignTime>
@@ -133,7 +142,7 @@ RDP.ROLE_MASTER_ID = 1]]></SQLQuery>
     ColumnType="CHAR"
     AliasName="R_VIEW"
     Expression="R_VIEW"
-    SQLType="CHAR">
+    SQLType="VARCHAR">
     <DesignTime>
       <Attr Name="_DisplaySize" Value="1"/>
     </DesignTime>
@@ -148,7 +157,7 @@ RDP.ROLE_MASTER_ID = 1]]></SQLQuery>
     ColumnType="CHAR"
     AliasName="R_ADD"
     Expression="R_ADD"
-    SQLType="CHAR">
+    SQLType="VARCHAR">
     <DesignTime>
       <Attr Name="_DisplaySize" Value="1"/>
     </DesignTime>
@@ -163,7 +172,7 @@ RDP.ROLE_MASTER_ID = 1]]></SQLQuery>
     ColumnType="CHAR"
     AliasName="R_EDIT"
     Expression="R_EDIT"
-    SQLType="CHAR">
+    SQLType="VARCHAR">
     <DesignTime>
       <Attr Name="_DisplaySize" Value="1"/>
     </DesignTime>
@@ -178,7 +187,7 @@ RDP.ROLE_MASTER_ID = 1]]></SQLQuery>
     ColumnType="CHAR"
     AliasName="R_DELETE"
     Expression="R_DELETE"
-    SQLType="CHAR">
+    SQLType="VARCHAR">
     <DesignTime>
       <Attr Name="_DisplaySize" Value="1"/>
     </DesignTime>
@@ -193,7 +202,7 @@ RDP.ROLE_MASTER_ID = 1]]></SQLQuery>
     ColumnType="CHAR"
     AliasName="R_PRINT"
     Expression="R_PRINT"
-    SQLType="CHAR">
+    SQLType="VARCHAR">
     <DesignTime>
       <Attr Name="_DisplaySize" Value="1"/>
     </DesignTime>

@@ -18,7 +18,7 @@
                                 <!-- Left -->
                                 <!--<af:pageTemplate viewId="/Main_Pages/Modules/Clusters_Farmers/Clusters_Farmers_Sidebar.jsf" id="pt2"/>-->
                                 <af:panelAccordion discloseMany="false" id="pa4" inlineStyle="width:210px; ">
-                                    <af:showDetailItem id="sdi1" text="Setups">
+                                    <af:showDetailItem id="sdi1" text="Clusters Farmers">
                                         <af:spacer width="190" height="10" id="s1"/>
                                         <af:iterator id="i2" value="#{bindings.CLUSTER_PAGES1.collectionModel}" var="item"
                                                      varStatus="status">
@@ -26,7 +26,7 @@
                                                 <af:button text="#{item.bindings.PagesName.inputValue}" id="b1"
                                                            inlineStyle="width:190px;"
                                                            icon="/ViewController/faces/javax.faces.resource/#{item.bindings.PageIcon.inputValue}?ln=images"
-                                                           actionListener="#{viewScope.SetupSidebarBean.fragmentCall}">
+                                                           actionListener="#{viewScope.ClusterFarmerSidebarBean.fragmentCall}">
                                                     <f:attribute name="link" value="#{item.bindings.PageLink.inputValue}"/>
                                                 </af:button>
                                             </af:panelGroupLayout>
@@ -35,7 +35,7 @@
                                 </af:panelAccordion>
                             </f:facet>
                             <f:facet name="second">
-                                <af:panelGroupLayout layout="scroll" id="pgl1">
+                                <af:panelGroupLayout layout="scroll" id="pgl3">
                                     <!-- Content -->
                                     <af:region value="#{bindings.dynamicRegion1.regionModel}" id="r1"/>
                                 </af:panelGroupLayout>

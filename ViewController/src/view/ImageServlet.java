@@ -7,7 +7,7 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
 import java.io.PrintWriter;
-
+import java.nio.file.Paths;
 import javax.servlet.*;
 import javax.servlet.http.*;
 
@@ -21,7 +21,7 @@ public class ImageServlet extends HttpServlet {
     public void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
            
             // File name is being passed by parameter on a servlet
-            String path = "E:\\Stable_EMFP\\Project_EMFP\\ViewController\\src\\META-INF\\resources\\user_data\\farmerImages\\";
+            String path = "E:\\Stable_EMFP\\ViewController\\src\\META-INF\\resources\\user_data\\farmerImages\\";
             String var0 = "";
             try {
                 if(!request.getParameter("imageNameParam").isEmpty()){
@@ -35,6 +35,8 @@ public class ImageServlet extends HttpServlet {
                 e.printStackTrace();
             }
             System.out.println("Image servlet called '''''''''''''''''''''''''");
+            //System.out.println(System.getProperty("user.dir"));
+            //System.out.println(Paths.get("").toAbsolutePath().toString());
             System.out.println(path+var0);
             response.setContentType(CONTENT_TYPE);
                 OutputStream os = response.getOutputStream();
