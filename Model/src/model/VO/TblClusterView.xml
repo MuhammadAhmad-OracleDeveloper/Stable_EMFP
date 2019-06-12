@@ -67,8 +67,9 @@
     Name="LOV_CropId"
     ListVOName="Crops_Name_LOV1"
     ListRangeSize="-1"
-    NullValueFlag="none"
-    MRUCount="0">
+    NullValueFlag="start"
+    MRUCount="0"
+    NullValueId="LOV_CropId_LOVUIHints_NullValueId">
     <AttrArray Name="AttrNames">
       <Item Value="CropId"/>
     </AttrArray>
@@ -85,8 +86,9 @@
     Name="LOV_PhaseId"
     ListVOName="Phase_Name_LOV1"
     ListRangeSize="-1"
-    NullValueFlag="none"
-    MRUCount="0">
+    NullValueFlag="start"
+    MRUCount="0"
+    NullValueId="LOV_PhaseId_LOVUIHints_NullValueId">
     <AttrArray Name="AttrNames">
       <Item Value="PhaseId"/>
     </AttrArray>
@@ -103,8 +105,9 @@
     Name="LOV_CityLibrDetail"
     ListVOName="City_Name_LOV1"
     ListRangeSize="-1"
-    NullValueFlag="none"
-    MRUCount="0">
+    NullValueFlag="start"
+    MRUCount="0"
+    NullValueId="LOV_CityLibrDetail_LOVUIHints_NullValueId">
     <AttrArray Name="AttrNames">
       <Item Value="CityLibrDetail"/>
     </AttrArray>
@@ -375,4 +378,8 @@
     ViewLink="model.VO.Fk4TblTrainingSchMasterFkLink"
     Type="oracle.jbo.RowIterator"
     IsUpdateable="false"/>
+  <ResourceBundle>
+    <PropertiesBundle
+      PropertiesFile="model.ModelBundle"/>
+  </ResourceBundle>
 </ViewObject>

@@ -47,7 +47,6 @@
         <page path="/Main_Pages/Modules/Management/Main_Management.jsf" usageId="view_Main_ManagementPageDef"/>
         <page path="/WEB-INF/Fragments/Modules/Management/User_Roles.jsff" usageId="view_User_RolesPageDef"/>
         <page path="/WEB-INF/Fragments/Dashboard.jsff" usageId="view_DashboardPageDef1"/>
-        <page path="/Main_Pages/Modules/Setup/Setup_Sidebar.jsf" usageId="view_Setup_SidebarPageDef"/>
         <page path="/Reports/Reports.jsf" usageId="view_ReportsPageDef"/>
         <page path="/WEB-INF/Fragments/Reports/Cluster_Detail_Report.jsff" usageId="view_Cluster_Detail_ReportPageDef"/>
         <page path="/WEB-INF/Fragments/Reports/Farmer_Report.jsff" usageId="view_Farmer_ReportPageDef"/>
