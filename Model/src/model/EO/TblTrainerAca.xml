@@ -44,7 +44,6 @@
   </Attribute>
   <Attribute
     Name="PassYear"
-    IsNotNull="true"
     ColumnName="PASS_YEAR"
     SQLType="NUMERIC"
     Type="java.math.BigDecimal"
@@ -64,7 +63,6 @@
   </Attribute>
   <Attribute
     Name="UniBoard"
-    IsNotNull="true"
     Precision="150"
     ColumnName="UNI_BOARD"
     SQLType="VARCHAR"

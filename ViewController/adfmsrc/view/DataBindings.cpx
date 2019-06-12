@@ -50,6 +50,7 @@
         <page path="/Reports/Reports.jsf" usageId="view_ReportsPageDef"/>
         <page path="/WEB-INF/Fragments/Reports/Cluster_Detail_Report.jsff" usageId="view_Cluster_Detail_ReportPageDef"/>
         <page path="/WEB-INF/Fragments/Reports/Farmer_Report.jsff" usageId="view_Farmer_ReportPageDef"/>
+        <page path="/WEB-INF/Fragments/Modules/Grants/Grant_Rate.jsff" usageId="view_Grant_RatePageDef"/>
     </pageMap>
     <pageDefinitionUsages>
         <page id="view_Farmer_RegistrationPageDef"
@@ -91,6 +92,7 @@
         <page id="view_ReportsPageDef" path="Reports.ReportsPageDef"/>
         <page id="view_Cluster_Detail_ReportPageDef" path="Fragments.Reports.Cluster_Detail_ReportPageDef"/>
         <page id="view_Farmer_ReportPageDef" path="Fragments.Reports.Farmer_ReportPageDef"/>
+        <page id="view_Grant_RatePageDef" path="Fragments.Modules.Grants.Grant_RatePageDef"/>
     </pageDefinitionUsages>
     <dataControlUsages>
         <BC4JDataControl id="AppModuleDataControl" Package="model"
