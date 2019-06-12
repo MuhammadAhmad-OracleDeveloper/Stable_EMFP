@@ -64,7 +64,6 @@
   </Attribute>
   <Attribute
     Name="MarStatus"
-    IsNotNull="true"
     Precision="1"
     ColumnName="MAR_STATUS"
     SQLType="CHAR"
@@ -93,7 +92,6 @@
   </Attribute>
   <Attribute
     Name="Dob"
-    IsNotNull="true"
     ColumnName="DOB"
     SQLType="DATE"
     Type="java.sql.Timestamp"
@@ -101,7 +99,6 @@
     TableName="TBL_TRAINER"/>
   <Attribute
     Name="Doj"
-    IsNotNull="true"
     ColumnName="DOJ"
     SQLType="DATE"
     Type="java.sql.Timestamp"
@@ -222,7 +219,6 @@
   </Attribute>
   <Attribute
     Name="PerAddress"
-    IsNotNull="true"
     Precision="300"
     ColumnName="PER_ADDRESS"
     SQLType="VARCHAR"
