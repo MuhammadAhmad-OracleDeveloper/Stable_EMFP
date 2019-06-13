@@ -51,6 +51,9 @@
         <page path="/WEB-INF/Fragments/Reports/Cluster_Detail_Report.jsff" usageId="view_Cluster_Detail_ReportPageDef"/>
         <page path="/WEB-INF/Fragments/Reports/Farmer_Report.jsff" usageId="view_Farmer_ReportPageDef"/>
         <page path="/WEB-INF/Fragments/Modules/Grants/Grant_Rate.jsff" usageId="view_Grant_RatePageDef"/>
+        <page path="/WEB-INF/Fragments/Modules/Grants/Grant_Application.jsff" usageId="view_Grant_ApplicationPageDef"/>
+        <page path="/WEB-INF/Fragments/Modules/Grants/Grant_Approval.jsff" usageId="view_Grant_ApprovalPageDef"/>
+        <page path="/WEB-INF/Fragments/Modules/Grants/Grant_Disburse.jsff" usageId="view_Grant_DisbursePageDef"/>
     </pageMap>
     <pageDefinitionUsages>
         <page id="view_Farmer_RegistrationPageDef"
@@ -93,6 +96,9 @@
         <page id="view_Cluster_Detail_ReportPageDef" path="Fragments.Reports.Cluster_Detail_ReportPageDef"/>
         <page id="view_Farmer_ReportPageDef" path="Fragments.Reports.Farmer_ReportPageDef"/>
         <page id="view_Grant_RatePageDef" path="Fragments.Modules.Grants.Grant_RatePageDef"/>
+        <page id="view_Grant_ApplicationPageDef" path="Fragments.Modules.Grants.Grant_ApplicationPageDef"/>
+        <page id="view_Grant_ApprovalPageDef" path="Fragments.Modules.Grants.Grant_ApprovalPageDef"/>
+        <page id="view_Grant_DisbursePageDef" path="Fragments.Modules.Grants.Grant_DisbursePageDef"/>
     </pageDefinitionUsages>
     <dataControlUsages>
         <BC4JDataControl id="AppModuleDataControl" Package="model"

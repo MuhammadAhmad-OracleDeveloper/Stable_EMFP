@@ -32,7 +32,8 @@
                           rowSelection="single" fetchSize="#{bindings.TblGrantRateView1.rangeSize}"
                           filterModel="#{bindings.TblGrantRateView1Query.queryDescriptor}" filterVisible="true"
                           queryListener="#{bindings.TblGrantRateView1Query.processQuery}" varStatus="vs" id="t1"
-                          partialTriggers="::b1 ::b2 ::b3" width="881">
+                          partialTriggers="::b1 ::b2 ::b3 ::b5" width="881"
+                          scrollPolicy="page" autoHeightRows="0">
                   <af:column sortProperty="#{bindings.TblGrantRateView1.hints.GrantRateId.name}" 
                              filterable="true" sortable="true" 
                              headerText="Grant Rate ID" 
@@ -155,6 +156,8 @@
                     </af:inputText>
                   </af:column>
                 </af:table>
+                <af:button actionListener="#{bindings.Execute.execute}" text="Refresh"
+                           disabled="#{!bindings.Execute.enabled}" id="b5" icon="#{resource['images:refresh.png']}"/>
               </af:showDetailItem>
             </af:panelTabbed>
           </af:gridCell>
@@ -170,7 +173,8 @@
                          disabled="#{!bindings.Execute.enabled}" id="b2" icon="#{resource['images:edit.png']}"/>
               <af:spacer width="5" height="10" id="s3"/>
               <af:button actionListener="#{bindings.Delete.execute}" text="Delete"
-                         disabled="#{!bindings.Delete.enabled}" id="b3" icon="#{resource['images:delete.png']}"/>
+                         disabled="#{!bindings.Delete.enabled}" id="b3" icon="#{resource['images:delete.png']}"
+                         immediate="true" action="Grant_Rate.jsf"/>
               
             </af:panelGroupLayout>
           </af:gridCell>

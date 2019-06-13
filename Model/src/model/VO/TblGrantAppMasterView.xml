@@ -4,7 +4,7 @@
 <ViewObject
   xmlns="http://xmlns.oracle.com/bc4j"
   Name="TblGrantAppMasterView"
-  Version="12.1.3.10.8"
+  Version="12.2.1.11.57"
   InheritPersonalization="merge"
   SelectListFlags="1"
   FromListFlags="1"
@@ -13,6 +13,94 @@
   CustomQuery="false"
   SelectAllAttributes="false"
   PageIterMode="Full">
+  <ViewAccessor
+    Name="Farmer_Reg_id_LOV1"
+    ViewObjectName="model.LOV.Farmer_Reg_id_LOV"
+    RowLevelBinds="true"/>
+  <ViewAccessor
+    Name="Cluster_Name_LOV1"
+    ViewObjectName="model.LOV.Cluster_Name_LOV"
+    RowLevelBinds="true"/>
+  <ViewAccessor
+    Name="Course_Name_LOV1"
+    ViewObjectName="model.LOV.Course_Name_LOV"
+    RowLevelBinds="true"/>
+  <ViewAccessor
+    Name="Trainer_Name_LOV1"
+    ViewObjectName="model.LOV.Trainer_Name_LOV"
+    RowLevelBinds="true"/>
+  <ListBinding
+    Name="LOV_FarmerRegId"
+    ListVOName="Farmer_Reg_id_LOV1"
+    ListRangeSize="-1"
+    NullValueFlag="none"
+    MRUCount="0">
+    <AttrArray Name="AttrNames">
+      <Item Value="FarmerRegId"/>
+    </AttrArray>
+    <AttrArray Name="AttrExpressions"/>
+    <AttrArray Name="ListAttrNames">
+      <Item Value="FarmerRegId"/>
+    </AttrArray>
+    <AttrArray Name="ListDisplayAttrNames">
+      <Item Value="Name"/>
+    </AttrArray>
+    <DisplayCriteria/>
+  </ListBinding>
+  <ListBinding
+    Name="LOV_ClusterId"
+    ListVOName="Cluster_Name_LOV1"
+    ListRangeSize="-1"
+    NullValueFlag="none"
+    MRUCount="0">
+    <AttrArray Name="AttrNames">
+      <Item Value="ClusterId"/>
+    </AttrArray>
+    <AttrArray Name="AttrExpressions"/>
+    <AttrArray Name="ListAttrNames">
+      <Item Value="ClusterId"/>
+    </AttrArray>
+    <AttrArray Name="ListDisplayAttrNames">
+      <Item Value="Name"/>
+    </AttrArray>
+    <DisplayCriteria/>
+  </ListBinding>
+  <ListBinding
+    Name="LOV_CourseId"
+    ListVOName="Course_Name_LOV1"
+    ListRangeSize="-1"
+    NullValueFlag="none"
+    MRUCount="0">
+    <AttrArray Name="AttrNames">
+      <Item Value="CourseId"/>
+    </AttrArray>
+    <AttrArray Name="AttrExpressions"/>
+    <AttrArray Name="ListAttrNames">
+      <Item Value="CourseId"/>
+    </AttrArray>
+    <AttrArray Name="ListDisplayAttrNames">
+      <Item Value="Name"/>
+    </AttrArray>
+    <DisplayCriteria/>
+  </ListBinding>
+  <ListBinding
+    Name="LOV_TrainerId"
+    ListVOName="Trainer_Name_LOV1"
+    ListRangeSize="-1"
+    NullValueFlag="none"
+    MRUCount="0">
+    <AttrArray Name="AttrNames">
+      <Item Value="TrainerId"/>
+    </AttrArray>
+    <AttrArray Name="AttrExpressions"/>
+    <AttrArray Name="ListAttrNames">
+      <Item Value="TrainerId"/>
+    </AttrArray>
+    <AttrArray Name="ListDisplayAttrNames">
+      <Item Value="Name"/>
+    </AttrArray>
+    <DisplayCriteria/>
+  </ListBinding>
   <EntityUsage
     Name="TblGrantAppMaster"
     Entity="model.EO.TblGrantAppMaster"/>
@@ -29,7 +117,15 @@
     PrecisionRule="true"
     EntityAttrName="FarmerRegId"
     EntityUsage="TblGrantAppMaster"
-    AliasName="FARMER_REG_ID"/>
+    AliasName="FARMER_REG_ID"
+    LOVName="LOV_FarmerRegId">
+    <Properties>
+      <SchemaBasedProperties>
+        <CONTROLTYPE
+          Value="combo"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
   <ViewAttribute
     Name="Acre"
     IsNotNull="true"
@@ -43,7 +139,15 @@
     PrecisionRule="true"
     EntityAttrName="ClusterId"
     EntityUsage="TblGrantAppMaster"
-    AliasName="CLUSTER_ID"/>
+    AliasName="CLUSTER_ID"
+    LOVName="LOV_ClusterId">
+    <Properties>
+      <SchemaBasedProperties>
+        <CONTROLTYPE
+          Value="combo"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
   <ViewAttribute
     Name="Dated"
     IsNotNull="true"
@@ -63,14 +167,30 @@
     PrecisionRule="true"
     EntityAttrName="CourseId"
     EntityUsage="TblGrantAppMaster"
-    AliasName="COURSE_ID"/>
+    AliasName="COURSE_ID"
+    LOVName="LOV_CourseId">
+    <Properties>
+      <SchemaBasedProperties>
+        <CONTROLTYPE
+          Value="combo"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
   <ViewAttribute
     Name="TrainerId"
     IsNotNull="true"
     PrecisionRule="true"
     EntityAttrName="TrainerId"
     EntityUsage="TblGrantAppMaster"
-    AliasName="TRAINER_ID"/>
+    AliasName="TRAINER_ID"
+    LOVName="LOV_TrainerId">
+    <Properties>
+      <SchemaBasedProperties>
+        <CONTROLTYPE
+          Value="combo"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
   <ViewLinkAccessor
     Name="TblGrantApprovalDetailView"
     ViewLink="model.VO.Fk3TblGrantApprovalDetailFkLink"
