@@ -87,6 +87,7 @@
          <list n="constituent-sets">
             <hash>
                <list n="pattern-filters">
+                  <string v="+refresh.png"/>
                   <string v="+add.png"/>
                   <string v="+admin.png"/>
                   <string v="+link_login_button.png"/>

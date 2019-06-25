@@ -1,38 +1,4 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <ui:composition xmlns:ui="http://java.sun.com/jsf/facelets" xmlns:af="http://xmlns.oracle.com/adf/faces/rich">
-  <af:panelAccordion discloseMany="false" id="pa1" inlineStyle="height:811px; width:1050px;">
-    <af:showDetailItem id="pane1" text="Grant Disburse">
-      <af:panelGridLayout id="pgl1">
-        <af:gridRow marginTop="5px" height="auto" id="gr1">
-          <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc1"/>
-        </af:gridRow>
-        <af:gridRow marginTop="5px" height="auto" id="gr2">
-          <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc2">
-            <af:panelTabbed position="above" id="pt1" inlineStyle="width:714px;">
-              <af:showDetailItem id="tab1" text="Grant Disburse Master"/>
-            </af:panelTabbed>
-          </af:gridCell>
-        </af:gridRow>
-        <af:gridRow marginTop="5px" height="auto" id="gr3">
-          <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc3"/>
-        </af:gridRow>
-        <af:gridRow marginTop="5px" height="auto" id="gr4">
-          <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc4"/>
-        </af:gridRow>
-        <af:gridRow marginTop="5px" height="auto" id="gr5">
-          <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc5">
-            <af:panelTabbed position="above" id="pt2">
-              <af:showDetailItem id="tab2" text="Grant Disburse Detail"/>
-            </af:panelTabbed>
-          </af:gridCell>
-        </af:gridRow>
-        <af:gridRow marginTop="5px" height="auto" id="gr6">
-          <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc6"/>
-        </af:gridRow>
-        <af:gridRow marginTop="5px" height="auto" marginBottom="5px" id="gr7">
-          <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc7"/>
-        </af:gridRow>
-      </af:panelGridLayout>
-    </af:showDetailItem>
-  </af:panelAccordion>
+  <af:button text="Main Grant" id="b1"/>
 </ui:composition>
