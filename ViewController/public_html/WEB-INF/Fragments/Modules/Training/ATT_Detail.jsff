@@ -235,7 +235,11 @@
                                                     <af:panelTabbed position="above" id="pt3"
                                                                     inlineStyle="width:871px;">
                                                         <af:showDetailItem id="tab2" text="Attendance Detail">
-                                                            <af:table value="#{bindings.TblClusterAttDetailView3.collectionModel}"
+                                                        
+                                                        
+                                                        
+                                                        
+                                                            <!--<af:table value="#{bindings.TblClusterAttDetailView3.collectionModel}"
                                                                       var="row"
                                                                       rows="#{bindings.TblClusterAttDetailView3.rangeSize}"
                                                                       emptyText="#{bindings.TblClusterAttDetailView3.viewable ? 'No data to display.' : 'Access Denied.'}"
@@ -402,8 +406,141 @@
                                                                         <f:validator binding="#{row.bindings.Ast.validator}"/>
                                                                     </af:selectOneChoice>
                                                                 </af:column>
-                                                            </af:table>
-                                                            <af:button actionListener="#{bindings.Execute1.execute}"
+                                                            </af:table>-->
+                               
+                               
+                               
+                               
+                                <af:table value="#{bindings.TblClusterAttDetailView31.collectionModel}" var="row"
+                                          rows="#{bindings.TblClusterAttDetailView31.rangeSize}"
+                                          emptyText="#{bindings.TblClusterAttDetailView31.viewable ? 'No data to display.' : 'Access Denied.'}"
+                                          rowBandingInterval="0"
+                                          selectedRowKeys="#{bindings.TblClusterAttDetailView31.collectionModel.selectedRow}"
+                                          selectionListener="#{bindings.TblClusterAttDetailView31.collectionModel.makeCurrent}"
+                                          rowSelection="single"
+                                          fetchSize="#{bindings.TblClusterAttDetailView31.rangeSize}"
+                                          filterModel="#{bindings.TblClusterAttDetailView3Query.queryDescriptor}"
+                                          filterVisible="true"
+                                          queryListener="#{bindings.TblClusterAttDetailView3Query.processQuery}"
+                                          varStatus="vs" id="t3" partialTriggers="::b18 ::b14 ::b12 ::b13">
+                                    <af:column sortProperty="#{bindings.TblClusterAttDetailView31.hints.ClusterAttDetailId.name}"
+                                               filterable="true" sortable="true"
+                                               headerText="#{bindings.TblClusterAttDetailView31.hints.ClusterAttDetailId.label}"
+                                               id="c15">
+                                        <af:inputText value="#{row.bindings.ClusterAttDetailId.inputValue}"
+                                                      label="#{bindings.TblClusterAttDetailView31.hints.ClusterAttDetailId.label}"
+                                                      required="#{bindings.TblClusterAttDetailView31.hints.ClusterAttDetailId.mandatory}"
+                                                      columns="#{bindings.TblClusterAttDetailView31.hints.ClusterAttDetailId.displayWidth}"
+                                                      maximumLength="#{bindings.TblClusterAttDetailView31.hints.ClusterAttDetailId.precision}"
+                                                      shortDesc="#{bindings.TblClusterAttDetailView31.hints.ClusterAttDetailId.tooltip}"
+                                                      id="it25" readOnly="true">
+                                            <f:validator binding="#{row.bindings.ClusterAttDetailId.validator}"/>
+                                            <af:convertNumber groupingUsed="false"
+                                                              pattern="#{bindings.TblClusterAttDetailView31.hints.ClusterAttDetailId.format}"/>
+                                        </af:inputText>
+                                    </af:column>
+                                    <af:column sortProperty="#{bindings.TblClusterAttDetailView31.hints.ClusterAttMasterId.name}"
+                                               filterable="true" sortable="true"
+                                               headerText="#{bindings.TblClusterAttDetailView31.hints.ClusterAttMasterId.label}"
+                                               id="c16">
+                                        <af:inputText value="#{row.bindings.ClusterAttMasterId.inputValue}"
+                                                      label="#{bindings.TblClusterAttDetailView31.hints.ClusterAttMasterId.label}"
+                                                      required="#{bindings.TblClusterAttDetailView31.hints.ClusterAttMasterId.mandatory}"
+                                                      columns="#{bindings.TblClusterAttDetailView31.hints.ClusterAttMasterId.displayWidth}"
+                                                      maximumLength="#{bindings.TblClusterAttDetailView31.hints.ClusterAttMasterId.precision}"
+                                                      shortDesc="#{bindings.TblClusterAttDetailView31.hints.ClusterAttMasterId.tooltip}"
+                                                      id="it26" readOnly="true">
+                                            <f:validator binding="#{row.bindings.ClusterAttMasterId.validator}"/>
+                                            <af:convertNumber groupingUsed="false"
+                                                              pattern="#{bindings.TblClusterAttDetailView31.hints.ClusterAttMasterId.format}"/>
+                                        </af:inputText>
+                                    </af:column>
+                                    <af:column sortProperty="#{bindings.TblClusterAttDetailView31.hints.FarmerRegId.name}"
+                                               filterable="true" sortable="true"
+                                               headerText="#{bindings.TblClusterAttDetailView31.hints.FarmerRegId.label}"
+                                               id="c17">
+                                        <af:selectOneChoice value="#{row.bindings.FarmerRegId.inputValue}"
+                                                            label="#{row.bindings.FarmerRegId.label}"
+                                                            required="#{bindings.TblClusterAttDetailView31.hints.FarmerRegId.mandatory}"
+                                                            shortDesc="#{bindings.TblClusterAttDetailView31.hints.FarmerRegId.tooltip}"
+                                                            id="soc3" readOnly="true">
+                                            <f:selectItems value="#{row.bindings.FarmerRegId.items}" id="si3"/>
+                                            <f:validator binding="#{row.bindings.FarmerRegId.validator}"/>
+                                        </af:selectOneChoice>
+                                    </af:column>
+                                    <af:column sortProperty="#{bindings.TblClusterAttDetailView31.hints.Ast.name}"
+                                               filterable="true" sortable="true"
+                                               headerText="#{bindings.TblClusterAttDetailView31.hints.Ast.label}"
+                                               id="c18">
+                                        <af:selectOneChoice value="#{row.bindings.Ast.inputValue}"
+                                                            label="#{row.bindings.Ast.label}"
+                                                            required="#{bindings.TblClusterAttDetailView31.hints.Ast.mandatory}"
+                                                            shortDesc="#{bindings.TblClusterAttDetailView31.hints.Ast.tooltip}"
+                                                            id="soc4">
+                                            <f:selectItems value="#{row.bindings.Ast.items}" id="si4"/>
+                                            <f:validator binding="#{row.bindings.Ast.validator}"/>
+                                        </af:selectOneChoice>
+                                    </af:column>
+                                    <af:column sortProperty="#{bindings.TblClusterAttDetailView31.hints.Farmer_Cnic.name}"
+                                               filterable="true" sortable="true"
+                                               headerText="#{bindings.TblClusterAttDetailView31.hints.Farmer_Cnic.label}"
+                                               id="c19">
+                                        <af:inputText value="#{row.bindings.Farmer_Cnic.inputValue}"
+                                                      label="#{bindings.TblClusterAttDetailView31.hints.Farmer_Cnic.label}"
+                                                      required="#{bindings.TblClusterAttDetailView31.hints.Farmer_Cnic.mandatory}"
+                                                      columns="#{bindings.TblClusterAttDetailView31.hints.Farmer_Cnic.displayWidth}"
+                                                      maximumLength="#{bindings.TblClusterAttDetailView31.hints.Farmer_Cnic.precision}"
+                                                      shortDesc="#{bindings.TblClusterAttDetailView31.hints.Farmer_Cnic.tooltip}"
+                                                      id="it27">
+                                            <f:validator binding="#{row.bindings.Farmer_Cnic.validator}"/>
+                                        </af:inputText>
+                                    </af:column>
+                                    <af:column sortProperty="#{bindings.TblClusterAttDetailView31.hints.FarmerRegId1.name}"
+                                               filterable="true" sortable="true"
+                                               headerText="#{bindings.TblClusterAttDetailView31.hints.FarmerRegId1.label}"
+                                               id="c20">
+                                        <af:inputText value="#{row.bindings.FarmerRegId1.inputValue}"
+                                                      label="#{bindings.TblClusterAttDetailView31.hints.FarmerRegId1.label}"
+                                                      required="#{bindings.TblClusterAttDetailView31.hints.FarmerRegId1.mandatory}"
+                                                      columns="#{bindings.TblClusterAttDetailView31.hints.FarmerRegId1.displayWidth}"
+                                                      maximumLength="#{bindings.TblClusterAttDetailView31.hints.FarmerRegId1.precision}"
+                                                      shortDesc="#{bindings.TblClusterAttDetailView31.hints.FarmerRegId1.tooltip}"
+                                                      id="it28">
+                                            <f:validator binding="#{row.bindings.FarmerRegId1.validator}"/>
+                                            <af:convertNumber groupingUsed="false"
+                                                              pattern="#{bindings.TblClusterAttDetailView31.hints.FarmerRegId1.format}"/>
+                                        </af:inputText>
+                                    </af:column>
+                                    <af:column sortProperty="#{bindings.TblClusterAttDetailView31.hints.Farmer_Name.name}"
+                                               filterable="true" sortable="true"
+                                               headerText="#{bindings.TblClusterAttDetailView31.hints.Farmer_Name.label}"
+                                               id="c21">
+                                        <af:inputText value="#{row.bindings.Farmer_Name.inputValue}"
+                                                      label="#{bindings.TblClusterAttDetailView31.hints.Farmer_Name.label}"
+                                                      required="#{bindings.TblClusterAttDetailView31.hints.Farmer_Name.mandatory}"
+                                                      columns="#{bindings.TblClusterAttDetailView31.hints.Farmer_Name.displayWidth}"
+                                                      maximumLength="#{bindings.TblClusterAttDetailView31.hints.Farmer_Name.precision}"
+                                                      shortDesc="#{bindings.TblClusterAttDetailView31.hints.Farmer_Name.tooltip}"
+                                                      id="it29">
+                                            <f:validator binding="#{row.bindings.Farmer_Name.validator}"/>
+                                        </af:inputText>
+                                    </af:column>
+                                    <af:column sortProperty="#{bindings.TblClusterAttDetailView31.hints.Farmer_Mobile.name}"
+                                               filterable="true" sortable="true"
+                                               headerText="#{bindings.TblClusterAttDetailView31.hints.Farmer_Mobile.label}"
+                                               id="c22">
+                                        <af:inputText value="#{row.bindings.Farmer_Mobile.inputValue}"
+                                                      label="#{bindings.TblClusterAttDetailView31.hints.Farmer_Mobile.label}"
+                                                      required="#{bindings.TblClusterAttDetailView31.hints.Farmer_Mobile.mandatory}"
+                                                      columns="#{bindings.TblClusterAttDetailView31.hints.Farmer_Mobile.displayWidth}"
+                                                      maximumLength="#{bindings.TblClusterAttDetailView31.hints.Farmer_Mobile.precision}"
+                                                      shortDesc="#{bindings.TblClusterAttDetailView31.hints.Farmer_Mobile.tooltip}"
+                                                      id="it30">
+                                            <f:validator binding="#{row.bindings.Farmer_Mobile.validator}"/>
+                                        </af:inputText>
+                                    </af:column>
+                                </af:table>
+                                <af:button actionListener="#{bindings.Execute1.execute}"
                                                                        text="Refresh"
                                                                        disabled="#{!bindings.Execute1.enabled}"
                                                                        id="b18"

@@ -65,7 +65,7 @@
                                                                                    id="si3"/>
                                                                     <f:validator binding="#{bindings.ModuleId.validator}"/>
                                                                 </af:selectOneChoice>
-                                                                <af:selectOneChoice value="#{bindings.ClusterId.inputValue}"
+                                                                <!--<af:selectOneChoice value="#{bindings.ClusterId.inputValue}"
                                                                                     label="#{bindings.ClusterId.label}"
                                                                                     required="#{bindings.ClusterId.hints.mandatory}"
                                                                                     shortDesc="#{bindings.ClusterId.hints.tooltip}"
@@ -73,7 +73,7 @@
                                                                     <f:selectItems value="#{bindings.ClusterId.items}"
                                                                                    id="si4"/>
                                                                     <f:validator binding="#{bindings.ClusterId.validator}"/>
-                                                                </af:selectOneChoice>
+                                                                </af:selectOneChoice>-->
                                                                 <af:selectOneChoice value="#{bindings.TeamId.inputValue}"
                                                                                     label="#{bindings.TeamId.label}"
                                                                                     required="#{bindings.TeamId.hints.mandatory}"
