@@ -124,4 +124,10 @@
   <ViewUsage
     Name="Cluster_No_LOV1"
     ViewObjectName="model.LOV.Cluster_No_LOV"/>
+  <ViewUsage
+    Name="Trainer_Type_LOV1"
+    ViewObjectName="model.LOV.Trainer_Type_LOV"/>
+  <ViewUsage
+    Name="Trainer_SM_LOV1"
+    ViewObjectName="model.LOV.Trainer_SM_LOV"/>
 </AppModule>

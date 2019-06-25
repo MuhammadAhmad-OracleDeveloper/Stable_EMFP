@@ -3,23 +3,24 @@
 <!---->
 <ViewObject
   xmlns="http://xmlns.oracle.com/bc4j"
-  Name="Trainer_Name_LOV"
+  Name="Trainer_SM_LOV"
   Version="12.2.1.11.57"
   InheritPersonalization="merge"
   SelectList="TblTrainer.TRAINER_ID, 
        TblTrainer.NAME, 
-       TblTrainer.AST"
+       TblTrainer.AST, 
+       TblTrainer.TRAINER_TYPE"
   FromList="TBL_TRAINER TblTrainer"
   Where="AST='Y'  
 AND  
-tbltrainer.trainer_type='tr'"
+TblTrainer.TRAINER_TYPE='sm'"
   BindingStyle="OracleName"
   CustomQuery="false"
   PageIterMode="Full">
   <Properties>
     <SchemaBasedProperties>
       <LABEL
-        ResId="model.LOV.Trainer_Name_LOV_LABEL"/>
+        ResId="model.LOV.Trainer_SM_LOV_LABEL"/>
     </SchemaBasedProperties>
   </Properties>
   <EntityUsage
@@ -27,7 +28,6 @@ tbltrainer.trainer_type='tr'"
     Entity="model.EO.TblTrainer"/>
   <ViewAttribute
     Name="TrainerId"
-    IsNotNull="true"
     PrecisionRule="true"
     EntityAttrName="TrainerId"
     EntityUsage="TblTrainer"
@@ -46,6 +46,12 @@ tbltrainer.trainer_type='tr'"
     EntityAttrName="Ast"
     EntityUsage="TblTrainer"
     AliasName="AST"/>
+  <ViewAttribute
+    Name="TrainerType"
+    PrecisionRule="true"
+    EntityAttrName="TrainerType"
+    EntityUsage="TblTrainer"
+    AliasName="TRAINER_TYPE"/>
   <ResourceBundle>
     <PropertiesBundle
       PropertiesFile="model.ModelBundle"/>

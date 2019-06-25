@@ -4,7 +4,7 @@
 <ViewObject
   xmlns="http://xmlns.oracle.com/bc4j"
   Name="TblTrainerView"
-  Version="12.1.3.10.8"
+  Version="12.2.1.11.57"
   InheritPersonalization="merge"
   SelectListFlags="1"
   FromListFlags="1"
@@ -24,6 +24,10 @@
   <ViewAccessor
     Name="Gender_LOV1"
     ViewObjectName="model.LOV.Gender_LOV"
+    RowLevelBinds="true"/>
+  <ViewAccessor
+    Name="Trainer_Type_LOV1"
+    ViewObjectName="model.LOV.Trainer_Type_LOV"
     RowLevelBinds="true"/>
   <ListBinding
     Name="LOV_Ast"
@@ -76,6 +80,24 @@
     </AttrArray>
     <AttrArray Name="ListDisplayAttrNames">
       <Item Value="GenderView"/>
+    </AttrArray>
+    <DisplayCriteria/>
+  </ListBinding>
+  <ListBinding
+    Name="LOV_TrainerType"
+    ListVOName="Trainer_Type_LOV1"
+    ListRangeSize="-1"
+    NullValueFlag="none"
+    MRUCount="0">
+    <AttrArray Name="AttrNames">
+      <Item Value="TrainerType"/>
+    </AttrArray>
+    <AttrArray Name="AttrExpressions"/>
+    <AttrArray Name="ListAttrNames">
+      <Item Value="TrainerDB"/>
+    </AttrArray>
+    <AttrArray Name="ListDisplayAttrNames">
+      <Item Value="Trainerview"/>
     </AttrArray>
     <DisplayCriteria/>
   </ListBinding>
@@ -227,6 +249,20 @@
     EntityAttrName="PerAddress"
     EntityUsage="TblTrainer"
     AliasName="PER_ADDRESS"/>
+  <ViewAttribute
+    Name="TrainerType"
+    PrecisionRule="true"
+    EntityAttrName="TrainerType"
+    EntityUsage="TblTrainer"
+    AliasName="TRAINER_TYPE"
+    LOVName="LOV_TrainerType">
+    <Properties>
+      <SchemaBasedProperties>
+        <CONTROLTYPE
+          Value="combo"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
   <ViewLinkAccessor
     Name="TblClusterAttMasterView"
     ViewLink="model.VO.FkTblClusterAttMasterFkLink"

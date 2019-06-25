@@ -27,7 +27,7 @@
                                             <af:gridRow marginTop="5px" height="auto" id="gr2">
                                                 <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc2">
                                                     <af:panelTabbed position="above" id="pt2"
-                                                                    inlineStyle="width:810px;">
+                                                                    inlineStyle="width:914px;">
                                                         <af:showDetailItem id="tab1" text="Trainer Setup">
                                                             <af:table value="#{bindings.TblTrainerView1.collectionModel}"
                                                                       var="row"
@@ -43,7 +43,7 @@
                                                                       queryListener="#{bindings.TblTrainerView1Query.processQuery}"
                                                                       varStatus="vs" id="t1"
                                                                       partialTriggers="::b7 ::b8 ::b9 ::b12 ::b13 ::b24 ::b25 ::b26"
-                                                                      width="797"
+                                                                      width="903"
                                                                       scrollPolicy="page" autoHeightRows="0">
                                                                 <af:column sortProperty="#{bindings.TblTrainerView1.hints.TrainerId.name}"
                                                                            filterable="true" sortable="true"
@@ -126,7 +126,24 @@
                                                                         <f:validator binding="#{row.bindings.Cnic.validator}"/>
                                                                     </af:inputText>
                                                                 </af:column>
-                                                                <af:column sortProperty="#{bindings.TblTrainerView1.hints.Ast.name}"
+                                    <af:column sortProperty="#{bindings.TblTrainerView1.hints.TrainerType.name}"
+                                               filterable="true" sortable="true"
+                                               headerText="Trainer Type" id="c6" width="100">
+                                                <f:facet name="filter">
+                                                                       <af:inputText value="#{vs.filterCriteria.TrainerType}"
+                                                                                     id="it17" placeholder="Search Type">
+                                                                       </af:inputText>
+                                                                   </f:facet>
+                                        <af:selectOneChoice value="#{row.bindings.TrainerType.inputValue}"
+                                                            label="#{row.bindings.TrainerType.label}"
+                                                            required="#{bindings.TblTrainerView1.hints.TrainerType.mandatory}"
+                                                            shortDesc="#{bindings.TblTrainerView1.hints.TrainerType.tooltip}"
+                                                            id="soc5">
+                                            <f:selectItems value="#{row.bindings.TrainerType.items}" id="si5"/>
+                                            <f:validator binding="#{row.bindings.TrainerType.validator}"/>
+                                        </af:selectOneChoice>
+                                    </af:column>
+                                    <af:column sortProperty="#{bindings.TblTrainerView1.hints.Ast.name}"
                                                                            filterable="true" sortable="true"
                                                                            headerText="Active" id="c4" width="60">
                                                                            
@@ -166,7 +183,7 @@
                                                         <af:showDetailItem id="tab2" text="Trainer Detail">
                                                             <af:panelFormLayout id="pfl1" maxColumns="3" rows="5">
                                                                 <af:selectOneChoice value="#{bindings.Gender.inputValue}"
-                                                                                    label="#{bindings.Gender.label}"
+                                                                                    label="Gender"
                                                                                     required="#{bindings.Gender.hints.mandatory}"
                                                                                     shortDesc="#{bindings.Gender.hints.tooltip}"
                                                                                     id="soc4"
