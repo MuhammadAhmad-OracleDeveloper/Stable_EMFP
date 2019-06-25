@@ -54,5 +54,19 @@
             Action="iteratorExecute"/>
     <action id="Commit" RequiresUpdateModel="true" Action="commitTransaction" DataControl="AppModuleDataControl"/>
     <action id="Rollback" RequiresUpdateModel="false" Action="rollbackTransaction" DataControl="AppModuleDataControl"/>
+    <tree IterBinding="TblClusterAttDetailView3Iterator" id="TblClusterAttDetailView31">
+      <nodeDefinition DefName="model.VO.TblClusterAttDetailView" Name="TblClusterAttDetailView310">
+        <AttrNames>
+          <Item Value="ClusterAttDetailId"/>
+          <Item Value="ClusterAttMasterId"/>
+          <Item Value="FarmerRegId"/>
+          <Item Value="Ast"/>
+          <Item Value="Farmer_Cnic"/>
+          <Item Value="FarmerRegId1"/>
+          <Item Value="Farmer_Name"/>
+          <Item Value="Farmer_Mobile"/>
+        </AttrNames>
+      </nodeDefinition>
+    </tree>
   </bindings>
 </pageDefinition>

@@ -46,7 +46,6 @@
     TableName="TBL_TRAINING_SCH_MASTER"/>
   <Attribute
     Name="ClusterId"
-    IsNotNull="true"
     ColumnName="CLUSTER_ID"
     SQLType="NUMERIC"
     Type="java.math.BigDecimal"
