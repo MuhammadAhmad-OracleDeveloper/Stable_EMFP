@@ -197,6 +197,10 @@
          <string v="Project_EMFP_Model"/>
       </list>
    </hash>
+   <hash n="oracle.jdeveloper.model.J2eeSettings">
+      <value n="j2eeWebAppName" v="ViewController"/>
+      <value n="j2eeWebContextRoot" v="ViewController"/>
+   </hash>
    <hash n="oracle.jdevimpl.config.JProjectLibraries">
       <list n="exportedReferences">
          <hash>
