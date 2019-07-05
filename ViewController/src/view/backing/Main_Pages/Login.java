@@ -26,6 +26,7 @@ import oracle.adf.view.rich.component.rich.layout.RichPanelFormLayout;
 
 import oracle.adf.view.rich.component.rich.nav.RichButton;
 import oracle.adf.view.rich.component.rich.nav.RichLink;
+import oracle.adf.view.rich.component.rich.output.RichSpacer;
 import oracle.adf.view.rich.context.AdfFacesContext;
 import oracle.jdbc.driver.OracleDriver;
 
@@ -57,6 +58,7 @@ public class Login {
     private RichLink l1;
     private RichPanelFormLayout panel_form_layout;
     private RichButton gen;
+    private RichSpacer s7;
 
 
     public void setIt1(RichInputText it1) {
@@ -92,7 +94,7 @@ public class Login {
     public static Connection getConnection() throws SQLException {
         String username = "emfp";
         String password = "emfp";
-        String thinConn = "jdbc:oracle:thin:@192.168.1.198:1521:orcl";
+        String thinConn = "jdbc:oracle:thin:@192.168.1.3:1521:orcl";
         DriverManager.registerDriver(new OracleDriver());
         Connection conn = DriverManager.getConnection(thinConn, username, password);
         conn.setAutoCommit(false);
@@ -679,4 +681,5 @@ public class Login {
         
         return null;
     }
+
 }
