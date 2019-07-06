@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <ui:composition xmlns:ui="http://java.sun.com/jsf/facelets" xmlns:af="http://xmlns.oracle.com/adf/faces/rich"
                 xmlns:f="http://java.sun.com/jsf/core">
-    <af:panelAccordion discloseMany="false" id="pa3" inlineStyle="height:811px; width:1050px;">
+    <af:panelAccordion discloseMany="false" id="pa3" styleClass="content_pannel_acc">
         <af:showDetailItem id="pane2" text="Program">
             <af:panelGridLayout id="pgl2">
                 <af:gridRow marginTop="5px" height="auto" id="gr4" >
@@ -21,7 +21,7 @@
                 </af:gridRow>
                 <af:gridRow marginTop="5px" height="auto" id="gr2">
                     <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc4">
-                        <af:panelTabbed  position="above" id="pt2" inlineStyle="width:631px;">
+                        <af:panelTabbed  position="above" id="pt2" styleClass="tabel_pannel_tab">
                             <af:showDetailItem  id="tab1" text="Program">
                                 <af:table value="#{bindings.TblProgView1.collectionModel}" var="row"
                                           rows="#{bindings.TblProgView1.rangeSize}"
@@ -33,7 +33,7 @@
                                           filterModel="#{bindings.TblProgView1Query.queryDescriptor}"
                                           filterVisible="true"
                                           queryListener="#{bindings.TblProgView1Query.processQuery}" varStatus="vs"
-                                          id="t1" inlineStyle="height:242px;" partialTriggers=" ::b9 ::b16" width="617"
+                                          id="t1" inlineStyle="height:242px;" partialTriggers=" ::b9 ::b16" width="637"
                                           scrollPolicy="page" autoHeightRows="0">
                                     <af:column sortProperty="#{bindings.TblProgView1.hints.ProgId.name}"
                                                filterable="true" sortable="true" headerText="Program ID" align="center"
@@ -119,7 +119,7 @@
                 </af:gridRow>
                 <af:gridRow marginTop="5px" height="auto" marginBottom="5px" id="gr6">
                     <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc7">
-                        <af:panelTabbed position="above" id="pt3" inlineStyle="width:1028px;">
+                        <af:panelTabbed position="above" id="pt3" styleClass="tabel_pannel_tab">
                             <af:showDetailItem id="tab2" text="Program Offices">
                                 <af:table value="#{bindings.TblProgOffView3.collectionModel}" var="row"
                                           rows="#{bindings.TblProgOffView3.rangeSize}"

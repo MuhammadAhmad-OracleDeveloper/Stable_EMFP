@@ -1,8 +1,7 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <ui:composition xmlns:ui="http://java.sun.com/jsf/facelets" xmlns:af="http://xmlns.oracle.com/adf/faces/rich"
                 xmlns:f="http://java.sun.com/jsf/core">
-                <af:panelAccordion discloseMany="false" id="pa3"
-                                                   inlineStyle="height:811px; width:1050px;">
+                <af:panelAccordion discloseMany="false" id="pa3" styleClass="content_pannel_acc">
                                     <af:showDetailItem id="pane2" text="Library">
                                         <af:panelGridLayout id="pgl2">
                                         <af:gridRow marginTop="5px" height="auto" id="gr4">
@@ -25,8 +24,7 @@
                                            </af:gridRow>
                                             <af:gridRow marginTop="5px" height="auto" id="gr2">
                                                 <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc2">
-                                                    <af:panelTabbed position="above" id="pt2"
-                                                                    inlineStyle="width:426px;">
+                                                    <af:panelTabbed position="above" id="pt2" styleClass="tabel_pannel_tab">
                                                         <af:showDetailItem id="tab1" text="Library Master">
                                                             <af:table value="#{bindings.TblLibrMasterView1.collectionModel}"
                                                                       var="row"
@@ -42,7 +40,7 @@
                                                                       queryListener="#{bindings.TblLibrMasterView1Query.processQuery}"
                                                                       varStatus="vs" id="t1"
                                                                       partialTriggers=""
-                                                                      width="413"
+                                                                      width="450"
                                                                       scrollPolicy="page" autoHeightRows="0">
                                                                 <af:column sortProperty="#{bindings.TblLibrMasterView1.hints.LibrMasterId.name}"
                                                                            filterable="true" sortable="true"
@@ -126,8 +124,7 @@
                                             </af:gridRow>
                                             <af:gridRow marginTop="5px" height="auto" id="gr5">
                                                 <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc1">
-                                                    <af:panelTabbed position="above" id="pt3"
-                                                                    inlineStyle="width:589px;">
+                                                    <af:panelTabbed position="above" id="pt3" styleClass="tabel_pannel_tab">
                                                         <af:showDetailItem id="tab2" text="Library Detail">
                                                             <af:table value="#{bindings.TblLibrDetailView3.collectionModel}"
                                                                       var="row"
@@ -143,7 +140,7 @@
                                                                       queryListener="#{bindings.TblLibrDetailView3Query.processQuery}"
                                                                       varStatus="vs" id="t2"
                                                                       partialTriggers="::b13 ::b14 ::b15 ::b9"
-                                                                      width="576"
+                                                                      width="609"
                                                                       scrollPolicy="page" autoHeightRows="0">
                                                                 <af:column sortProperty="#{bindings.TblLibrDetailView3.hints.LibrDetailId.name}"
                                                                            filterable="true" sortable="true"

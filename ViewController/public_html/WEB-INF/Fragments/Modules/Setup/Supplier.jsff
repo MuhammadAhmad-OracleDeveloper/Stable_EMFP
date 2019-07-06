@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <ui:composition xmlns:ui="http://java.sun.com/jsf/facelets" xmlns:af="http://xmlns.oracle.com/adf/faces/rich"
                 xmlns:f="http://java.sun.com/jsf/core">
-    <af:panelAccordion discloseMany="false" id="pa3" inlineStyle="height:811px; width:1050px;">
+    <af:panelAccordion discloseMany="false" id="pa3" styleClass="content_pannel_acc">
         <af:showDetailItem id="pane2" text="Supplier">
             <af:panelGridLayout id="pgl2">
             <af:gridRow marginTop="5px" height="auto" id="gr4">
@@ -24,7 +24,7 @@
                                            </af:gridRow>
                 <af:gridRow marginTop="5px" height="auto" id="gr2">
                     <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc2">
-                        <af:panelTabbed position="above" id="pt2" inlineStyle="width:659px;">
+                        <af:panelTabbed position="above" id="pt2" styleClass="tabel_pannel_tab">
                             <af:showDetailItem id="tab1" text="Supplier Setup">
                                 <af:table value="#{bindings.TblSupplierView1.collectionModel}" var="row"
                                           rows="#{bindings.TblSupplierView1.rangeSize}"
@@ -37,7 +37,7 @@
                                           filterVisible="true"
                                           queryListener="#{bindings.TblSupplierView1Query.processQuery}" varStatus="vs"
                                           id="t1" partialTriggers="::b9 ::b10 ::b13 ::b14 ::b16 ::b1"
-                                          scrollPolicy="page" autoHeightRows="0" width="643">
+                                          scrollPolicy="page" autoHeightRows="0" width="678">
                                     <af:column sortProperty="#{bindings.TblSupplierView1.hints.SupplierId.name}"
                                                filterable="true" sortable="true" align="center" headerText="Supplier ID"
                                                id="c1" width="60">
@@ -117,7 +117,7 @@
                 </af:gridRow>
                 <af:gridRow marginTop="5px" height="auto" id="gr1">
                     <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc5">
-                        <af:panelTabbed position="above" id="pt3" inlineStyle="width:1030px;">
+                        <af:panelTabbed position="above" id="pt3" styleClass="tabel_pannel_tab">
                             <af:showDetailItem id="tab2" text="Supplier Detail Setup">
                                 <af:panelFormLayout id="pfl1" maxColumns="3" rows="4">
                                     <af:inputText value="#{bindings.Payee.inputValue}" label="Vendor Name"
@@ -313,7 +313,7 @@
                                           filterVisible="true"
                                           queryListener="#{bindings.TblSupplierPartView3Query.processQuery}"
                                           varStatus="vs" id="t2" partialTriggers="::b18 ::b19 ::b20 ::b22"
-                                          scrollPolicy="page" autoHeightRows="0" width="519">
+                                          scrollPolicy="page" autoHeightRows="0" width="557">
                                     <af:column sortProperty="#{bindings.TblSupplierPartView3.hints.SupplierPartId.name}"
                                                filterable="true" sortable="true" headerText="Partner/Director ID"
                                                id="c5" align="center" width="100">

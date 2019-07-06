@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <ui:composition xmlns:ui="http://java.sun.com/jsf/facelets" xmlns:af="http://xmlns.oracle.com/adf/faces/rich"
                 xmlns:f="http://java.sun.com/jsf/core">
-    <af:panelAccordion discloseMany="false" id="pa3" inlineStyle="height:780px; width:1030px;">
+    <af:panelAccordion discloseMany="false" id="pa3" styleClass="content_pannel_acc">
         <af:showDetailItem id="pane2" text="Target Crops">
             <af:panelGridLayout id="pgl2">
             <af:gridRow marginTop="5px" height="auto" id="gr4">
@@ -24,7 +24,7 @@
                                            </af:gridRow>
                 <af:gridRow marginTop="5px" height="auto" id="gr2">
                     <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc2">
-                        <af:panelTabbed position="above" id="pt2" inlineStyle="width:1014px;">
+                        <af:panelTabbed position="above" id="pt2" styleClass="tabel_pannel_tab">
                             <af:showDetailItem id="tab1" text="Project Office">
                                 <af:table value="#{bindings.TblProjOffView1.collectionModel}" var="row"
                                           rows="#{bindings.TblProjOffView1.rangeSize}"
@@ -153,7 +153,7 @@
                 </af:gridRow>
                 <af:gridRow marginTop="5px" height="auto" id="gr1">
                     <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc5">
-                        <af:panelTabbed position="above" id="pt3" inlineStyle="width:697px;">
+                        <af:panelTabbed position="above" id="pt3" styleClass="tabel_pannel_tab">
                             <af:showDetailItem id="tab2" text="Target Crops">
                                 <af:table value="#{bindings.TblTargetCropsView4.collectionModel}" var="row"
                                           rows="#{bindings.TblTargetCropsView4.rangeSize}"
@@ -166,7 +166,7 @@
                                           filterVisible="true"
                                           queryListener="#{bindings.TblTargetCropsView4Query.processQuery}"
                                           varStatus="vs" id="t2" partialTriggers="::b10"
-                                          scrollPolicy="page" autoHeightRows="0" width="683">
+                                          scrollPolicy="page" autoHeightRows="0" width="723">
                                     <af:column sortProperty="#{bindings.TblTargetCropsView4.hints.CropId.name}"
                                                filterable="true" sortable="true" headerText="Crop" id="c19" width="200">
                                         <f:facet name="filter">
