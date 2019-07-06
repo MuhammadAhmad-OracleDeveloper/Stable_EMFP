@@ -1,9 +1,7 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <ui:composition xmlns:ui="http://java.sun.com/jsf/facelets" xmlns:af="http://xmlns.oracle.com/adf/faces/rich"
                 xmlns:f="http://java.sun.com/jsf/core">
- <af:panelAccordion discloseMany="false" id="pa3"
-                                                  
-                                                   inlineStyle="height:811px; width:1025px;">
+ <af:panelAccordion discloseMany="false" id="pa3" styleClass="content_pannel_acc">
                                     <af:showDetailItem id="pane2" text="Project Components">
                                         
                                         <af:panelGridLayout id="pgl2">
@@ -27,8 +25,7 @@
                                            </af:gridRow>
                                             <af:gridRow marginTop="5px" height="auto" id="gr2">
                                                 <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc2">
-                                                    <af:panelTabbed position="above" id="pt2"
-                                                                    inlineStyle="width:953px;">
+                                                    <af:panelTabbed position="above" id="pt2" styleClass="tabel_pannel_tab">
                                                         <af:showDetailItem id="tab1" text="Project Components">
                                                             <af:table value="#{bindings.TblProjCompView1.collectionModel}"
                                                                       var="row"
@@ -44,7 +41,7 @@
                                                                       queryListener="#{bindings.TblProjCompView1Query.processQuery}"
                                                                       varStatus="vs" id="t1"
                                                                       partialTriggers="::b13 ::b14 ::b15 ::b2"
-                                                                      width="940"
+                                                                      width="992"
                                                                       scrollPolicy="page" autoHeightRows="0" >
                                                                 <af:column sortProperty="#{bindings.TblProjCompView1.hints.ProjId.name}"
                                                                            filterable="true" sortable="true"
@@ -200,8 +197,7 @@
                                         <af:panelGridLayout id="pgl3">
                                             <af:gridRow marginTop="5px" height="auto" id="gr1">
                                                 <af:gridCell marginStart="5px" width="100%" id="gc5">
-                                                    <af:panelTabbed position="above" id="pt3"
-                                                                    inlineStyle="width:545px;">
+                                                    <af:panelTabbed position="above" id="pt3" styleClass="tabel_pannel_tab">
                                                         <af:showDetailItem text="Beneficiary" id="sdi3">
                                                             <af:table value="#{bindings.TblBeneficiaryView1.collectionModel}"
                                                                       var="row"
@@ -218,7 +214,7 @@
                                                                       varStatus="vs" id="t4"
                                                                       partialTriggers="::b4 ::b12 ::b19 ::b6"
                                                                       scrollPolicy="page" autoHeightRows="0"
-                                                                      width="538">
+                                                                      width="577">
                                                                 <af:column sortProperty="#{bindings.TblBeneficiaryView1.hints.BeneficiaryId.name}"
                                                                            filterable="true" sortable="true" align="center"
                                                                            headerText=" Beneficiary ID"
