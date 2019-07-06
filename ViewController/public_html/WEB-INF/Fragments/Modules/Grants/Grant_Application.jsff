@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <ui:composition xmlns:ui="http://java.sun.com/jsf/facelets" xmlns:af="http://xmlns.oracle.com/adf/faces/rich"
                 xmlns:f="http://java.sun.com/jsf/core">
-    <af:panelAccordion discloseMany="false" id="pa1" inlineStyle="height:811px; width:1050px;">
+    <af:panelAccordion discloseMany="false" id="pa1" styleClass="content_pannel_acc">
         <af:showDetailItem id="pane1" text="Grant Application">
             <af:panelGridLayout id="pgl1">
                 <af:gridRow marginTop="5px" height="auto" id="gr4">
@@ -20,7 +20,7 @@
                 </af:gridRow>
                 <af:gridRow marginTop="5px" height="auto" id="gr2">
                     <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc2">
-                        <af:panelTabbed position="above" id="pt1" inlineStyle="width:1033px;">
+                        <af:panelTabbed position="above" id="pt1" styleClass="tabel_pannel_tab">
                             <af:showDetailItem id="tab1" text="Grant Application Master">
                                 <af:table value="#{bindings.TblGrantAppMasterView1.collectionModel}" var="row"
                                           rows="#{bindings.TblGrantAppMasterView1.rangeSize}"
@@ -32,7 +32,7 @@
                                           filterModel="#{bindings.TblGrantAppMasterView1Query.queryDescriptor}"
                                           filterVisible="true"
                                           queryListener="#{bindings.TblGrantAppMasterView1Query.processQuery}"
-                                          varStatus="vs" id="t1" partialTriggers="::b2 ::b3 ::b4 ::b9" width="1014"
+                                          varStatus="vs" id="t1" partialTriggers="::b2 ::b3 ::b4 ::b9" width="1017"
                                           scrollPolicy="page" autoHeightRows="0">
                                     <af:column sortProperty="#{bindings.TblGrantAppMasterView1.hints.GrantAppMasterId.name}"
                                                filterable="true" sortable="true"
@@ -56,7 +56,7 @@
                                     </af:column>
                                     <af:column sortProperty="#{bindings.TblGrantAppMasterView1.hints.FarmerRegId.name}"
                                                filterable="true" sortable="true" headerText="Farmer" id="c2"
-                                               width="180">
+                                               width="149">
                                         <f:facet name="filter">
                                             <af:inputText value="#{vs.filterCriteria.FarmerRegId}" id="it2"
                                                           placeholder="Search Farmer"></af:inputText>
@@ -71,7 +71,7 @@
                                         </af:selectOneChoice>
                                     </af:column>
                                     <af:column sortProperty="#{bindings.TblGrantAppMasterView1.hints.Acre.name}"
-                                               filterable="true" sortable="true" headerText="Acre" id="c3" width="100">
+                                               filterable="true" sortable="true" headerText="Acre" id="c3" width="82">
                                         <f:facet name="filter">
                                             <af:inputText value="#{vs.filterCriteria.Acre}" id="it9"
                                                           placeholder="Search Acre"></af:inputText>
@@ -105,7 +105,7 @@
                                         </af:selectOneChoice>
                                     </af:column>
                                     <af:column sortProperty="#{bindings.TblGrantAppMasterView1.hints.Dated.name}"
-                                               filterable="true" sortable="true" headerText="Date" id="c5" width="100">
+                                               filterable="true" sortable="true" headerText="Date" id="c5" width="104">
                                         <f:facet name="filter">
                                             <af:inputDate value="#{bindings.TblGrantAppMasterView1Query.queryDescriptor.filterConjunctionCriterion.criterionMap.Dated.value}"
                                                           id="id1">
@@ -123,7 +123,8 @@
                                         </af:inputDate>
                                     </af:column>
                                     <af:column sortProperty="#{bindings.TblGrantAppMasterView1.hints.Status.name}"
-                                               filterable="true" sortable="true" headerText="Status" id="c6" width="80">
+                                               filterable="true" sortable="true" headerText="Status" id="c6"
+                                               width="90">
                                         <f:facet name="filter">
                                             <af:inputText value="#{vs.filterCriteria.Status}" id="it12"
                                                           placeholder="Search Status"></af:inputText>
@@ -142,7 +143,7 @@
                                     </af:column>
                                     <af:column sortProperty="#{bindings.TblGrantAppMasterView1.hints.CourseId.name}"
                                                filterable="true" sortable="true" headerText="Training" id="c7"
-                                               width="150">
+                                               width="123">
                                         <f:facet name="filter">
                                             <af:inputText value="#{vs.filterCriteria.CourseId}" id="it6"
                                                           placeholder="Search Training"></af:inputText>
@@ -158,7 +159,7 @@
                                     </af:column>
                                     <af:column sortProperty="#{bindings.TblGrantAppMasterView1.hints.TrainerId.name}"
                                                filterable="true" sortable="true" headerText="Trainer" id="c8"
-                                               width="151">
+                                               width="143">
                                         <f:facet name="filter">
                                             <af:inputText value="#{vs.filterCriteria.TrainerId}" id="it7"
                                                           placeholder="Search Trainer"></af:inputText>
@@ -204,7 +205,7 @@
                 </af:gridRow>
                 <af:gridRow marginTop="5px" height="auto" id="gr5">
                     <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc5">
-                        <af:panelTabbed position="above" id="pt2" inlineStyle="width:487px;">
+                        <af:panelTabbed position="above" id="pt2" styleClass="tabel_pannel_tab">
                             <af:showDetailItem id="tab2" text="Grant Application Detail">
                                 <af:table value="#{bindings.TblGrantAppDetailView3.collectionModel}" var="row"
                                           rows="#{bindings.TblGrantAppDetailView3.rangeSize}"
@@ -216,7 +217,7 @@
                                           filterModel="#{bindings.TblGrantAppDetailView3Query.queryDescriptor}"
                                           filterVisible="true"
                                           queryListener="#{bindings.TblGrantAppDetailView3Query.processQuery}"
-                                          varStatus="vs" id="t2" partialTriggers="::b5 ::b6 ::b7 ::b8" width="477"
+                                          varStatus="vs" id="t2" partialTriggers="::b5 ::b6 ::b7 ::b8" width="511"
                                           scrollPolicy="page" autoHeightRows="0">
                                     <af:column sortProperty="#{bindings.TblGrantAppDetailView3.hints.GrantAppDetailId.name}"
                                                filterable="true" sortable="true"

@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <ui:composition xmlns:ui="http://java.sun.com/jsf/facelets" xmlns:af="http://xmlns.oracle.com/adf/faces/rich"
                 xmlns:f="http://java.sun.com/jsf/core">
-<af:panelAccordion discloseMany="false" id="pa1" inlineStyle="height:811px; width:1050px;">
+<af:panelAccordion discloseMany="false" id="pa1" styleClass="content_pannel_acc">
     <af:showDetailItem id="pane1" text="Grant Disburse">
       <af:panelGridLayout id="pgl1">
         <af:gridRow marginTop="5px" height="auto" id="gr4">
@@ -20,7 +20,7 @@
                 </af:gridRow>
         <af:gridRow marginTop="5px" height="auto" id="gr2">
           <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc2">
-            <af:panelTabbed position="above" id="pt1" inlineStyle="width:309px;">
+            <af:panelTabbed position="above" id="pt1" styleClass="tabel_pannel_tab">
               <af:showDetailItem id="tab1" text="Grant Disburse Master">
                 <af:table value="#{bindings.TblGrantDisburseMasterView1.collectionModel}" var="row"
                           rows="#{bindings.TblGrantDisburseMasterView1.rangeSize}"
@@ -31,7 +31,7 @@
                           rowSelection="single" fetchSize="#{bindings.TblGrantDisburseMasterView1.rangeSize}"
                           filterModel="#{bindings.TblGrantDisburseMasterView1Query.queryDescriptor}"
                           filterVisible="true" queryListener="#{bindings.TblGrantDisburseMasterView1Query.processQuery}"
-                          varStatus="vs" id="t1" partialTriggers="::b5 ::b6 ::b7 ::b8" width="299"
+                          varStatus="vs" id="t1" partialTriggers="::b5 ::b6 ::b7 ::b8" width="334"
                           scrollPolicy="page" autoHeightRows="0">
                   <af:column sortProperty="#{bindings.TblGrantDisburseMasterView1.hints.GrantDisburseMasterId.name}"
                              filterable="true" sortable="true"
@@ -120,7 +120,7 @@
         </af:gridRow>
         <af:gridRow marginTop="5px" height="auto" id="gr5">
           <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc5">
-            <af:panelTabbed position="above" id="pt2" inlineStyle="width:1032px;">
+            <af:panelTabbed position="above" id="pt2" styleClass="tabel_pannel_tab">
               <af:showDetailItem id="tab2" text="Grant Disburse Detail">
                 <af:table value="#{bindings.TblGrantDisburseDetailView4.collectionModel}" var="row"
                           rows="#{bindings.TblGrantDisburseDetailView4.rangeSize}"

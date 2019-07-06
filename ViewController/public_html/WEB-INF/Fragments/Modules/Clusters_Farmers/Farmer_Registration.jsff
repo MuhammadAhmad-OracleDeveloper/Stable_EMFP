@@ -969,7 +969,7 @@
                                           filterModel="#{bindings.TblFarmerRegCertView4Query.queryDescriptor}"
                                           filterVisible="true"
                                           queryListener="#{bindings.TblFarmerRegCertView4Query.processQuery}"
-                                          varStatus="vs" id="t5" partialTriggers="::b12 ::b27 ::b28 ::b37" width="361"
+                                          varStatus="vs" id="t5" partialTriggers="::b12 ::b27 ::b28 ::b37" width="393"
                                           scrollPolicy="page" autoHeightRows="0">
                                     <af:column sortProperty="#{bindings.TblFarmerRegCertView4.hints.FarmerRegCertId.name}"
                                                filterable="true" sortable="true" headerText="Farmer Certification ID"
@@ -1037,7 +1037,7 @@
                                           filterModel="#{bindings.TblFarmerRegOwnershipView3Query.queryDescriptor}"
                                           filterVisible="true"
                                           queryListener="#{bindings.TblFarmerRegOwnershipView3Query.processQuery}"
-                                          varStatus="vs" id="t6" partialTriggers="::b10 ::b30 ::b31 ::b38" width="877"
+                                          varStatus="vs" id="t6" partialTriggers="::b10 ::b30 ::b31 ::b38" width="927"
                                           scrollPolicy="page" autoHeightRows="0">
                                     <af:column sortProperty="#{bindings.TblFarmerRegOwnershipView3.hints.FarmerRegOwnershipId.name}"
                                                filterable="true" sortable="true" headerText="Farmer Owner ID" id="c38"
