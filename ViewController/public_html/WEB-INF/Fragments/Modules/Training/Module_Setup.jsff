@@ -1,8 +1,7 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <ui:composition xmlns:ui="http://java.sun.com/jsf/facelets" xmlns:af="http://xmlns.oracle.com/adf/faces/rich"
                 xmlns:f="http://java.sun.com/jsf/core">
-                <af:panelAccordion discloseMany="false" id="pa3"
-                                                   inlineStyle="height:811px; width:1030px;">
+                <af:panelAccordion discloseMany="false" id="pa3" styleClass="content_pannel_acc">
                                     <af:showDetailItem id="pane2" text="Module Setup">
                                         <af:panelGridLayout id="pgl2">
                                         <af:gridRow marginTop="5px" height="auto" id="gr4">
@@ -25,8 +24,7 @@
                                            </af:gridRow>
                                             <af:gridRow marginTop="5px" height="auto" id="gr2">
                                                 <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc2">
-                                                    <af:panelTabbed position="above" id="pt2"
-                                                                    inlineStyle="width:646px;">
+                                                    <af:panelTabbed position="above" id="pt2" styleClass="tabel_pannel_tab">
                                                         <af:showDetailItem id="tab1" text="Training Setup">
                                                             <af:table value="#{bindings.TblCourseView1.collectionModel}"
                                                                       var="row"
@@ -40,7 +38,7 @@
                                                                       filterModel="#{bindings.TblCourseView1Query.queryDescriptor}"
                                                                       filterVisible="true"
                                                                       queryListener="#{bindings.TblCourseView1Query.processQuery}"
-                                                                      varStatus="vs" id="t1" width="634"
+                                                                      varStatus="vs" id="t1" width="663"
                                                                       partialTriggers="::b13"
                                                                       scrollPolicy="page" autoHeightRows="0">
                                                   <af:column sortProperty="#{bindings.TblCourseView1.hints.PhaseId.name}"
@@ -119,8 +117,7 @@
                                             </af:gridRow>
                                             <af:gridRow marginTop="5px" height="auto" id="gr1">
                                                 <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc5">
-                                                    <af:panelTabbed position="above" id="pt3"
-                                                                    inlineStyle="width:569px;">
+                                                    <af:panelTabbed position="above" id="pt3" styleClass="tabel_pannel_tab">
                                                         <af:showDetailItem id="tab2" text="Module Setup">
                                                             <af:table value="#{bindings.TblModuleView3.collectionModel}"
                                                                       var="row"
@@ -135,7 +132,7 @@
                                                                       filterVisible="true"
                                                                       queryListener="#{bindings.TblModuleView3Query.processQuery}"
                                                                       varStatus="vs" id="t2"
-                                                                      partialTriggers="::b7 ::b14" width="557"
+                                                                      partialTriggers="::b7 ::b14" width="597"
                                                                       scrollPolicy="page" autoHeightRows="0">
                                                                 <af:column sortProperty="#{bindings.TblModuleView3.hints.ModuleId.name}"
                                                                            filterable="true" sortable="true"
@@ -182,7 +179,7 @@
                                                                 </af:column>
                                                                 <af:column sortProperty="#{bindings.TblModuleView3.hints.Ast.name}"
                                                                            filterable="true" sortable="true"
-                                                                           headerText="Active" id="c8" width="60">
+                                                                           headerText="Active" id="c8" width="72">
                                                                            
                                                                                 <f:facet name="filter">
                                                                        <af:inputText value="#{vs.filterCriteria.Ast}"

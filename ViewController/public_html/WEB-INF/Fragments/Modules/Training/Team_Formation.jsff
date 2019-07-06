@@ -1,8 +1,7 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <ui:composition xmlns:ui="http://java.sun.com/jsf/facelets" xmlns:af="http://xmlns.oracle.com/adf/faces/rich"
                 xmlns:f="http://java.sun.com/jsf/core">
-                <af:panelAccordion discloseMany="false" id="pa3"
-                                                   inlineStyle="height:811px; width:1030px;">
+                <af:panelAccordion discloseMany="false" id="pa3" styleClass="content_pannel_acc">
                                     <af:showDetailItem id="pane2" text="Team Formation">
                                         <af:panelGridLayout id="pgl2">
                                         <af:gridRow marginTop="5px" height="auto" id="gr4">
@@ -25,8 +24,7 @@
                                            </af:gridRow>
                                             <af:gridRow marginTop="5px" height="auto" id="gr2">
                                                 <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc2">
-                                                    <af:panelTabbed position="above" id="pt2"
-                                                                    inlineStyle="width:1002px;">
+                                                    <af:panelTabbed position="above" id="pt2" styleClass="tabel_pannel_tab">
                                                         <af:showDetailItem id="tab1" text="Team Formation">
                                                             <af:table value="#{bindings.TblTeamFormationView1.collectionModel}"
                                                                       var="row"
@@ -68,7 +66,7 @@
                                                                 <af:column  sortProperty="#{bindings.TblTeamFormationView1.hints.TeamId.name}"
                                                                             filterable="true" sortable="true"
                                                                             headerText="Team"
-                                                                           id="c2" width="300">
+                                                                           id="c2" width="251">
                                                                             <f:facet name="filter">
                                                                        <af:inputText 
                                                                        value="#{vs.filterCriteria.TeamId}"
@@ -88,7 +86,7 @@
                                                                 <af:column  sortProperty="#{bindings.TblTeamFormationView1.hints.TrainerId.name}"
                                                                            filterable="true" sortable="true"
                                                                             headerText="Trainer"
-                                                                           id="c3" width="250">
+                                                                           id="c3" width="245">
                                                                             <f:facet name="filter">
                                                                        <af:inputText 
                                                                        value="#{vs.filterCriteria.TrainerId}"
@@ -108,7 +106,7 @@
                                     <af:column sortProperty="#{bindings.TblTeamFormationView1.hints.TrainerType.name}"
                                                filterable="true" sortable="true"
                                                headerText="Social Mobilizer"
-                                               id="c5" width="250">
+                                               id="c5" width="245">
                                                <f:facet name="filter">
                                                                        <af:inputText 
                                                                        value="#{vs.filterCriteria.TrainerType}"
@@ -127,7 +125,7 @@
                                     <af:column  sortProperty="#{bindings.TblTeamFormationView1.hints.Ast.name}"
                                                                            filterable="true" sortable="true"
                                                                             headerText="Active"
-                                                                           id="c4" width="80">
+                                                                           id="c4" width="104">
                                                                              <f:facet name="filter">
                                                                        <af:inputText 
                                                                        value="#{vs.filterCriteria.Ast}"

@@ -1,8 +1,7 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <ui:composition xmlns:ui="http://java.sun.com/jsf/facelets" xmlns:af="http://xmlns.oracle.com/adf/faces/rich"
                 xmlns:f="http://java.sun.com/jsf/core">
-                <af:panelAccordion discloseMany="false" id="pa3"
-                                                   inlineStyle="height:811px; width:1050px;">
+                <af:panelAccordion discloseMany="false" id="pa3" styleClass="content_pannel_acc">
                                     <af:showDetailItem id="pane2" text="Attendance Detail">
                                         <af:panelGridLayout id="pgl2">
                                         <af:gridRow marginTop="5px" height="auto" id="gr4">
@@ -25,8 +24,7 @@
                                            </af:gridRow>
                                            <af:gridRow marginTop="5px" height="auto" id="gr2">
                                                 <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc2">
-                                                    <af:panelTabbed position="above" id="pt2"
-                                                                    inlineStyle="width:1031px;">
+                                                    <af:panelTabbed position="above" id="pt2" styleClass="tabel_pannel_tab">
                                                         <af:showDetailItem id="tab1" text="Attendance Master">
                                                             <af:table value="#{bindings.TblClusterAttMasterView1.collectionModel}"
                                                                       var="row"
@@ -232,8 +230,7 @@
                                             </af:gridRow>
                                             <af:gridRow marginTop="5px" height="auto" id="gr5">
                                                 <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc1">
-                                                    <af:panelTabbed position="above" id="pt3"
-                                                                    inlineStyle="width:871px;">
+                                                    <af:panelTabbed position="above" id="pt3" styleClass="tabel_pannel_tab">
                                                         <af:showDetailItem id="tab2" text="Attendance Detail">
                                                         
                                                         
@@ -422,7 +419,8 @@
                                           filterModel="#{bindings.TblClusterAttDetailView3Query.queryDescriptor}"
                                           filterVisible="true"
                                           queryListener="#{bindings.TblClusterAttDetailView3Query.processQuery}"
-                                          varStatus="vs" id="t3" partialTriggers="::b18 ::b14 ::b12 ::b13">
+                                          varStatus="vs" id="t3" partialTriggers="::b18 ::b14 ::b12 ::b13"
+                                          scrollPolicy="page">
                                     <af:column sortProperty="#{bindings.TblClusterAttDetailView31.hints.ClusterAttDetailId.name}"
                                                filterable="true" sortable="true"
                                                headerText="#{bindings.TblClusterAttDetailView31.hints.ClusterAttDetailId.label}"

@@ -1,8 +1,7 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <ui:composition xmlns:ui="http://java.sun.com/jsf/facelets" xmlns:af="http://xmlns.oracle.com/adf/faces/rich"
                 xmlns:f="http://java.sun.com/jsf/core">
-                <af:panelAccordion discloseMany="false" id="pa3"
-                                                   inlineStyle="height:811px; width:1030px;">
+                <af:panelAccordion discloseMany="false" id="pa3" styleClass="content_pannel_acc">
                                     <af:showDetailItem id="pane2" text="Team Setup">
                                         <af:panelGridLayout id="pgl2">
                                         <af:gridRow marginTop="5px" height="auto" id="gr4">
@@ -25,8 +24,7 @@
                                            </af:gridRow>
                                             <af:gridRow marginTop="5px" height="auto" id="gr2">
                                                 <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc2">
-                                                    <af:panelTabbed position="above" id="pt2"
-                                                                    inlineStyle="width:757px;">
+                                                    <af:panelTabbed position="above" id="pt2" styleClass="tabel_pannel_tab">
                                                         <af:showDetailItem id="tab1" text="Team Setup">
                                                             <af:table value="#{bindings.TblTeamView1.collectionModel}"
                                                                       var="row"
@@ -41,7 +39,7 @@
                                                                       filterVisible="true"
                                                                       queryListener="#{bindings.TblTeamView1Query.processQuery}"
                                                                       varStatus="vs" id="t1"
-                                                                      partialTriggers="::b7 ::b8 ::b13" width="746"
+                                                                      partialTriggers="::b7 ::b8 ::b13" width="808"
                                                                       scrollPolicy="page" autoHeightRows="0" >
                                                                 <af:column sortProperty="#{bindings.TblTeamView1.hints.TeamId.name}"
                                                                            filterable="true" sortable="true"
@@ -108,7 +106,7 @@
                                                                 <af:column sortProperty="#{bindings.TblTeamView1.hints.Ast.name}"
                                                                            filterable="true" sortable="true"
                                                                            headerText="Active"
-                                                                           id="c4" width="60">
+                                                                           id="c4" width="88">
                                                                            
                                                                            <f:facet name="filter">
                                                                        <af:inputText value="#{vs.filterCriteria.Ast}"

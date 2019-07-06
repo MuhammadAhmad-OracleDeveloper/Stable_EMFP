@@ -1,9 +1,7 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <ui:composition xmlns:ui="http://java.sun.com/jsf/facelets" xmlns:af="http://xmlns.oracle.com/adf/faces/rich"
                 xmlns:f="http://java.sun.com/jsf/core">
- <af:panelAccordion discloseMany="false" id="pa3"
-                                                  
-                                                   inlineStyle="height:811px; width:1030px;">
+ <af:panelAccordion discloseMany="false" id="pa3" styleClass="content_pannel_acc">
                                     <af:showDetailItem id="pane2" text="Trainer">
                                         <af:panelGridLayout id="pgl2">
                                         <af:gridRow marginTop="5px" height="auto" id="gr4">
@@ -26,8 +24,7 @@
                                            </af:gridRow>
                                             <af:gridRow marginTop="5px" height="auto" id="gr2">
                                                 <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc2">
-                                                    <af:panelTabbed position="above" id="pt2"
-                                                                    inlineStyle="width:914px;">
+                                                    <af:panelTabbed position="above" id="pt2" styleClass="tabel_pannel_tab">
                                                         <af:showDetailItem id="tab1" text="Trainer Setup">
                                                             <af:table value="#{bindings.TblTrainerView1.collectionModel}"
                                                                       var="row"
@@ -43,7 +40,7 @@
                                                                       queryListener="#{bindings.TblTrainerView1Query.processQuery}"
                                                                       varStatus="vs" id="t1"
                                                                       partialTriggers="::b7 ::b8 ::b9 ::b12 ::b13 ::b24 ::b25 ::b26"
-                                                                      width="903"
+                                                                      width="963"
                                                                       scrollPolicy="page" autoHeightRows="0">
                                                                 <af:column sortProperty="#{bindings.TblTrainerView1.hints.TrainerId.name}"
                                                                            filterable="true" sortable="true"
@@ -145,7 +142,7 @@
                                     </af:column>
                                     <af:column sortProperty="#{bindings.TblTrainerView1.hints.Ast.name}"
                                                                            filterable="true" sortable="true"
-                                                                           headerText="Active" id="c4" width="60">
+                                                                           headerText="Active" id="c4" width="78">
                                                                            
                                                                                  <f:facet name="filter">
                                                                        <af:inputText value="#{vs.filterCriteria.Ast}"
