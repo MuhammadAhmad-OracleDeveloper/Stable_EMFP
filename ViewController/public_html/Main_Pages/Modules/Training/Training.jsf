@@ -14,7 +14,7 @@
                     </af:gridCell>
                 </af:gridRow>
                 <af:gridRow height="100%" id="gr2">
-                    <af:gridCell width="100%" halign="stretch" valign="stretch" id="gc1">
+                    <af:gridCell width="100%" halign="stretch" valign="stretch" id="gc1" styleClass="backColor">
                         <af:panelSplitter orientation="horizontal" splitterPosition="210" id="ps1">
                             <f:facet name="first">
                                 <!-- Left -->
