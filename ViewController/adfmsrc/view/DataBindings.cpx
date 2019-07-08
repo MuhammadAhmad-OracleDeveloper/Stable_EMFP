@@ -54,6 +54,7 @@
         <page path="/WEB-INF/Fragments/Modules/Grants/Grant_Application.jsff" usageId="view_Grant_ApplicationPageDef"/>
         <page path="/WEB-INF/Fragments/Modules/Grants/Grant_Approval.jsff" usageId="view_Grant_ApprovalPageDef"/>
         <page path="/WEB-INF/Fragments/Modules/Grants/Grant_Disburse.jsff" usageId="view_Grant_DisbursePageDef"/>
+        <page path="/Main_Pages/Modules/Financial/Financial.jsf" usageId="view_FinancialPageDef"/>
     </pageMap>
     <pageDefinitionUsages>
         <page id="view_Farmer_RegistrationPageDef"
@@ -99,6 +100,7 @@
         <page id="view_Grant_ApplicationPageDef" path="Fragments.Modules.Grants.Grant_ApplicationPageDef"/>
         <page id="view_Grant_ApprovalPageDef" path="Fragments.Modules.Grants.Grant_ApprovalPageDef"/>
         <page id="view_Grant_DisbursePageDef" path="Fragments.Modules.Grants.Grant_DisbursePageDef"/>
+        <page id="view_FinancialPageDef" path="Main_Pages.Modules.Financial.FinancialPageDef"/>
     </pageDefinitionUsages>
     <dataControlUsages>
         <BC4JDataControl id="AppModuleDataControl" Package="model"
