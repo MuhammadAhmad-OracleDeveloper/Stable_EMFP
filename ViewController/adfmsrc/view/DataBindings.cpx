@@ -55,6 +55,9 @@
         <page path="/WEB-INF/Fragments/Modules/Grants/Grant_Approval.jsff" usageId="view_Grant_ApprovalPageDef"/>
         <page path="/WEB-INF/Fragments/Modules/Grants/Grant_Disburse.jsff" usageId="view_Grant_DisbursePageDef"/>
         <page path="/Main_Pages/Modules/Financial/Financial.jsf" usageId="view_FinancialPageDef"/>
+        <page path="/WEB-INF/Fragments/Modules/Financial/Period.jsff" usageId="view_PeriodPageDef"/>
+        <page path="/WEB-INF/Fragments/Modules/Financial/Company_Profile.jsff" usageId="view_Company_ProfilePageDef"/>
+        <page path="/WEB-INF/Fragments/Modules/Financial/Opening_Balance.jsff" usageId="view_Opening_BalancePageDef"/>
     </pageMap>
     <pageDefinitionUsages>
         <page id="view_Farmer_RegistrationPageDef"
@@ -101,6 +104,9 @@
         <page id="view_Grant_ApprovalPageDef" path="Fragments.Modules.Grants.Grant_ApprovalPageDef"/>
         <page id="view_Grant_DisbursePageDef" path="Fragments.Modules.Grants.Grant_DisbursePageDef"/>
         <page id="view_FinancialPageDef" path="Main_Pages.Modules.Financial.FinancialPageDef"/>
+        <page id="view_PeriodPageDef" path="Fragments.Modules.Financial.PeriodPageDef"/>
+        <page id="view_Company_ProfilePageDef" path="Fragments.Modules.Financial.Company_ProfilePageDef"/>
+        <page id="view_Opening_BalancePageDef" path="Fragments.Modules.Financial.Opening_BalancePageDef"/>
     </pageDefinitionUsages>
     <dataControlUsages>
         <BC4JDataControl id="AppModuleDataControl" Package="model"

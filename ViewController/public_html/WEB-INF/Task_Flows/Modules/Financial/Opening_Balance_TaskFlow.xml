@@ -5,7 +5,9 @@
     <data-control-scope>
       <shared/>
     </data-control-scope>
-    <view id="Opening_Balance"></view>
+    <view id="Opening_Balance">
+      <page>/WEB-INF/Fragments/Modules/Financial/Opening_Balance.jsff</page>
+    </view>
     <use-page-fragments/>
   </task-flow-definition>
 </adfc-config>

@@ -947,6 +947,24 @@
   <ViewUsage
     Name="Financial_Transaction_Pages1"
     ViewObjectName="model.VO.USERS_ROLES.Financial_Transaction_Pages"/>
+  <ViewUsage
+    Name="TblCompanyprofileView1"
+    ViewObjectName="model.VO.TblCompanyprofileView"/>
+  <ViewUsage
+    Name="TblOpenBlncView1"
+    ViewObjectName="model.VO.TblOpenBlncView"/>
+  <ViewUsage
+    Name="TblPeriodView1"
+    ViewObjectName="model.VO.TblPeriodView"/>
+  <ViewUsage
+    Name="TblCompanyprofileView2"
+    ViewObjectName="model.queryBasedVO.TblCompanyprofileView"/>
+  <ViewUsage
+    Name="TblOpenBlncView2"
+    ViewObjectName="model.queryBasedVO.TblOpenBlncView"/>
+  <ViewUsage
+    Name="TblPeriodView2"
+    ViewObjectName="model.queryBasedVO.TblPeriodView"/>
   <ViewLinkUsage
     Name="FkTblClusterAttDetailFkLink1"
     ViewLinkObjectName="model.VO.FkTblClusterAttDetailFkLink"
