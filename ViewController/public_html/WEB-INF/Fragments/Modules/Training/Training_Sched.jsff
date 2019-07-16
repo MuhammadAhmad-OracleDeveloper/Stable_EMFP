@@ -82,15 +82,6 @@
                                                                                    id="si5"/>
                                                                     <f:validator binding="#{bindings.TeamId.validator}"/>
                                                                 </af:selectOneChoice>
-                                                                <af:inputText value="#{bindings.TrainerId.inputValue}"
-                                                                              label="#{bindings.TrainerId.hints.label}"
-                                                                              required="#{bindings.TrainerId.hints.mandatory}"
-                                                                              columns="8"
-                                                                              maximumLength="#{bindings.TrainerId.hints.precision}"
-                                                                              shortDesc="#{bindings.TrainerId.hints.tooltip}"
-                                                                              id="it2">
-                                                                    <f:validator binding="#{bindings.TrainerId.validator}"/>
-                                                                </af:inputText>
                                                                 <af:inputDate value="#{bindings.Dated.inputValue}"
                                                                               label="#{bindings.Dated.hints.label}"
                                                                               required="#{bindings.Dated.hints.mandatory}"
@@ -224,7 +215,7 @@
                                                                       queryListener="#{bindings.TblTrainingSchDetailView4Query.processQuery}"
                                                                       varStatus="vs" id="t2"
                                                                       partialTriggers="::b13 ::b14 ::b15 ::b22"
-                                                                      width="467"
+                                                                      width="694"
                                                                       scrollPolicy="page" autoHeightRows="0" >
                                                                 <af:column sortProperty="#{bindings.TblTrainingSchDetailView4.hints.ClusterId.name}"
                                                                            filterable="true" sortable="true"
@@ -289,7 +280,35 @@
                                                                         <f:validator binding="#{row.bindings.TrainingSchMasterId.validator}"/>
                                                                     </af:inputText>
                                                                 </af:column>
-                                                                <af:column sortProperty="#{bindings.TblTrainingSchDetailView4.hints.DatedD.name}"
+                                    <af:column headerText="#{bindings.TblTrainingSchDetailView4.hints.Latitude.label}"
+                                               id="c1">
+                                        <af:inputText value="#{row.bindings.Latitude.inputValue}"
+                                                      label="#{bindings.TblTrainingSchDetailView4.hints.Latitude.label}"
+                                                      required="#{bindings.TblTrainingSchDetailView4.hints.Latitude.mandatory}"
+                                                      columns="#{bindings.TblTrainingSchDetailView4.hints.Latitude.displayWidth}"
+                                                      maximumLength="#{bindings.TblTrainingSchDetailView4.hints.Latitude.precision}"
+                                                      shortDesc="#{bindings.TblTrainingSchDetailView4.hints.Latitude.tooltip}"
+                                                      id="it6">
+                                            <f:validator binding="#{row.bindings.Latitude.validator}"/>
+                                            <af:convertNumber groupingUsed="false"
+                                                              pattern="#{bindings.TblTrainingSchDetailView4.hints.Latitude.format}"/>
+                                        </af:inputText>
+                                    </af:column>
+                                    <af:column headerText="#{bindings.TblTrainingSchDetailView4.hints.Longitude.label}"
+                                               id="c3">
+                                        <af:inputText value="#{row.bindings.Longitude.inputValue}"
+                                                      label="#{bindings.TblTrainingSchDetailView4.hints.Longitude.label}"
+                                                      required="#{bindings.TblTrainingSchDetailView4.hints.Longitude.mandatory}"
+                                                      columns="#{bindings.TblTrainingSchDetailView4.hints.Longitude.displayWidth}"
+                                                      maximumLength="#{bindings.TblTrainingSchDetailView4.hints.Longitude.precision}"
+                                                      shortDesc="#{bindings.TblTrainingSchDetailView4.hints.Longitude.tooltip}"
+                                                      id="it7">
+                                            <f:validator binding="#{row.bindings.Longitude.validator}"/>
+                                            <af:convertNumber groupingUsed="false"
+                                                              pattern="#{bindings.TblTrainingSchDetailView4.hints.Longitude.format}"/>
+                                        </af:inputText>
+                                    </af:column>
+                                    <af:column sortProperty="#{bindings.TblTrainingSchDetailView4.hints.DatedD.name}"
                                                                            filterable="true" sortable="true"
                                                                            headerText="Date" align="center"
                                                                            id="c16">

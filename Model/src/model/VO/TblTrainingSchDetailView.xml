@@ -4,7 +4,7 @@
 <ViewObject
   xmlns="http://xmlns.oracle.com/bc4j"
   Name="TblTrainingSchDetailView"
-  Version="12.1.3.10.8"
+  Version="12.2.1.11.57"
   InheritPersonalization="merge"
   SelectListFlags="1"
   FromListFlags="1"
@@ -74,4 +74,16 @@
       </SchemaBasedProperties>
     </Properties>
   </ViewAttribute>
+  <ViewAttribute
+    Name="Longitude"
+    PrecisionRule="true"
+    EntityAttrName="Longitude"
+    EntityUsage="TblTrainingSchDetail"
+    AliasName="LONGITUDE"/>
+  <ViewAttribute
+    Name="Latitude"
+    PrecisionRule="true"
+    EntityAttrName="Latitude"
+    EntityUsage="TblTrainingSchDetail"
+    AliasName="LATITUDE"/>
 </ViewObject>
