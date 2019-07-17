@@ -4,12 +4,9 @@
   <parameters/>
   <executables>
     <variableIterator id="variables"/>
-    <iterator Binds="Phase_Name_LOV1" RangeSize="25" DataControl="AppModuleDataControl1" id="Phase_Name_LOV1Iterator"
-              Refresh="ifNeeded" CacheResults="false"/>
-    <iterator Binds="Crops_Name_LOV1" RangeSize="25" DataControl="AppModuleDataControl1" id="Crops_Name_LOV1Iterator"
-              Refresh="ifNeeded" CacheResults="false"/>
-    <iterator Binds="City_Name_LOV1" RangeSize="25" DataControl="AppModuleDataControl1" id="City_Name_LOV1Iterator"
-              Refresh="ifNeeded" CacheResults="false"/>
+    <iterator Binds="Phase_Name_LOV1" RangeSize="25" DataControl="AppModuleDataControl1" id="Phase_Name_LOV1Iterator"/>
+    <iterator Binds="Crops_Name_LOV1" RangeSize="25" DataControl="AppModuleDataControl1" id="Crops_Name_LOV1Iterator"/>
+    <iterator Binds="City_Name_LOV1" RangeSize="25" DataControl="AppModuleDataControl1" id="City_Name_LOV1Iterator"/>
   </executables>
   <bindings>
     <list IterBinding="Phase_Name_LOV1Iterator" ListOperMode="navigation" ListIter="Phase_Name_LOV1Iterator"
