@@ -5,6 +5,8 @@
         <factory nameSpace="http://xmlns.oracle.com/adf/controller/binding"
                  className="oracle.adf.controller.internal.binding.TaskFlowBindingDefFactoryImpl"/>
         <dtfactory className="oracle.adf.controller.internal.dtrt.binding.BindingDTObjectFactory"/>
+        <factory nameSpace="http://xmlns.oracle.com/adfm/dvt"
+                 className="oracle.adfinternal.view.faces.dvt.model.binding.FacesBindingFactory"/>
     </definitionFactories>
     <pageMap>
         <page path="/WEB-INF/Fragments/Modules/Setup/Program.jsff" usageId="view_ProgramPageDef"/>
@@ -63,6 +65,7 @@
         <page path="/WEB-INF/Fragments/Modules/Financial/Cash_Payment.jsff" usageId="view_Cash_PaymentPageDef"/>
         <page path="/WEB-INF/Fragments/Modules/Financial/Cash_Receipt.jsff" usageId="view_Cash_ReceiptPageDef"/>
         <page path="/WEB-INF/Fragments/Modules/Financial/Journal.jsff" usageId="view_JournalPageDef"/>
+        <page path="/WEB-INF/Fragments/Modules/Management/Map.jsff" usageId="view_MapPageDef"/>
     </pageMap>
     <pageDefinitionUsages>
         <page id="view_Farmer_RegistrationPageDef"
@@ -117,6 +120,7 @@
         <page id="view_Cash_PaymentPageDef" path="Fragments.Modules.Financial.Cash_PaymentPageDef"/>
         <page id="view_Cash_ReceiptPageDef" path="Fragments.Modules.Financial.Cash_ReceiptPageDef"/>
         <page id="view_JournalPageDef" path="Fragments.Modules.Financial.JournalPageDef"/>
+        <page id="view_MapPageDef" path="Fragments.Modules.Management.MapPageDef"/>
     </pageDefinitionUsages>
     <dataControlUsages>
         <BC4JDataControl id="AppModuleDataControl" Package="model"

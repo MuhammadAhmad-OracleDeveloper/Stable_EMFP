@@ -7,7 +7,7 @@
         <Contents>thin</Contents>
       </StringRefAddr>
       <StringRefAddr addrType="hostname">
-        <Contents>192.168.1.102</Contents>
+        <Contents>192.168.1.3</Contents>
       </StringRefAddr>
       <SecureRefAddr addrType="password"/>
       <StringRefAddr addrType="subtype">
@@ -22,6 +22,26 @@
       <StringRefAddr addrType="sid">
         <Contents>orcl</Contents>
       </StringRefAddr>
+    </RefAddresses>
+  </Reference>
+  <Reference name="map" className="oracle.adf.model.connection.url.HttpURLConnection" xmlns="">
+    <Factory className="oracle.adf.model.connection.url.URLConnectionFactory"/>
+    <RefAddresses>
+      <XmlRefAddr addrType="map">
+        <Contents>
+          <urlconnection name="map" url="http://elocation.oracle.com/mapviewer"/>
+        </Contents>
+      </XmlRefAddr>
+    </RefAddresses>
+  </Reference>
+  <Reference name="geo" className="oracle.adf.model.connection.url.HttpURLConnection" xmlns="">
+    <Factory className="oracle.adf.model.connection.url.URLConnectionFactory"/>
+    <RefAddresses>
+      <XmlRefAddr addrType="geo">
+        <Contents>
+          <urlconnection name="geo" url="http://elocation.oracle.com/geocoder/gcserver"/>
+        </Contents>
+      </XmlRefAddr>
     </RefAddresses>
   </Reference>
 </References>
