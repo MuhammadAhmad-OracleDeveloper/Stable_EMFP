@@ -100,7 +100,7 @@
                                             <f:validator binding="#{row.bindings.Name.validator}"/>
                                         </af:inputText>
                                     </af:column>
-                                    <af:column sortProperty="#{bindings.TblClusterView1.hints.UcNumber.name}"
+                                    <!--<af:column sortProperty="#{bindings.TblClusterView1.hints.UcNumber.name}"
                                                filterable="true" sortable="true" headerText="UC NO." id="c3"
                                                width="100">
                                         <f:facet name="filter">
@@ -118,6 +118,21 @@
                                             <af:convertNumber groupingUsed="false"
                                                               pattern="#{bindings.TblClusterView1.hints.UcNumber.format}"/>
                                         </af:inputText>
+                                    </af:column>-->
+                                    <af:column filterable="true" sortable="true" headerText="UC NO."
+                                               id="c3">
+                                               <f:facet name="filter">
+                                            <af:inputText value="#{vs.filterCriteria.UcNumber}" id="it16"
+                                                          placeholder="Search UC NO. "></af:inputText>
+                                        </f:facet>
+                                        <af:selectOneChoice value="#{row.bindings.UcLibrDetail.inputValue}"
+                                                            label="#{row.bindings.UcLibrDetail.label}"
+                                                            required="#{bindings.TblClusterView1.hints.UcLibrDetail.mandatory}"
+                                                            shortDesc="#{bindings.TblClusterView1.hints.UcLibrDetail.tooltip}"
+                                                            id="soc9">
+                                            <f:selectItems value="#{row.bindings.UcLibrDetail.items}" id="si9"/>
+                                            <f:validator binding="#{row.bindings.UcLibrDetail.validator}"/>
+                                        </af:selectOneChoice>
                                     </af:column>
                                     <af:column sortProperty="#{bindings.TblClusterView1.hints.CropId.name}"
                                                filterable="true" sortable="true" headerText="Crop" id="c11" width="130">

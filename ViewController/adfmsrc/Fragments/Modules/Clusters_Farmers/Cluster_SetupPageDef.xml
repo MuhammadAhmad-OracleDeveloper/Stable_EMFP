@@ -23,7 +23,7 @@
           <Item Value="Ast"/>
           <Item Value="PhaseId"/>
           <Item Value="ClusterNo"/>
-          <Item Value="UcNumber"/>
+          <Item Value="UcLibrDetail"/>
         </AttrNames>
       </nodeDefinition>
     </tree>

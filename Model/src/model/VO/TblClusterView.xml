@@ -45,6 +45,10 @@
     Name="Village_Name_LOV1"
     ViewObjectName="model.LOV.Village_Name_LOV"
     RowLevelBinds="true"/>
+  <ViewAccessor
+    Name="UC_Name_LOV1"
+    ViewObjectName="model.LOV.UC_Name_LOV"
+    RowLevelBinds="true"/>
   <ListBinding
     Name="LOV_Ast"
     ListVOName="Active_Status1"
@@ -182,6 +186,24 @@
     MRUCount="0">
     <AttrArray Name="AttrNames">
       <Item Value="VillageLibrDetail"/>
+    </AttrArray>
+    <AttrArray Name="AttrExpressions"/>
+    <AttrArray Name="ListAttrNames">
+      <Item Value="LibrDetailId"/>
+    </AttrArray>
+    <AttrArray Name="ListDisplayAttrNames">
+      <Item Value="Name"/>
+    </AttrArray>
+    <DisplayCriteria/>
+  </ListBinding>
+  <ListBinding
+    Name="LOV_UcLibrDetail"
+    ListVOName="UC_Name_LOV1"
+    ListRangeSize="-1"
+    NullValueFlag="none"
+    MRUCount="0">
+    <AttrArray Name="AttrNames">
+      <Item Value="UcLibrDetail"/>
     </AttrArray>
     <AttrArray Name="AttrExpressions"/>
     <AttrArray Name="ListAttrNames">
@@ -338,11 +360,19 @@
     EntityUsage="TblCluster"
     AliasName="CLUSTER_NO"/>
   <ViewAttribute
-    Name="UcNumber"
+    Name="UcLibrDetail"
     PrecisionRule="true"
-    EntityAttrName="UcNumber"
+    EntityAttrName="UcLibrDetail"
     EntityUsage="TblCluster"
-    AliasName="UC_NUMBER"/>
+    AliasName="UC_LIBR_DETAIL"
+    LOVName="LOV_UcLibrDetail">
+    <Properties>
+      <SchemaBasedProperties>
+        <CONTROLTYPE
+          Value="combo"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
   <ViewLinkAccessor
     Name="TblClusterAttMasterView"
     ViewLink="model.VO.Fk2TblClusterAttMasterFkLink"

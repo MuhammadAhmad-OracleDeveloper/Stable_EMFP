@@ -115,8 +115,8 @@
     </DesignTime>
   </Attribute>
   <Attribute
-    Name="UcNumber"
-    ColumnName="UC_NUMBER"
+    Name="UcLibrDetail"
+    ColumnName="UC_LIBR_DETAIL"
     SQLType="NUMERIC"
     Type="java.math.BigDecimal"
     ColumnType="NUMBER"

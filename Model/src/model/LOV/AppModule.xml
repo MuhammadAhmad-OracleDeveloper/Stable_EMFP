@@ -136,4 +136,7 @@
   <ViewUsage
     Name="Training_Schd_Detail_Dated_Cluster1"
     ViewObjectName="model.LOV.Training_Schd_Detail_Dated_Cluster"/>
+  <ViewUsage
+    Name="UC_Name_LOV1"
+    ViewObjectName="model.LOV.UC_Name_LOV"/>
 </AppModule>
