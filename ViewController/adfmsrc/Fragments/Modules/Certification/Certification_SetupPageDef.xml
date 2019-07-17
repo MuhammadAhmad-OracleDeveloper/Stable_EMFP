@@ -5,7 +5,7 @@
   <executables>
     <variableIterator id="variables"/>
     <iterator Binds="TblCertificationView1" RangeSize="8" DataControl="AppModuleDataControl"
-              id="TblCertificationView1Iterator"/>
+              id="TblCertificationView1Iterator" CacheResults="false" Refresh="always"/>
     <searchRegion Binds="TblCertificationView1Iterator" Criteria=""
                   Customizer="oracle.jbo.uicli.binding.JUSearchBindingCustomizer" id="TblCertificationView1Query"/>
   </executables>

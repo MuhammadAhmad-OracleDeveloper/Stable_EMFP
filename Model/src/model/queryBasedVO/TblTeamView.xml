@@ -4,7 +4,7 @@
 <ViewObject
   xmlns="http://xmlns.oracle.com/bc4j"
   Name="TblTeamView"
-  Version="12.1.3.10.8"
+  Version="12.2.1.11.57"
   InheritPersonalization="merge"
   BindingStyle="OracleName"
   CustomQuery="true"
@@ -55,7 +55,7 @@ FROM TBL_TEAM TblTeam]]></SQLQuery>
     ColumnType="CHAR"
     AliasName="AST"
     Expression="AST"
-    SQLType="CHAR">
+    SQLType="VARCHAR">
     <DesignTime>
       <Attr Name="_DisplaySize" Value="1"/>
     </DesignTime>
@@ -77,11 +77,6 @@ FROM TBL_TEAM TblTeam]]></SQLQuery>
   <ViewLinkAccessor
     Name="TblTeamFormationView"
     ViewLink="model.queryBasedVO.Fk2TblTeamFormationFkLink"
-    Type="oracle.jbo.RowIterator"
-    IsUpdateable="false"/>
-  <ViewLinkAccessor
-    Name="TblTrainingSchMasterView"
-    ViewLink="model.queryBasedVO.Fk5TblTrainingSchMasterFkLink"
     Type="oracle.jbo.RowIterator"
     IsUpdateable="false"/>
 </ViewObject>

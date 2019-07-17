@@ -4,7 +4,7 @@
 <ViewObject
   xmlns="http://xmlns.oracle.com/bc4j"
   Name="TblTrainingSchMasterView"
-  Version="12.1.3.10.8"
+  Version="12.2.1.11.57"
   InheritPersonalization="merge"
   SelectListFlags="1"
   FromListFlags="1"
@@ -13,18 +13,14 @@
   CustomQuery="false"
   SelectAllAttributes="false"
   PageIterMode="Full">
-  <ViewAccessor
+  <!--<ViewAccessor
     Name="Trainer_Name_LOV1"
     ViewObjectName="model.LOV.Trainer_Name_LOV"
     RowLevelBinds="true"/>
   <ViewAccessor
     Name="Team_Name_LOV1"
     ViewObjectName="model.LOV.Team_Name_LOV"
-    RowLevelBinds="true"/>
-  <ViewAccessor
-    Name="Cluster_Name_LOV1"
-    ViewObjectName="model.LOV.Cluster_Name_LOV"
-    RowLevelBinds="true"/>
+    RowLevelBinds="true"/>-->
   <ViewAccessor
     Name="Module_Name_LOV1"
     ViewObjectName="model.LOV.Module_Name_LOV"
@@ -34,63 +30,13 @@
     ViewObjectName="model.LOV.Course_Name_LOV"
     RowLevelBinds="true"/>
   <ViewAccessor
+    Name="Team_Formation_ID_LOV1"
+    ViewObjectName="model.LOV.Team_Formation_ID_LOV"
+    RowLevelBinds="true"/>
+  <ViewAccessor
     Name="Proj_Comp_Name_LOV1"
     ViewObjectName="model.LOV.Proj_Comp_Name_LOV"
     RowLevelBinds="true"/>
-  <ListBinding
-    Name="LOV_TrainerId"
-    ListVOName="Trainer_Name_LOV1"
-    ListRangeSize="-1"
-    NullValueFlag="none"
-    MRUCount="0">
-    <AttrArray Name="AttrNames">
-      <Item Value="TrainerId"/>
-    </AttrArray>
-    <AttrArray Name="AttrExpressions"/>
-    <AttrArray Name="ListAttrNames">
-      <Item Value="TrainerId"/>
-    </AttrArray>
-    <AttrArray Name="ListDisplayAttrNames">
-      <Item Value="Name"/>
-    </AttrArray>
-    <DisplayCriteria/>
-  </ListBinding>
-  <ListBinding
-    Name="LOV_TeamId"
-    ListVOName="Team_Name_LOV1"
-    ListRangeSize="-1"
-    NullValueFlag="none"
-    MRUCount="0">
-    <AttrArray Name="AttrNames">
-      <Item Value="TeamId"/>
-    </AttrArray>
-    <AttrArray Name="AttrExpressions"/>
-    <AttrArray Name="ListAttrNames">
-      <Item Value="TeamId"/>
-    </AttrArray>
-    <AttrArray Name="ListDisplayAttrNames">
-      <Item Value="Name"/>
-    </AttrArray>
-    <DisplayCriteria/>
-  </ListBinding>
-  <ListBinding
-    Name="LOV_ClusterId"
-    ListVOName="Cluster_Name_LOV1"
-    ListRangeSize="-1"
-    NullValueFlag="none"
-    MRUCount="0">
-    <AttrArray Name="AttrNames">
-      <Item Value="ClusterId"/>
-    </AttrArray>
-    <AttrArray Name="AttrExpressions"/>
-    <AttrArray Name="ListAttrNames">
-      <Item Value="ClusterId"/>
-    </AttrArray>
-    <AttrArray Name="ListDisplayAttrNames">
-      <Item Value="Name"/>
-    </AttrArray>
-    <DisplayCriteria/>
-  </ListBinding>
   <ListBinding
     Name="LOV_ModuleId"
     ListVOName="Module_Name_LOV1"
@@ -124,6 +70,24 @@
     </AttrArray>
     <AttrArray Name="ListDisplayAttrNames">
       <Item Value="Name"/>
+    </AttrArray>
+    <DisplayCriteria/>
+  </ListBinding>
+  <ListBinding
+    Name="LOV_TeamFormationId"
+    ListVOName="Team_Formation_ID_LOV1"
+    ListRangeSize="-1"
+    NullValueFlag="none"
+    MRUCount="0">
+    <AttrArray Name="AttrNames">
+      <Item Value="TeamFormationId"/>
+    </AttrArray>
+    <AttrArray Name="AttrExpressions"/>
+    <AttrArray Name="ListAttrNames">
+      <Item Value="TeamFormationId"/>
+    </AttrArray>
+    <AttrArray Name="ListDisplayAttrNames">
+      <Item Value="TeamFormationId"/>
     </AttrArray>
     <DisplayCriteria/>
   </ListBinding>
@@ -201,51 +165,6 @@
     </Properties>
   </ViewAttribute>
   <ViewAttribute
-    Name="ClusterId"
-    IsNotNull="true"
-    PrecisionRule="true"
-    EntityAttrName="ClusterId"
-    EntityUsage="TblTrainingSchMaster"
-    AliasName="CLUSTER_ID"
-    LOVName="LOV_ClusterId">
-    <Properties>
-      <SchemaBasedProperties>
-        <CONTROLTYPE
-          Value="combo"/>
-      </SchemaBasedProperties>
-    </Properties>
-  </ViewAttribute>
-  <ViewAttribute
-    Name="TeamId"
-    IsNotNull="true"
-    PrecisionRule="true"
-    EntityAttrName="TeamId"
-    EntityUsage="TblTrainingSchMaster"
-    AliasName="TEAM_ID"
-    LOVName="LOV_TeamId">
-    <Properties>
-      <SchemaBasedProperties>
-        <CONTROLTYPE
-          Value="combo"/>
-      </SchemaBasedProperties>
-    </Properties>
-  </ViewAttribute>
-  <ViewAttribute
-    Name="TrainerId"
-    IsNotNull="true"
-    PrecisionRule="true"
-    EntityAttrName="TrainerId"
-    EntityUsage="TblTrainingSchMaster"
-    AliasName="TRAINER_ID"
-    LOVName="LOV_TrainerId">
-    <Properties>
-      <SchemaBasedProperties>
-        <CONTROLTYPE
-          Value="combo"/>
-      </SchemaBasedProperties>
-    </Properties>
-  </ViewAttribute>
-  <ViewAttribute
     Name="Dated"
     IsNotNull="true"
     PrecisionRule="true"
@@ -285,6 +204,21 @@
     EntityAttrName="Remarks"
     EntityUsage="TblTrainingSchMaster"
     AliasName="REMARKS"/>
+  <ViewAttribute
+    Name="TeamFormationId"
+    IsNotNull="true"
+    PrecisionRule="true"
+    EntityAttrName="TeamFormationId"
+    EntityUsage="TblTrainingSchMaster"
+    AliasName="TEAM_FORMATION_ID"
+    LOVName="LOV_TeamFormationId">
+    <Properties>
+      <SchemaBasedProperties>
+        <CONTROLTYPE
+          Value="combo"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
   <ViewLinkAccessor
     Name="TblTrainingSchDetailView"
     ViewLink="model.VO.FkTblTrainingSchDetailFkLink"

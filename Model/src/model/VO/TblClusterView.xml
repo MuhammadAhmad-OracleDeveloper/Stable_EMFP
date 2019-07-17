@@ -373,11 +373,6 @@
     ViewLink="model.VO.Fk2TblTrainingSchDetailFkLink"
     Type="oracle.jbo.RowIterator"
     IsUpdateable="false"/>
-  <ViewLinkAccessor
-    Name="TblTrainingSchMasterView"
-    ViewLink="model.VO.Fk4TblTrainingSchMasterFkLink"
-    Type="oracle.jbo.RowIterator"
-    IsUpdateable="false"/>
   <ResourceBundle>
     <PropertiesBundle
       PropertiesFile="model.ModelBundle"/>

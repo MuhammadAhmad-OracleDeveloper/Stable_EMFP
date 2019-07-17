@@ -11,9 +11,9 @@
        TblTrainer.AST, 
        TblTrainer.TRAINER_TYPE"
   FromList="TBL_TRAINER TblTrainer"
-  Where="AST='Y'  
-AND  
-TblTrainer.TRAINER_TYPE='sm'"
+  Where="AST='Y'   
+AND   
+TblTrainer.TRAINER_TYPE='SM'"
   BindingStyle="OracleName"
   CustomQuery="false"
   PageIterMode="Full">

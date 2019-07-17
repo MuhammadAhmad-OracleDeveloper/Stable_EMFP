@@ -130,4 +130,7 @@
   <ViewUsage
     Name="Trainer_SM_LOV1"
     ViewObjectName="model.LOV.Trainer_SM_LOV"/>
+  <ViewUsage
+    Name="Team_Formation_ID_LOV1"
+    ViewObjectName="model.LOV.Team_Formation_ID_LOV"/>
 </AppModule>

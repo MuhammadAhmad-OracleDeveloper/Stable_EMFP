@@ -4,19 +4,24 @@
   <parameters/>
   <executables>
     <variableIterator id="variables"/>
-    <iterator Binds="TblItemL4View1" RangeSize="8" DataControl="AppModuleDataControl" id="TblItemL4View1Iterator"/>
+    <iterator Binds="TblItemL4View1" RangeSize="8" DataControl="AppModuleDataControl" id="TblItemL4View1Iterator"
+              Refresh="ifNeeded" CacheResults="false"/>
     <searchRegion Binds="TblItemL4View1Iterator" Criteria=""
                   Customizer="oracle.jbo.uicli.binding.JUSearchBindingCustomizer" id="TblItemL4View1Query"/>
-    <iterator Binds="TblItemL1View1" RangeSize="8" DataControl="AppModuleDataControl" id="TblItemL1View1Iterator"/>
+    <iterator Binds="TblItemL1View1" RangeSize="8" DataControl="AppModuleDataControl" id="TblItemL1View1Iterator"
+              Refresh="ifNeeded" CacheResults="false"/>
     <searchRegion Binds="TblItemL1View1Iterator" Criteria=""
                   Customizer="oracle.jbo.uicli.binding.JUSearchBindingCustomizer" id="TblItemL1View1Query"/>
-    <iterator Binds="TblItemL2View3" RangeSize="8" DataControl="AppModuleDataControl" id="TblItemL2View3Iterator"/>
+    <iterator Binds="TblItemL2View3" RangeSize="8" DataControl="AppModuleDataControl" id="TblItemL2View3Iterator"
+              Refresh="ifNeeded" CacheResults="false"/>
     <searchRegion Binds="TblItemL2View3Iterator" Criteria=""
                   Customizer="oracle.jbo.uicli.binding.JUSearchBindingCustomizer" id="TblItemL2View3Query"/>
-    <iterator Binds="TblItemL3View4" RangeSize="8" DataControl="AppModuleDataControl" id="TblItemL3View4Iterator"/>
+    <iterator Binds="TblItemL3View4" RangeSize="8" DataControl="AppModuleDataControl" id="TblItemL3View4Iterator"
+              Refresh="ifNeeded" CacheResults="false"/>
     <searchRegion Binds="TblItemL3View4Iterator" Criteria=""
                   Customizer="oracle.jbo.uicli.binding.JUSearchBindingCustomizer" id="TblItemL3View4Query"/>
-    <iterator Binds="TblItemL4View5" RangeSize="8" DataControl="AppModuleDataControl" id="TblItemL4View5Iterator"/>
+    <iterator Binds="TblItemL4View5" RangeSize="8" DataControl="AppModuleDataControl" id="TblItemL4View5Iterator"
+              Refresh="ifNeeded" CacheResults="false"/>
     <searchRegion Binds="TblItemL4View5Iterator" Criteria=""
                   Customizer="oracle.jbo.uicli.binding.JUSearchBindingCustomizer" id="TblItemL4View5Query"/>
   </executables>

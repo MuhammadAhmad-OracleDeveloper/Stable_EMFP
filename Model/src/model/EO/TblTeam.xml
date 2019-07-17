@@ -4,7 +4,7 @@
 <Entity
   xmlns="http://xmlns.oracle.com/bc4j"
   Name="TblTeam"
-  Version="12.1.3.10.8"
+  Version="12.2.1.11.57"
   InheritPersonalization="merge"
   DBObjectType="table"
   DBObjectName="TBL_TEAM"
@@ -70,13 +70,6 @@
     Association="model.EO.Fk2TblTeamFormationFkAssoc"
     AssociationEnd="model.EO.Fk2TblTeamFormationFkAssoc.TblTeamFormation"
     AssociationOtherEnd="model.EO.Fk2TblTeamFormationFkAssoc.TblTeam"
-    Type="oracle.jbo.RowIterator"
-    IsUpdateable="false"/>
-  <AccessorAttribute
-    Name="TblTrainingSchMaster"
-    Association="model.EO.Fk5TblTrainingSchMasterFkAssoc"
-    AssociationEnd="model.EO.Fk5TblTrainingSchMasterFkAssoc.TblTrainingSchMaster"
-    AssociationOtherEnd="model.EO.Fk5TblTrainingSchMasterFkAssoc.TblTeam"
     Type="oracle.jbo.RowIterator"
     IsUpdateable="false"/>
   <Key

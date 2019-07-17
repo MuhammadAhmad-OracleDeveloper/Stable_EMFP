@@ -10,9 +10,9 @@
        TblTrainer.NAME, 
        TblTrainer.AST"
   FromList="TBL_TRAINER TblTrainer"
-  Where="AST='Y'  
-AND  
-tbltrainer.trainer_type='tr'"
+  Where="AST='Y'   
+AND   
+tbltrainer.trainer_type='TR'"
   BindingStyle="OracleName"
   CustomQuery="false"
   PageIterMode="Full">

@@ -103,6 +103,7 @@
                                                                         <f:validator binding="#{row.bindings.TrainerId.validator}"/>
                                                                     </af:selectOneChoice>
                                                                 </af:column>
+                                                                
                                     <af:column sortProperty="#{bindings.TblTeamFormationView1.hints.TrainerType.name}"
                                                filterable="true" sortable="true"
                                                headerText="Social Mobilizer"

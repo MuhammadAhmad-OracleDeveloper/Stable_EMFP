@@ -4,7 +4,7 @@
 <ViewObject
   xmlns="http://xmlns.oracle.com/bc4j"
   Name="TblTrainingSchMasterView"
-  Version="12.1.3.10.8"
+  Version="12.2.1.11.57"
   InheritPersonalization="merge"
   BindingStyle="OracleName"
   CustomQuery="true"
@@ -16,9 +16,6 @@
        TblTrainingSchMaster.PROJ_COMP_ID,
        TblTrainingSchMaster.COURSE_ID,
        TblTrainingSchMaster.MODULE_ID,
-       TblTrainingSchMaster.CLUSTER_ID,
-       TblTrainingSchMaster.TEAM_ID,
-       TblTrainingSchMaster.TRAINER_ID,
        TblTrainingSchMaster.DATED,
        TblTrainingSchMaster.STATUS,
        TblTrainingSchMaster.MON,
@@ -71,39 +68,6 @@ FROM TBL_TRAINING_SCH_MASTER TblTrainingSchMaster]]></SQLQuery>
     Expression="MODULE_ID"
     SQLType="NUMERIC"/>
   <ViewAttribute
-    Name="ClusterId"
-    IsUpdateable="false"
-    IsPersistent="false"
-    IsNotNull="true"
-    PrecisionRule="true"
-    Type="java.math.BigDecimal"
-    ColumnType="NUMBER"
-    AliasName="CLUSTER_ID"
-    Expression="CLUSTER_ID"
-    SQLType="NUMERIC"/>
-  <ViewAttribute
-    Name="TeamId"
-    IsUpdateable="false"
-    IsPersistent="false"
-    IsNotNull="true"
-    PrecisionRule="true"
-    Type="java.math.BigDecimal"
-    ColumnType="NUMBER"
-    AliasName="TEAM_ID"
-    Expression="TEAM_ID"
-    SQLType="NUMERIC"/>
-  <ViewAttribute
-    Name="TrainerId"
-    IsUpdateable="false"
-    IsPersistent="false"
-    IsNotNull="true"
-    PrecisionRule="true"
-    Type="java.math.BigDecimal"
-    ColumnType="NUMBER"
-    AliasName="TRAINER_ID"
-    Expression="TRAINER_ID"
-    SQLType="NUMERIC"/>
-  <ViewAttribute
     Name="Dated"
     IsUpdateable="false"
     IsPersistent="false"
@@ -135,7 +99,7 @@ FROM TBL_TRAINING_SCH_MASTER TblTrainingSchMaster]]></SQLQuery>
     ColumnType="CHAR"
     AliasName="MON"
     Expression="MON"
-    SQLType="CHAR">
+    SQLType="VARCHAR">
     <DesignTime>
       <Attr Name="_DisplaySize" Value="3"/>
     </DesignTime>

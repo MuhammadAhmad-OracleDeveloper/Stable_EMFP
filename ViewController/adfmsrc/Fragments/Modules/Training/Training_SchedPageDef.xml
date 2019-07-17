@@ -5,11 +5,11 @@
   <executables>
     <variableIterator id="variables"/>
     <iterator Binds="TblTrainingSchMasterView1" RangeSize="8" DataControl="AppModuleDataControl"
-              id="TblTrainingSchMasterView1Iterator"/>
+              id="TblTrainingSchMasterView1Iterator" Refresh="ifNeeded" CacheResults="false"/>
     <searchRegion Binds="TblTrainingSchMasterView1Iterator" Criteria=""
                   Customizer="oracle.jbo.uicli.binding.JUSearchBindingCustomizer" id="TblTrainingSchMasterView1Query"/>
     <iterator Binds="TblTrainingSchDetailView4" RangeSize="8" DataControl="AppModuleDataControl"
-              id="TblTrainingSchDetailView4Iterator"/>
+              id="TblTrainingSchDetailView4Iterator" Refresh="ifNeeded" CacheResults="false"/>
     <searchRegion Binds="TblTrainingSchDetailView4Iterator" Criteria=""
                   Customizer="oracle.jbo.uicli.binding.JUSearchBindingCustomizer" id="TblTrainingSchDetailView4Query"/>
   </executables>
@@ -21,9 +21,6 @@
           <Item Value="ProjCompId"/>
           <Item Value="CourseId"/>
           <Item Value="ModuleId"/>
-          <Item Value="ClusterId"/>
-          <Item Value="TeamId"/>
-          <Item Value="TrainerId"/>
           <Item Value="Dated"/>
           <Item Value="Status"/>
           <Item Value="Mon"/>
@@ -70,10 +67,6 @@
           DTSupportsMRU="false" SelectItemValueMode="ListObject"/>
     <list IterBinding="TblTrainingSchMasterView1Iterator" StaticList="false" Uses="LOV_ModuleId" id="ModuleId"
           DTSupportsMRU="false" SelectItemValueMode="ListObject"/>
-    <list IterBinding="TblTrainingSchMasterView1Iterator" StaticList="false" Uses="LOV_ClusterId" id="ClusterId"
-          DTSupportsMRU="false" SelectItemValueMode="ListObject"/>
-    <list IterBinding="TblTrainingSchMasterView1Iterator" StaticList="false" Uses="LOV_TeamId" id="TeamId"
-          DTSupportsMRU="false" SelectItemValueMode="ListObject"/>
     <attributeValues IterBinding="TblTrainingSchMasterView1Iterator" id="Dated">
       <AttrNames>
         <Item Value="Dated"/>
@@ -109,6 +102,8 @@
     <action IterBinding="TblTrainingSchMasterView1Iterator" id="Next" RequiresUpdateModel="true" Action="next"/>
     <action IterBinding="TblTrainingSchMasterView1Iterator" id="Last" RequiresUpdateModel="true" Action="last"/>
     <action id="Rollback" RequiresUpdateModel="false" Action="rollbackTransaction" DataControl="AppModuleDataControl"/>
+    <list IterBinding="TblTrainingSchMasterView1Iterator" StaticList="false" Uses="LOV_TeamFormationId"
+          id="TeamFormationId" DTSupportsMRU="true" SelectItemValueMode="ListObject"/>
   </bindings>
 </pageDefinition>
 

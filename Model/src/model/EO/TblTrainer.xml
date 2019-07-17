@@ -276,13 +276,6 @@
     AssociationOtherEnd="model.EO.FkTblTrainerPercFkAssoc.TblTrainer"
     Type="oracle.jbo.RowIterator"
     IsUpdateable="false"/>
-  <AccessorAttribute
-    Name="TblTrainingSchMaster"
-    Association="model.EO.Fk6TblTrainingSchMasterFkAssoc"
-    AssociationEnd="model.EO.Fk6TblTrainingSchMasterFkAssoc.TblTrainingSchMaster"
-    AssociationOtherEnd="model.EO.Fk6TblTrainingSchMasterFkAssoc.TblTrainer"
-    Type="oracle.jbo.RowIterator"
-    IsUpdateable="false"/>
   <Key
     Name="PkTblTrainerPk"
     PrimaryKey="true">

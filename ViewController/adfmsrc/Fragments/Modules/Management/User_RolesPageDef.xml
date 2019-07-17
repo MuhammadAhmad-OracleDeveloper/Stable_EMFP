@@ -5,19 +5,19 @@
   <executables>
     <variableIterator id="variables"/>
     <iterator Binds="TblRoleMasterView1" RangeSize="25" DataControl="AppModuleDataControl"
-              id="TblRoleMasterView1Iterator"/>
+              id="TblRoleMasterView1Iterator" Refresh="ifNeeded" CacheResults="false"/>
     <searchRegion Binds="TblRoleMasterView1Iterator" Criteria=""
                   Customizer="oracle.jbo.uicli.binding.JUSearchBindingCustomizer" id="TblRoleMasterView1Query"/>
     <iterator Binds="TblUserMasterView3" RangeSize="25" DataControl="AppModuleDataControl"
-              id="TblUserMasterView3Iterator"/>
+              id="TblUserMasterView3Iterator" Refresh="ifNeeded" CacheResults="false"/>
     <searchRegion Binds="TblUserMasterView3Iterator" Criteria=""
                   Customizer="oracle.jbo.uicli.binding.JUSearchBindingCustomizer" id="TblUserMasterView3Query"/>
     <iterator Binds="TblRoleDetailModulesView4" RangeSize="25" DataControl="AppModuleDataControl"
-              id="TblRoleDetailModulesView4Iterator"/>
+              id="TblRoleDetailModulesView4Iterator" Refresh="ifNeeded" CacheResults="false"/>
     <iterator Binds="TblRoleDetailPagesView4" RangeSize="25" DataControl="AppModuleDataControl"
-              id="TblRoleDetailPagesView4Iterator"/>
+              id="TblRoleDetailPagesView4Iterator" Refresh="ifNeeded" CacheResults="false"/>
     <iterator Binds="TblRoleDetailReportsView4" RangeSize="25" DataControl="AppModuleDataControl"
-              id="TblRoleDetailReportsView4Iterator"/>
+              id="TblRoleDetailReportsView4Iterator" Refresh="ifNeeded" CacheResults="false"/>
     <searchRegion Binds="TblRoleDetailModulesView4Iterator" Criteria=""
                   Customizer="oracle.jbo.uicli.binding.JUSearchBindingCustomizer" id="TblRoleDetailModulesView4Query"/>
     <searchRegion Binds="TblRoleDetailPagesView4Iterator" Criteria=""

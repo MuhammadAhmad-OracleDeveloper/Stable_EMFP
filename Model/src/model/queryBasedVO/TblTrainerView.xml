@@ -4,7 +4,7 @@
 <ViewObject
   xmlns="http://xmlns.oracle.com/bc4j"
   Name="TblTrainerView"
-  Version="12.1.3.10.8"
+  Version="12.2.1.11.57"
   InheritPersonalization="merge"
   BindingStyle="OracleName"
   CustomQuery="true"
@@ -85,7 +85,7 @@ FROM TBL_TRAINER TblTrainer]]></SQLQuery>
     ColumnType="CHAR"
     AliasName="AST"
     Expression="AST"
-    SQLType="CHAR">
+    SQLType="VARCHAR">
     <DesignTime>
       <Attr Name="_DisplaySize" Value="1"/>
     </DesignTime>
@@ -101,7 +101,7 @@ FROM TBL_TRAINER TblTrainer]]></SQLQuery>
     ColumnType="CHAR"
     AliasName="MAR_STATUS"
     Expression="MAR_STATUS"
-    SQLType="CHAR">
+    SQLType="VARCHAR">
     <DesignTime>
       <Attr Name="_DisplaySize" Value="1"/>
     </DesignTime>
@@ -116,7 +116,7 @@ FROM TBL_TRAINER TblTrainer]]></SQLQuery>
     ColumnType="CHAR"
     AliasName="GENDER"
     Expression="GENDER"
-    SQLType="CHAR">
+    SQLType="VARCHAR">
     <DesignTime>
       <Attr Name="_DisplaySize" Value="1"/>
     </DesignTime>
@@ -322,11 +322,6 @@ FROM TBL_TRAINER TblTrainer]]></SQLQuery>
   <ViewLinkAccessor
     Name="TblTrainerPercView"
     ViewLink="model.queryBasedVO.FkTblTrainerPercFkLink"
-    Type="oracle.jbo.RowIterator"
-    IsUpdateable="false"/>
-  <ViewLinkAccessor
-    Name="TblTrainingSchMasterView"
-    ViewLink="model.queryBasedVO.Fk6TblTrainingSchMasterFkLink"
     Type="oracle.jbo.RowIterator"
     IsUpdateable="false"/>
 </ViewObject>
