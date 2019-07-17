@@ -5,11 +5,11 @@
   <executables>
     <variableIterator id="variables"/>
     <iterator Binds="TblLibrMasterView1" RangeSize="8" DataControl="AppModuleDataControl"
-              id="TblLibrMasterView1Iterator" CacheResults="false" Refresh="ifNeeded"/>
+              id="TblLibrMasterView1Iterator"/>
     <searchRegion Binds="TblLibrMasterView1Iterator" Criteria=""
                   Customizer="oracle.jbo.uicli.binding.JUSearchBindingCustomizer" id="TblLibrMasterView1Query"/>
     <iterator Binds="TblLibrDetailView3" RangeSize="8" DataControl="AppModuleDataControl"
-              id="TblLibrDetailView3Iterator" Refresh="ifNeeded" CacheResults="false"/>
+              id="TblLibrDetailView3Iterator"/>
     <searchRegion Binds="TblLibrDetailView3Iterator" Criteria=""
                   Customizer="oracle.jbo.uicli.binding.JUSearchBindingCustomizer" id="TblLibrDetailView3Query"/>
   </executables>

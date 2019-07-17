@@ -4,7 +4,7 @@
 <ViewObject
   xmlns="http://xmlns.oracle.com/bc4j"
   Name="TblClusterAttMasterView"
-  Version="12.1.3.10.8"
+  Version="12.2.1.11.57"
   InheritPersonalization="merge"
   SelectListFlags="1"
   FromListFlags="1"
@@ -12,7 +12,8 @@
   BindingStyle="OracleName"
   CustomQuery="false"
   SelectAllAttributes="false"
-  PageIterMode="Full">
+  PageIterMode="Full"
+  AutoRefresh="true">
   <ViewAccessor
     Name="Trainer_Name_LOV1"
     ViewObjectName="model.LOV.Trainer_Name_LOV"
@@ -21,6 +22,21 @@
     Name="Cluster_Name_LOV1"
     ViewObjectName="model.LOV.Cluster_Name_LOV"
     RowLevelBinds="true"/>
+  <ViewAccessor
+    Name="Training_Schd_Detail_Dated_Cluster1"
+    ViewObjectName="model.LOV.Training_Schd_Detail_Dated_Cluster"
+    RowLevelBinds="true">
+    <ViewCriteriaUsage
+      Name="Training_Schd_Detail_Dated_ClusterCriteria"
+      FullName="model.LOV.Training_Schd_Detail_Dated_Cluster.Training_Schd_Detail_Dated_ClusterCriteria"/>
+    <ParameterMap>
+      <PIMap Variable="SchdDated">
+        <TransientExpression
+          trustMode="untrusted"
+          Name="ExpressionScript"><![CDATA[Dated]]></TransientExpression>
+      </PIMap>
+    </ParameterMap>
+  </ViewAccessor>
   <ListBinding
     Name="LOV_TrainerId"
     ListVOName="Trainer_Name_LOV1"
@@ -41,7 +57,7 @@
   </ListBinding>
   <ListBinding
     Name="LOV_ClusterId"
-    ListVOName="Cluster_Name_LOV1"
+    ListVOName="Training_Schd_Detail_Dated_Cluster1"
     ListRangeSize="-1"
     NullValueFlag="none"
     MRUCount="0">
@@ -53,7 +69,7 @@
       <Item Value="ClusterId"/>
     </AttrArray>
     <AttrArray Name="ListDisplayAttrNames">
-      <Item Value="Name"/>
+      <Item Value="ClusterId"/>
     </AttrArray>
     <DisplayCriteria/>
   </ListBinding>

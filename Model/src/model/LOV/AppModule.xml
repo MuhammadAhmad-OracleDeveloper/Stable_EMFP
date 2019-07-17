@@ -133,4 +133,7 @@
   <ViewUsage
     Name="Team_Formation_ID_LOV1"
     ViewObjectName="model.LOV.Team_Formation_ID_LOV"/>
+  <ViewUsage
+    Name="Training_Schd_Detail_Dated_Cluster1"
+    ViewObjectName="model.LOV.Training_Schd_Detail_Dated_Cluster"/>
 </AppModule>

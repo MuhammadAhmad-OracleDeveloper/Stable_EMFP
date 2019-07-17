@@ -42,7 +42,7 @@
                                                                       partialTriggers="::b8 ::b9 ::b15"
                                                                       scrollPolicy="page" autoHeightRows="0"
                                                                       width="979">
-                                                                <af:column sortProperty="#{bindings.TblClusterAttMasterView1.hints.ClusterId.name}"
+                                                                <!--<af:column sortProperty="#{bindings.TblClusterAttMasterView1.hints.ClusterId.name}"
                                                                            filterable="true" sortable="true"
                                                                            headerText="Cluster"
                                                                            id="c14" width="150">
@@ -60,8 +60,19 @@
                                                                                        id="si2"/>
                                                                         <f:validator binding="#{row.bindings.ClusterId.validator}"/>
                                                                     </af:selectOneChoice>
-                                                                </af:column>
-                                                                <af:column sortProperty="#{bindings.TblClusterAttMasterView1.hints.ClusterAttMasterId.name}"
+                                                                </af:column>-->
+                                    <af:column headerText="#{bindings.TblClusterAttMasterView1.hints.ClusterId.label}"
+                                               id="c2">
+                                        <af:selectOneChoice value="#{row.bindings.ClusterId.inputValue}"
+                                                            label="#{row.bindings.ClusterId.label}"
+                                                            required="#{bindings.TblClusterAttMasterView1.hints.ClusterId.mandatory}"
+                                                            shortDesc="#{bindings.TblClusterAttMasterView1.hints.ClusterId.tooltip}"
+                                                            id="soc1">
+                                            <f:selectItems value="#{row.bindings.ClusterId.items}" id="si1"/>
+                                            <f:validator binding="#{row.bindings.ClusterId.validator}"/>
+                                        </af:selectOneChoice>
+                                    </af:column>
+                                    <af:column sortProperty="#{bindings.TblClusterAttMasterView1.hints.ClusterAttMasterId.name}"
                                                                            filterable="true" sortable="true"
                                                                            headerText="Cluster Attendance Master ID"
                                                                            id="c1" align="center" width="80">
