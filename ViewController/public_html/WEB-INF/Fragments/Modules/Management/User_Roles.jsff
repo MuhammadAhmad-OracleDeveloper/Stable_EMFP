@@ -234,7 +234,7 @@
                         <af:gridRow marginTop="5px" height="auto" id="gr7">
                             <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc7">
                                 <af:panelTabbed position="above" id="pt4" styleClass="tabel_pannel_tab">
-                                    <af:showDetailItem id="tab4" text="Tab Label 4">
+                                    <af:showDetailItem id="tab4" text="User's Roles">
                                         <af:table value="#{bindings.TblRoleMasterView11.collectionModel}" var="row"
                                                   rows="#{bindings.TblRoleMasterView11.rangeSize}"
                                                   emptyText="#{bindings.TblRoleMasterView11.viewable ? 'No data to display.' : 'Access Denied.'}"
