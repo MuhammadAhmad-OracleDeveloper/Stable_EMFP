@@ -38,5 +38,16 @@ public class ReportSidebar implements Serializable {
     public void setDynamicTaskFlowId1(String taskFlowId) {
         this.taskFlowId = taskFlowId;
     }
+    
+    public void fragmentCall(ActionEvent actionEvent) {
+        // Add event code here...
+        String action = (String)actionEvent.getComponent().getAttributes().get("link");
+        StringBuilder link = new StringBuilder();
+        link.append("/WEB-INF/Task_Flows/Reports/");
+        link.append(action);
+        link.append(".xml#");
+        link.append(action);
+        setDynamicTaskFlowId(link.toString());
+    }
 
 }

@@ -936,9 +936,6 @@
     Name="FINANCIAL_PAGES1"
     ViewObjectName="model.VO.USERS_ROLES.FINANCIAL_PAGES"/>
   <ViewUsage
-    Name="REPORTS_PAGES1"
-    ViewObjectName="model.VO.USERS_ROLES.REPORTS_PAGES"/>
-  <ViewUsage
     Name="MARKETING_PAGES1"
     ViewObjectName="model.VO.USERS_ROLES.MARKETING_PAGES"/>
   <ViewUsage
@@ -1055,6 +1052,9 @@
   <ViewUsage
     Name="TblJRVVoucherDView4"
     ViewObjectName="model.queryBasedVO.TblJRVVoucherDView"/>
+  <ViewUsage
+    Name="REPORTS_PAGES1"
+    ViewObjectName="model.VO.USERS_ROLES.REPORTS_PAGES"/>
   <ViewLinkUsage
     Name="FkTblClusterAttDetailFkLink1"
     ViewLinkObjectName="model.VO.FkTblClusterAttDetailFkLink"
