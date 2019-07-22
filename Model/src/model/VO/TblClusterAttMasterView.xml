@@ -138,7 +138,14 @@
     PrecisionRule="true"
     EntityAttrName="Dated"
     EntityUsage="TblClusterAttMaster"
-    AliasName="DATED"/>
+    AliasName="DATED">
+    <Properties>
+      <SchemaBasedProperties>
+        <AUTOSUBMIT
+          Value="true"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
   <ViewAttribute
     Name="Status"
     PrecisionRule="true"

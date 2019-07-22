@@ -101,7 +101,7 @@
                                                                            id="c3" width="100">
                                                                     <f:facet name="filter">
                                                                         <af:inputDate value="#{bindings.TblClusterAttMasterView1Query.queryDescriptor.filterConjunctionCriterion.criterionMap.Dated.value}"
-                                                                                      id="id1">
+                                                                                      id="id1" autoSubmit="true">
                                                                             <af:convertDateTime pattern="#{bindings.TblClusterAttMasterView1.hints.Dated.format}"/>
                                                                         </af:inputDate>
                                                                     </f:facet>
